@@ -18895,3 +18895,3599 @@ Started GET "/" for 127.0.0.1 at Mon Oct 25 15:43:37 +0300 2010
   Processing by HomeController#index as HTML
 Rendered home/index.html.erb within layouts/sessions (4.2ms)
 Completed 200 OK in 12ms (Views: 7.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at Mon Oct 25 16:02:36 +0300 2010
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Giriş Yap", "authenticity_token"=>"mcrQgygmrgn217Rfs6rBbW8r2omSdyPPtTDfdH5HjO0=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"soner.eker@yh.com.tr"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`email` = 'soner.eker@yh.com.tr') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `users` SET `current_sign_in_at` = '2010-10-25 13:02:36', `last_sign_in_at` = '2010-10-25 12:39:52', `sign_in_count` = 15, `updated_at` = '2010-10-25 13:02:36' WHERE (`users`.`id` = 1)
+  [1m[36mSQL (1.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://adbase.local/
+Completed 302 Found in 133ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Oct 25 16:02:36 +0300 2010
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Redirected to http://adbase.local/dashboard
+Completed 302 Found in 22ms
+
+
+Started GET "/dashboard" for 127.0.0.1 at Mon Oct 25 16:02:36 +0300 2010
+  Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.7ms)
+Rendered dashboard/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 96ms (Views: 9.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:02:37 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 16:02:38 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY created_at desc[0m
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 37ms (Views: 12.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:02:39 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at Mon Oct 25 16:02:49 +0300 2010
+  Processing by DashboardController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered shared/_header.html.erb (2.7ms)
+Rendered dashboard/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 32ms (Views: 9.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:02:49 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 16:02:49 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.9ms)
+Rendered sites/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 33ms (Views: 10.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:02:50 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/zones" for 127.0.0.1 at Mon Oct 25 16:02:50 +0300 2010
+  Processing by ZonesController#index as HTML
+  [1m[35mUser Load (1.5ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered shared/_header.html.erb (3.6ms)
+Rendered zones/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 44ms (Views: 11.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:02:50 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/ads" for 127.0.0.1 at Mon Oct 25 16:02:51 +0300 2010
+  Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mAd Load (0.3ms)[0m  SELECT `ads`.* FROM `ads`
+Rendered shared/_header.html.erb (7.3ms)
+Rendered ads/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 72ms (Views: 25.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:02:51 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 16:02:51 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` ORDER BY created_at desc
+Rendered shared/_header.html.erb (2.8ms)
+Rendered users/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 44ms (Views: 15.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:02:51 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Oct 25 16:03:54 +0300 2010
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Redirected to http://adbase.local/dashboard
+Completed 302 Found in 90ms
+
+
+Started GET "/dashboard" for 127.0.0.1 at Mon Oct 25 16:03:54 +0300 2010
+  Processing by DashboardController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered shared/_header.html.erb (2.8ms)
+Rendered dashboard/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 32ms (Views: 9.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:03:54 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 16:03:56 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` ORDER BY created_at desc
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 37ms (Views: 12.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:03:56 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 16:03:59 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/edit.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 38ms (Views: 14.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:03:59 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 16:04:09 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` ORDER BY created_at desc
+Rendered shared/_header.html.erb (2.9ms)
+Rendered users/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 37ms (Views: 12.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:04:09 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Mon Oct 25 16:13:39 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/edit.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 38ms (Views: 13.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:13:39 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Mon Oct 25 16:13:43 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (65.3ms)
+Completed   in 92ms
+
+ActionView::Template::Error (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+    1: <h2>Kullanıcı No#<%= @user.id %></h2>
+    2: 
+    3: <table class="kart">
+    4:   <tr>
+  app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb___967776477_2177007180_0'
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (225.7ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (234.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Mon Oct 25 16:14:21 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 36ms (Views: 11.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:14:21 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Mon Oct 25 16:14:49 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.9ms)
+Rendered users/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 36ms (Views: 11.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:14:49 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 16:15:53 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY created_at desc[0m
+Rendered shared/_header.html.erb (2.8ms)
+Rendered users/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 39ms (Views: 13.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:15:53 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at Mon Oct 25 16:15:56 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (1.9ms)
+Completed   in 30ms
+
+ActionView::Template::Error (Object must be a Date, DateTime or Time object. nil given.):
+    13:     <td><%= l(@user.created_at, :format => :short) %></td>
+    14:     <td><%= l(@user.updated_at, :format => :short) %></td>
+    15:     <td><%= @user.sign_in_count %></td>
+    16:     <td><%= l(@user.last_sign_in_at, :format => :short) %></td>
+    17:     <td><%= l(@user.current_sign_in_at, :format => :short) %></td>
+    18:   </tr>
+    19: </table>
+  app/views/users/show.html.erb:16:in `_app_views_users_show_html_erb___967776477_2177088620_0'
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (225.3ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (232.5ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at Mon Oct 25 16:17:09 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 35ms (Views: 11.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:17:10 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at Mon Oct 25 16:17:30 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+Rendered shared/_header.html.erb (3.0ms)
+Rendered users/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 37ms (Views: 11.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:17:30 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at Mon Oct 25 16:17:51 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 35ms (Views: 11.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:17:51 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at Mon Oct 25 16:18:10 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 35ms (Views: 11.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:18:10 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at Mon Oct 25 16:18:30 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 103ms (Views: 11.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:18:30 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at Mon Oct 25 16:20:53 +0300 2010
+
+SyntaxError (/Users/soner/Projects/YH/AdBase/app/controllers/application_controller.rb:8: syntax error, unexpected $end, expecting kEND):
+  config/application.rb:43:in `_callback_before_9'
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at Mon Oct 25 16:21:03 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.8ms)
+Rendered users/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 37ms (Views: 11.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:21:04 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 16:21:07 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY created_at desc[0m
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 37ms (Views: 13.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:21:07 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Mon Oct 25 16:21:10 +0300 2010
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Redirected to http://adbase.local/
+Completed 302 Found in 92ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Oct 25 16:21:10 +0300 2010
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/sessions (4.6ms)
+Completed 200 OK in 14ms (Views: 8.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at Mon Oct 25 16:21:17 +0300 2010
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Giriş Yap", "authenticity_token"=>"mcrQgygmrgn217Rfs6rBbW8r2omSdyPPtTDfdH5HjO0=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"soner@sonereker.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`email` = 'soner@sonereker.com') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `users` SET `current_sign_in_at` = '2010-10-25 13:21:17', `last_sign_in_at` = '2010-10-25 12:36:45', `sign_in_count` = 4, `updated_at` = '2010-10-25 13:21:17' WHERE (`users`.`id` = 2)[0m
+  [1m[35mSQL (1.3ms)[0m  COMMIT
+Redirected to http://adbase.local/
+Completed 302 Found in 133ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Oct 25 16:21:17 +0300 2010
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Redirected to http://adbase.local/dashboard
+Completed 302 Found in 93ms
+
+
+Started GET "/dashboard" for 127.0.0.1 at Mon Oct 25 16:21:18 +0300 2010
+  Processing by DashboardController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+Rendered shared/_header.html.erb (2.6ms)
+Rendered dashboard/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 32ms (Views: 9.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:21:18 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/profile" for 127.0.0.1 at Mon Oct 25 16:21:21 +0300 2010
+  Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/profile.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 108ms (Views: 14.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:21:22 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Mon Oct 25 16:21:26 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+Completed   in 126ms
+
+NameError (undefined local variable or method `user_session_destroy_path' for #<UsersController:0x103992470>):
+  app/controllers/application_controller.rb:6:in `require_admin'
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (216.4ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (224.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Mon Oct 25 16:22:01 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Redirected to http://adbase.local/logout
+Completed 302 Found in 24ms
+
+
+Started GET "/logout" for 127.0.0.1 at Mon Oct 25 16:22:02 +0300 2010
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+Redirected to http://adbase.local/
+Completed 302 Found in 24ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Oct 25 16:22:02 +0300 2010
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/sessions (4.2ms)
+Completed 200 OK in 13ms (Views: 7.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/login" for 127.0.0.1 at Mon Oct 25 16:23:22 +0300 2010
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Giriş Yap", "authenticity_token"=>"mcrQgygmrgn217Rfs6rBbW8r2omSdyPPtTDfdH5HjO0=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"soner.eker@yh.com.tr"}}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`email` = 'soner.eker@yh.com.tr') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `users` SET `current_sign_in_at` = '2010-10-25 13:23:22', `last_sign_in_at` = '2010-10-25 13:02:36', `sign_in_count` = 16, `updated_at` = '2010-10-25 13:23:22' WHERE (`users`.`id` = 1)[0m
+  [1m[35mSQL (1.2ms)[0m  COMMIT
+Redirected to http://adbase.local/
+Completed 302 Found in 138ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Oct 25 16:23:22 +0300 2010
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Redirected to http://adbase.local/dashboard
+Completed 302 Found in 23ms
+
+
+Started GET "/dashboard" for 127.0.0.1 at Mon Oct 25 16:23:22 +0300 2010
+  Processing by DashboardController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered shared/_header.html.erb (2.8ms)
+Rendered dashboard/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 32ms (Views: 9.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:23:22 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 16:23:24 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` ORDER BY created_at desc
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 38ms (Views: 13.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:23:24 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at Mon Oct 25 16:23:28 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 101ms (Views: 11.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:23:29 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/3/edit" for 127.0.0.1 at Mon Oct 25 16:23:31 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/edit.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 39ms (Views: 14.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:23:31 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/3/edit" for 127.0.0.1 at Mon Oct 25 16:24:28 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/edit.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 38ms (Views: 14.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:24:29 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 16:24:55 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` ORDER BY created_at desc
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 104ms (Views: 13.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:24:55 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:25:01 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 35ms (Views: 11.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:25:01 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:28:44 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 36ms (Views: 11.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:28:44 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:28:56 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (68.6ms)
+Rendered users/show.html.erb within layouts/application (73.5ms)
+Completed 200 OK in 101ms (Views: 77.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:28:56 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:29:04 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 36ms (Views: 11.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:29:05 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:29:44 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 36ms (Views: 11.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:29:44 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:29:52 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 35ms (Views: 11.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:29:52 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:30:02 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 36ms (Views: 11.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:30:02 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:30:10 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 102ms (Views: 11.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:30:11 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:30:18 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 35ms (Views: 11.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:30:18 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:30:45 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 35ms (Views: 11.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:30:46 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:31:13 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 101ms (Views: 77.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:31:13 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:34:52 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 35ms (Views: 11.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:34:52 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:35:02 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 36ms (Views: 11.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:35:03 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:35:20 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.4ms)
+Rendered users/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 35ms (Views: 11.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:35:20 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:35:49 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 35ms (Views: 11.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:35:49 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:36:16 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.7ms)
+Rendered users/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 37ms (Views: 11.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:36:16 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:38:32 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 34ms (Views: 11.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:38:32 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:38:43 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 37ms (Views: 11.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:38:44 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:38:44 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (1.9ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (3.5ms)
+Rendered users/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 125ms (Views: 12.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:38:44 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:38:54 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 36ms (Views: 11.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:38:55 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:39:38 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 36ms (Views: 11.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:39:39 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 16:39:51 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.8ms)
+Rendered users/edit.html.erb within layouts/application (78.7ms)
+Completed 200 OK in 107ms (Views: 83.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:39:51 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 16:40:26 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.4ms)
+Rendered users/edit.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 38ms (Views: 13.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:40:26 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 16:41:23 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/edit.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 39ms (Views: 14.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:41:23 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:41:29 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.4ms)
+Rendered users/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 35ms (Views: 11.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:41:29 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:41:41 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 37ms (Views: 11.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:41:41 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:41:54 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 36ms (Views: 11.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:41:55 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 16:42:13 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.8ms)
+Rendered users/edit.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 38ms (Views: 14.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:42:14 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 16:42:26 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` ORDER BY created_at desc
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 37ms (Views: 13.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:42:27 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:42:42 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 104ms (Views: 11.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:42:42 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 16:42:46 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/edit.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 38ms (Views: 13.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:42:46 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 16:47:33 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Completed   in 28ms
+
+SyntaxError (/Users/soner/Projects/YH/AdBase/app/models/state.rb:7: syntax error, unexpected ':', expecting kEND
+  named_scope :users :conditions => ['category_id = ?', 100]
+                      ^):
+  app/controllers/users_controller.rb:26:in `edit'
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (223.9ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (231.4ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 16:47:47 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/AdBase/app/models/state.rb:7)
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (category_id = 100)[0m
+Rendered users/edit.html.erb within layouts/application (306.9ms)
+Completed   in 416ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x103c88878>:0x103c85cb8>):
+    40:   </tr>
+    41:   <tr>
+    42:     <td></td>
+    43:     <td><%= f.submit 'Güncelle' %> <%= link_to "&times; Kullanıcıyı Sil", user, :methot => :delete %></td>
+    44:   </tr>
+    45: </table>
+    46: <% end %>
+  app/views/users/edit.html.erb:43:in `_app_views_users_edit_html_erb___405002609_2179207200_0'
+  app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb___405002609_2179207200_0'
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (222.7ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (231.2ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 16:48:04 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/AdBase/app/models/state.rb:7)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/edit.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 116ms (Views: 14.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:48:04 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 16:48:15 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/AdBase/app/models/state.rb:7)
+Rendered shared/_header.html.erb (2.4ms)
+Rendered users/edit.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 53ms (Views: 14.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:48:16 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:48:19 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 35ms (Views: 11.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:48:19 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 16:48:29 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/AdBase/app/models/state.rb:7)
+Rendered shared/_header.html.erb (2.4ms)
+Rendered users/edit.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 53ms (Views: 14.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:48:30 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:48:31 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+Rendered shared/_header.html.erb (69.5ms)
+Rendered users/show.html.erb within layouts/application (74.4ms)
+Completed 200 OK in 102ms (Views: 78.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:48:31 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 16:50:32 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/AdBase/app/models/state.rb:7)
+Rendered shared/_header.html.erb (2.4ms)
+Rendered users/edit.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 52ms (Views: 14.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:50:32 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:50:33 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 35ms (Views: 11.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:50:33 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 16:50:42 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/AdBase/app/models/state.rb:7)
+Rendered shared/_header.html.erb (2.4ms)
+Rendered users/edit.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 119ms (Views: 14.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:50:42 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:50:43 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.8ms)
+Rendered users/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 37ms (Views: 12.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:50:44 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 16:50:49 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/AdBase/app/models/state.rb:7)
+Rendered shared/_header.html.erb (2.4ms)
+Rendered users/edit.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 51ms (Views: 14.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:50:49 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 16:50:50 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/AdBase/app/models/state.rb:7)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/edit.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 60ms (Views: 17.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:50:50 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 16:50:50 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/AdBase/app/models/state.rb:7)
+Rendered shared/_header.html.erb (7.4ms)
+Rendered users/edit.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 167ms (Views: 26.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:50:50 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/adbase/config/routes.rb:7)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 16:53:12 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/state.rb:7)
+Rendered shared/_header.html.erb (3.2ms)
+Rendered users/edit.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 107ms (Views: 18.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:53:13 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:53:15 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.8ms)
+Rendered users/show.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 38ms (Views: 13.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:53:15 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:53:30 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.8ms)
+Rendered users/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 36ms (Views: 11.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:53:30 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:53:30 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+Rendered shared/_header.html.erb (3.2ms)
+Rendered users/show.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 123ms (Views: 16.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 16:53:31 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.8ms)
+Rendered users/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 35ms (Views: 10.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:53:31 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 16:53:51 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/state.rb:7)
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (category_id = 100)
+Rendered users/edit.html.erb within layouts/application (319.5ms)
+Completed   in 363ms
+
+ActionView::Template::Error (undefined method `destroy_user_path' for #<#<Class:0x103c78fb8>:0x103c754f8>):
+    40:   </tr>
+    41:   <tr>
+    42:     <td></td>
+    43:     <td><%= f.submit 'Güncelle' %> <%= link_to "&times; Kullanıcıyı Sil".html_safe, destroy_user_path(@user), :confirm => "Hesabı ve bağımlı içeriği kaldırmak istediğinize emin misiniz?", :method => :delete %></td>
+    44:   </tr>
+    45: </table>
+    46: <% end %>
+  app/views/users/edit.html.erb:43:in `_app_views_users_edit_html_erb__706357069_2179177840_0'
+  app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__706357069_2179177840_0'
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (214.5ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (222.9ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 16:54:01 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/state.rb:7)
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (category_id = 100)[0m
+Rendered users/edit.html.erb within layouts/application (300.7ms)
+Completed   in 342ms
+
+ActionView::Template::Error (undefined method `delete_user_path' for #<#<Class:0x103b5a230>:0x103b57008>):
+    40:   </tr>
+    41:   <tr>
+    42:     <td></td>
+    43:     <td><%= f.submit 'Güncelle' %> <%= link_to "&times; Kullanıcıyı Sil".html_safe, delete_user_path(@user), :confirm => "Hesabı ve bağımlı içeriği kaldırmak istediğinize emin misiniz?", :method => :delete %></td>
+    44:   </tr>
+    45: </table>
+    46: <% end %>
+  app/views/users/edit.html.erb:43:in `_app_views_users_edit_html_erb__706357069_2178583820_0'
+  app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__706357069_2178583820_0'
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (214.4ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (222.6ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 16:54:12 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/state.rb:7)
+Rendered shared/_header.html.erb (2.4ms)
+Rendered users/edit.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 51ms (Views: 13.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:54:12 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 16:55:15 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/state.rb:7)
+Rendered shared/_header.html.erb (2.7ms)
+Rendered users/edit.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 52ms (Views: 14.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:55:16 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 16:55:34 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/state.rb:7)
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/edit.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 117ms (Views: 13.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:55:34 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at Mon Oct 25 16:55:38 +0300 2010
+  Processing by DashboardController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered shared/_header.html.erb (2.6ms)
+Rendered dashboard/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 34ms (Views: 9.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:55:38 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 16:55:39 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` ORDER BY created_at desc
+Rendered shared/_header.html.erb (2.8ms)
+Rendered users/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 37ms (Views: 13.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:55:39 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/ads" for 127.0.0.1 at Mon Oct 25 16:55:43 +0300 2010
+  Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mAd Load (0.3ms)[0m  SELECT `ads`.* FROM `ads`
+Rendered shared/_header.html.erb (2.6ms)
+Rendered ads/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 45ms (Views: 10.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:55:43 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 16:55:46 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.6ms)
+Rendered sites/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 33ms (Views: 9.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:55:46 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/zones" for 127.0.0.1 at Mon Oct 25 16:55:47 +0300 2010
+  Processing by ZonesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered shared/_header.html.erb (2.6ms)
+Rendered zones/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 32ms (Views: 9.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:55:47 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/ads" for 127.0.0.1 at Mon Oct 25 16:55:47 +0300 2010
+  Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mAd Load (0.3ms)[0m  SELECT `ads`.* FROM `ads`
+Rendered shared/_header.html.erb (3.1ms)
+Rendered ads/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 50ms (Views: 12.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:55:47 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (79.3ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 16:55:48 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.7ms)
+Rendered sites/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 33ms (Views: 9.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:55:48 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/zones" for 127.0.0.1 at Mon Oct 25 16:55:49 +0300 2010
+  Processing by ZonesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered shared/_header.html.erb (2.7ms)
+Rendered zones/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 98ms (Views: 9.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:55:49 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/ads" for 127.0.0.1 at Mon Oct 25 16:55:50 +0300 2010
+  Processing by AdsController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mAd Load (0.7ms)[0m  SELECT `ads`.* FROM `ads`
+Rendered shared/_header.html.erb (2.7ms)
+Rendered ads/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 56ms (Views: 13.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:55:50 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 16:55:51 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` ORDER BY created_at desc
+Rendered shared/_header.html.erb (3.0ms)
+Rendered users/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 36ms (Views: 12.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:55:51 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Mon Oct 25 16:55:52 +0300 2010
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Redirected to http://adbase.local/
+Completed 302 Found in 25ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Oct 25 16:55:52 +0300 2010
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/sessions (4.6ms)
+Completed 200 OK in 14ms (Views: 8.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at Mon Oct 25 16:56:07 +0300 2010
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Giriş Yap", "authenticity_token"=>"mcrQgygmrgn217Rfs6rBbW8r2omSdyPPtTDfdH5HjO0=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"soner.eker@yh.com.tr"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`email` = 'soner.eker@yh.com.tr') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `users` SET `current_sign_in_at` = '2010-10-25 13:56:08', `last_sign_in_at` = '2010-10-25 13:23:22', `sign_in_count` = 17, `updated_at` = '2010-10-25 13:56:08' WHERE (`users`.`id` = 1)
+  [1m[36mSQL (18.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://adbase.local/
+Completed 302 Found in 157ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Oct 25 16:56:08 +0300 2010
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Redirected to http://adbase.local/dashboard
+Completed 302 Found in 23ms
+
+
+Started GET "/dashboard" for 127.0.0.1 at Mon Oct 25 16:56:08 +0300 2010
+  Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.6ms)
+Rendered dashboard/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 31ms (Views: 8.6ms | ActiveRecord: 19.4ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:56:08 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/ads" for 127.0.0.1 at Mon Oct 25 16:56:11 +0300 2010
+  Processing by AdsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mAd Load (0.3ms)[0m  [1mSELECT `ads`.* FROM `ads`[0m
+Rendered shared/_header.html.erb (2.6ms)
+Rendered ads/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 113ms (Views: 9.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:56:11 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 16:56:12 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY created_at desc[0m
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 37ms (Views: 12.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:56:12 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at Mon Oct 25 16:56:16 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+Rendered shared/_header.html.erb (67.6ms)
+Rendered users/show.html.erb within layouts/application (72.1ms)
+Completed 200 OK in 99ms (Views: 75.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:56:16 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/3/edit" for 127.0.0.1 at Mon Oct 25 16:56:18 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/state.rb:7)
+Rendered shared/_header.html.erb (3.1ms)
+Rendered users/edit.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 51ms (Views: 14.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:56:18 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 16:56:40 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY created_at desc[0m
+Rendered shared/_header.html.erb (2.8ms)
+Rendered users/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 39ms (Views: 12.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:56:40 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Mon Oct 25 16:56:43 +0300 2010
+  Processing by UsersController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 38ms (Views: 14.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:56:43 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at Mon Oct 25 16:56:49 +0300 2010
+  Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_header.html.erb (3.0ms)
+Rendered dashboard/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 31ms (Views: 9.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:56:49 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 16:56:52 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY created_at desc[0m
+Rendered shared/_header.html.erb (2.9ms)
+Rendered users/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 38ms (Views: 13.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:56:52 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 16:58:47 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered shared/_header.html.erb (2.7ms)
+Rendered sites/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 33ms (Views: 9.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:58:47 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/zones" for 127.0.0.1 at Mon Oct 25 16:58:50 +0300 2010
+  Processing by ZonesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_header.html.erb (68.9ms)
+Rendered zones/index.html.erb within layouts/application (72.3ms)
+Completed 200 OK in 98ms (Views: 75.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:58:51 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/ads" for 127.0.0.1 at Mon Oct 25 16:58:51 +0300 2010
+  Processing by AdsController#index as HTML
+  [1m[35mUser Load (1.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mAd Load (0.3ms)[0m  [1mSELECT `ads`.* FROM `ads`[0m
+Rendered shared/_header.html.erb (2.6ms)
+Rendered ads/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 62ms (Views: 11.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:58:51 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 16:58:52 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY created_at desc[0m
+Rendered shared/_header.html.erb (4.1ms)
+Rendered users/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 50ms (Views: 15.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:58:52 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/ads" for 127.0.0.1 at Mon Oct 25 16:58:53 +0300 2010
+  Processing by AdsController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mAd Load (0.3ms)[0m  [1mSELECT `ads`.* FROM `ads`[0m
+Rendered shared/_header.html.erb (2.8ms)
+Rendered ads/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 45ms (Views: 10.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:58:53 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/zones" for 127.0.0.1 at Mon Oct 25 16:58:53 +0300 2010
+  Processing by ZonesController#index as HTML
+  [1m[35mUser Load (2.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered shared/_header.html.erb (2.8ms)
+Rendered zones/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 131ms (Views: 9.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:58:53 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 16:58:54 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.5ms)
+Rendered sites/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 32ms (Views: 9.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:58:54 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 16:58:54 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY created_at desc[0m
+Rendered shared/_header.html.erb (2.8ms)
+Rendered users/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 37ms (Views: 12.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 16:58:55 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Mon Oct 25 17:03:42 +0300 2010
+  Processing by UsersController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered shared/_header.html.erb (2.7ms)
+Rendered users/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 104ms (Views: 13.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:03:42 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 17:03:49 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.4ms)
+Rendered users/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 34ms (Views: 10.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:03:50 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 17:03:51 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/state.rb:7)
+Rendered users/_form.html.erb (4.5ms)
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/edit.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 54ms (Views: 15.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:03:51 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 17:05:13 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/state.rb:7)
+Rendered users/_form.html.erb (4.6ms)
+Rendered shared/_header.html.erb (2.8ms)
+Rendered users/edit.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 54ms (Views: 16.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:05:14 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 17:08:00 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/state.rb:7)
+Rendered users/_form.html.erb (4.7ms)
+Rendered shared/_header.html.erb (2.9ms)
+Rendered users/edit.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 55ms (Views: 15.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:08:00 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 17:08:03 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` ORDER BY created_at desc
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 38ms (Views: 12.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:08:03 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 17:08:05 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.4ms)
+Rendered users/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 35ms (Views: 10.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:08:05 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 17:08:06 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/state.rb:7)
+Rendered users/_form.html.erb (4.8ms)
+Rendered shared/_header.html.erb (2.8ms)
+Rendered users/edit.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 55ms (Views: 15.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:08:06 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 17:08:09 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` ORDER BY created_at desc
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 36ms (Views: 12.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:08:10 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Mon Oct 25 17:08:10 +0300 2010
+  Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered users/_form.html.erb (4.5ms)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 106ms (Views: 15.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:08:11 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 17:08:13 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY created_at desc[0m
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 36ms (Views: 12.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:08:13 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 17:10:13 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY created_at desc[0m
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 36ms (Views: 12.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:10:14 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Mon Oct 25 17:10:15 +0300 2010
+  Processing by UsersController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered users/_form.html.erb (4.5ms)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 39ms (Views: 15.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:10:16 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 17:10:21 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` ORDER BY created_at desc
+Rendered shared/_header.html.erb (70.2ms)
+Rendered users/index.html.erb within layouts/application (76.6ms)
+Completed 200 OK in 104ms (Views: 79.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:10:21 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Mon Oct 25 17:10:21 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 34ms (Views: 10.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:10:22 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at Mon Oct 25 17:10:23 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/state.rb:7)
+Rendered users/_form.html.erb (4.7ms)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/edit.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 55ms (Views: 15.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:10:23 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 17:10:26 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` ORDER BY created_at desc
+Rendered shared/_header.html.erb (2.7ms)
+Rendered users/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 37ms (Views: 12.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:10:26 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 17:10:28 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 34ms (Views: 10.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:10:28 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at Mon Oct 25 17:10:29 +0300 2010
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/state.rb:7)
+Rendered users/_form.html.erb (4.5ms)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/edit.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 51ms (Views: 14.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:10:30 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 17:10:32 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` ORDER BY created_at desc
+Rendered shared/_header.html.erb (2.8ms)
+Rendered users/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 37ms (Views: 12.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:10:32 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 17:10:38 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.7ms)
+Rendered sites/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 34ms (Views: 9.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:10:39 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 17:13:50 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY created_at desc[0m
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 37ms (Views: 13.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:13:50 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at Mon Oct 25 17:13:51 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 35ms (Views: 10.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:13:52 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 17:13:55 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY created_at desc[0m
+Rendered shared/_header.html.erb (2.6ms)
+Rendered users/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 38ms (Views: 12.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:13:55 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at Mon Oct 25 17:13:56 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 35ms (Views: 10.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:13:57 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 17:13:59 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY created_at desc[0m
+Rendered shared/_header.html.erb (2.5ms)
+Rendered users/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 36ms (Views: 12.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:13:59 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 17:14:00 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered shared/_header.html.erb (2.7ms)
+Rendered sites/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 36ms (Views: 9.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:14:00 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 17:26:56 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+Completed   in 100ms
+
+NameError (undefined local variable or method `current_user' for #<Class:0x10385fee0>):
+  app/models/site.rb:9
+  app/controllers/sites_controller.rb:7:in `index'
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (226.4ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (233.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Oct 25 17:27:07 +0300 2010
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Redirected to http://adbase.local/dashboard
+Completed 302 Found in 23ms
+
+
+Started GET "/dashboard" for 127.0.0.1 at Mon Oct 25 17:27:07 +0300 2010
+  Processing by DashboardController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered shared/_header.html.erb (2.6ms)
+Rendered dashboard/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 32ms (Views: 9.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:27:07 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 17:27:09 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+Completed   in 101ms
+
+NameError (undefined local variable or method `current_user' for #<Class:0x103da7560>):
+  app/models/site.rb:9
+  app/controllers/sites_controller.rb:7:in `index'
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (225.2ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (231.7ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 17:27:49 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+Completed   in 99ms
+
+NameError (undefined local variable or method `current_user' for #<Class:0x103d56818>):
+  app/models/site.rb:9
+  app/controllers/sites_controller.rb:7:in `index'
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (216.9ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (224.4ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 17:30:00 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites`
+Rendered shared/_header.html.erb (2.6ms)
+Rendered sites/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 111ms (Views: 9.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:30:00 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sites/new" for 127.0.0.1 at Mon Oct 25 17:30:52 +0300 2010
+
+AbstractController::ActionNotFound (The action 'new' could not be found for SitesController):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.6ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 17:32:50 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites`
+Rendered shared/_header.html.erb (2.6ms)
+Rendered sites/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 47ms (Views: 10.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:32:51 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 17:33:30 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites`
+Rendered shared/_header.html.erb (2.5ms)
+Rendered sites/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 47ms (Views: 9.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:33:30 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/sites/new" for 127.0.0.1 at Mon Oct 25 17:33:31 +0300 2010
+  Processing by SitesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+Rendered sites/_form.html.erb (6.3ms)
+Rendered shared/_header.html.erb (2.7ms)
+Rendered sites/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 118ms (Views: 17.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:33:31 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 17:33:42 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[36mSite Load (0.3ms)[0m  [1mSELECT `sites`.* FROM `sites`[0m
+Rendered shared/_header.html.erb (2.6ms)
+Rendered sites/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 213ms (Views: 9.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:33:43 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sites/new" for 127.0.0.1 at Mon Oct 25 17:33:44 +0300 2010
+  Processing by SitesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+Rendered sites/_form.html.erb (6.1ms)
+Rendered shared/_header.html.erb (70.4ms)
+Rendered sites/new.html.erb within layouts/application (81.0ms)
+Completed 200 OK in 119ms (Views: 84.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:33:44 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 17:33:47 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites`
+Rendered shared/_header.html.erb (2.8ms)
+Rendered sites/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 46ms (Views: 10.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:33:47 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 17:33:57 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites`
+Rendered shared/_header.html.erb (3.7ms)
+Rendered sites/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 47ms (Views: 11.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:33:57 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 17:34:06 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites`
+Rendered shared/_header.html.erb (2.5ms)
+Rendered sites/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 46ms (Views: 9.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:34:06 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/sites/new" for 127.0.0.1 at Mon Oct 25 17:34:10 +0300 2010
+  Processing by SitesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+Rendered sites/_form.html.erb (6.2ms)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered sites/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 54ms (Views: 17.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:34:10 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 17:36:39 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[36mSite Load (0.4ms)[0m  [1mSELECT `sites`.* FROM `sites`[0m
+Rendered shared/_header.html.erb (2.6ms)
+Rendered sites/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 115ms (Views: 9.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:36:39 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 25 17:36:43 +0300 2010
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY created_at desc[0m
+Rendered shared/_header.html.erb (69.9ms)
+Rendered users/index.html.erb within layouts/application (76.5ms)
+Completed 200 OK in 104ms (Views: 79.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:36:43 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Mon Oct 25 17:36:44 +0300 2010
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Redirected to http://adbase.local/
+Completed 302 Found in 24ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Oct 25 17:36:44 +0300 2010
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/sessions (4.4ms)
+Completed 200 OK in 12ms (Views: 7.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at Mon Oct 25 17:36:59 +0300 2010
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Giriş Yap", "authenticity_token"=>"mcrQgygmrgn217Rfs6rBbW8r2omSdyPPtTDfdH5HjO0=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"soner.eker@yh.com.tr"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`email` = 'soner.eker@yh.com.tr') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `users` SET `current_sign_in_at` = '2010-10-25 14:36:59', `last_sign_in_at` = '2010-10-25 13:56:08', `sign_in_count` = 18, `updated_at` = '2010-10-25 14:36:59' WHERE (`users`.`id` = 1)[0m
+  [1m[35mSQL (1.3ms)[0m  COMMIT
+Redirected to http://adbase.local/
+Completed 302 Found in 133ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Oct 25 17:36:59 +0300 2010
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Redirected to http://adbase.local/dashboard
+Completed 302 Found in 22ms
+
+
+Started GET "/dashboard" for 127.0.0.1 at Mon Oct 25 17:36:59 +0300 2010
+  Processing by DashboardController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered shared/_header.html.erb (2.7ms)
+Rendered dashboard/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 95ms (Views: 9.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:37:00 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 17:37:02 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites`
+Rendered shared/_header.html.erb (2.5ms)
+Rendered sites/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 45ms (Views: 9.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:37:02 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 17:43:28 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites`
+Rendered shared/_header.html.erb (2.5ms)
+Rendered sites/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 45ms (Views: 9.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:43:28 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/sites/new" for 127.0.0.1 at Mon Oct 25 17:43:29 +0300 2010
+  Processing by SitesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+Completed   in 40ms
+
+NoMethodError (undefined method `all' for Users:Module):
+  app/controllers/sites_controller.rb:15:in `new'
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (224.5ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (291.9ms)
+
+
+Started GET "/sites/new" for 127.0.0.1 at Mon Oct 25 17:45:10 +0300 2010
+  Processing by SitesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered sites/_form.html.erb (6.2ms)
+Rendered sites/new.html.erb within layouts/application (8.1ms)
+Completed   in 48ms
+
+ActionView::Template::Error (undefined method `user_id' for #<Site:0x103b1a978>):
+    10:   </tr>
+    11:   <tr>
+    12:     <td></td>
+    13:     <td class="field"><%= f.select :user_id, @users.map {|u| [u.info, u.id]}, :prompt => "Kullanıcı Seçiniz" %></td>
+    14:   </tr>
+    15:   <tr>
+    16:     <td></td>
+  app/views/sites/_form.html.erb:13:in `_app_views_sites__form_html_erb___1538922338_2178352880_531070'
+  app/views/sites/_form.html.erb:1:in `_app_views_sites__form_html_erb___1538922338_2178352880_531070'
+  app/views/sites/new.html.erb:3:in `_app_views_sites_new_html_erb__93235324_2178440040_0'
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (228.9ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (297.9ms)
+
+
+Started GET "/sites/new" for 127.0.0.1 at Mon Oct 25 17:48:48 +0300 2010
+  Processing by SitesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered sites/_form.html.erb (6.7ms)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered sites/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 54ms (Views: 17.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:48:48 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/sites/new" for 127.0.0.1 at Mon Oct 25 17:49:10 +0300 2010
+  Processing by SitesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered sites/_form.html.erb (7.1ms)
+Rendered shared/_header.html.erb (2.8ms)
+Rendered sites/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 56ms (Views: 18.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:49:10 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sites/new" for 127.0.0.1 at Mon Oct 25 17:49:39 +0300 2010
+  Processing by SitesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered sites/_form.html.erb (6.3ms)
+Rendered shared/_header.html.erb (2.5ms)
+Rendered sites/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 121ms (Views: 16.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:49:39 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/sites/new" for 127.0.0.1 at Mon Oct 25 17:49:56 +0300 2010
+  Processing by SitesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered sites/_form.html.erb (6.9ms)
+Rendered shared/_header.html.erb (2.7ms)
+Rendered sites/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 121ms (Views: 17.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:49:57 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/sites" for 127.0.0.1 at Mon Oct 25 17:50:40 +0300 2010
+  Processing by SitesController#create as HTML
+  Parameters: {"commit"=>"Kaydet", "authenticity_token"=>"mcrQgygmrgn217Rfs6rBbW8r2omSdyPPtTDfdH5HjO0=", "utf8"=>"✓", "site"=>{"name"=>"Soner Eker", "url"=>"http://sonereker.com", "user_id"=>"1"}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  describe `sites`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `sites` (`created_at`, `name`, `status_id`, `updated_at`, `url`, `user_id`) VALUES ('2010-10-25 14:50:40', 'Soner Eker', NULL, '2010-10-25 14:50:40', 'http://sonereker.com', 1)[0m
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+Redirected to http://adbase.local/zones/new.1
+Completed 302 Found in 119ms
+
+
+Started GET "/zones/new.1" for 127.0.0.1 at Mon Oct 25 17:50:40 +0300 2010
+
+AbstractController::ActionNotFound (The action 'new' could not be found for ZonesController):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.6ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 17:54:32 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites`
+Rendered shared/_header.html.erb (2.8ms)
+Rendered sites/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 52ms (Views: 16.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 17:54:32 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 18:01:58 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites`
+Rendered shared/_header.html.erb (2.7ms)
+Rendered sites/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 52ms (Views: 16.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 18:01:59 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 18:02:21 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites`
+Rendered shared/_header.html.erb (2.8ms)
+Rendered sites/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 53ms (Views: 17.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 18:02:22 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sites/1" for 127.0.0.1 at Mon Oct 25 18:02:23 +0300 2010
+  Processing by SitesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+ERROR: compiling _app_views_sites_show_html_erb__1266162388_2179279840_0 RAISED compile error
+/Users/soner/Projects/YH/adbase/app/views/sites/show.html.erb:23: syntax error, unexpected '\n', expecting tCOLON2 or '[' or '.'
+Function body:           def _app_views_sites_show_html_erb__1266162388_2179279840_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "sites/show";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h2>Site ');@output_buffer.append= ( @site.name );@output_buffer.safe_concat('</h2>
+<table class="cart">
+  <tr>
+    <td class="title"></td>
+    <td>');@output_buffer.append= ( @site.name );@output_buffer.safe_concat('</td>
+  </tr>
+  <tr>
+    <td class="title">Adres</td>
+    <td>');@output_buffer.append= ( @site.url );@output_buffer.safe_concat('</td>
+  </tr>
+');   if current_user.is_admin? 
+@output_buffer.safe_concat('  <tr>
+    <td class="title">Kullanıcı</td>
+    <td>');@output_buffer.append= ( link_to @site.user.name, user_path(@site.user) );@output_buffer.safe_concat('</td>
+  </tr>
+');   end 
+@output_buffer.safe_concat('  <tr>
+    <td class="title">Reklam Alanları</td>
+    <td>
+      <ul>
+');@output_buffer.append_if_string=          for @site.zones.each do |zone| 
+@output_buffer.safe_concat('        <li>');@output_buffer.append= ( zone.name );@output_buffer.safe_concat('</li>
+');         end 
+@output_buffer.safe_concat('      </ul>
+    </td>
+  </tr>
+</table>
+
+');@output_buffer.append= ( link_to "Düzenle", edit_user_path(@user), :class => "edit_user" );@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/soner/Projects/YH/adbase/app/views/sites/show.html.erb:32:in `compile'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_view/template.rb:134:in `render'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.1/lib/active_support/notifications.rb:54:in `instrument'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_view/template.rb:127:in `render'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_view/render/rendering.rb:59:in `_render_template'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.1/lib/active_support/notifications.rb:52:in `instrument'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.1/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.1/lib/active_support/notifications.rb:52:in `instrument'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_view/render/rendering.rb:26:in `render'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/abstract_controller/rendering.rb:92:in `render'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.1/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/soner/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.1/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.1/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.1/lib/active_support/callbacks.rb:440:in `_run__1386189197__process_action__662920150__callbacks'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.1/lib/active_support/callbacks.rb:409:in `send'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.1/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.1/lib/active_support/callbacks.rb:93:in `send'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.1/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.1/lib/active_support/notifications.rb:52:in `instrument'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.1/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.1/lib/active_support/notifications.rb:52:in `instrument'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/abstract_controller/base.rb:119:in `process'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/abstract_controller/rendering.rb:40:in `process'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_controller/metal.rb:133:in `dispatch'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_controller/metal.rb:173:in `action'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:96:in `optimized_each'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/warden-0.10.7/lib/warden/manager.rb:35:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/warden-0.10.7/lib/warden/manager.rb:34:in `catch'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/warden-0.10.7/lib/warden/manager.rb:34:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/cookies.rb:287:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.1/lib/active_record/query_cache.rb:32:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.1/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.1/lib/active_record/query_cache.rb:12:in `cache'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.1/lib/active_record/query_cache.rb:31:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/activerecord-3.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.1/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.1/lib/rails/rack/logger.rb:13:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/activesupport-3.0.1/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.1/lib/rails/application.rb:168:in `call'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.1/lib/rails/application.rb:77:in `send'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/railties-3.0.1/lib/rails/application.rb:77:in `method_missing'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/rack/request_handler.rb:96:in `process_request'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/abstract_request_handler.rb:513:in `accept_and_process_next_request'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/abstract_request_handler.rb:274:in `main_loop'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/rack/application_spawner.rb:205:in `start_request_handler'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/rack/application_spawner.rb:170:in `send'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/rack/application_spawner.rb:170:in `handle_spawn_application'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/utils.rb:479:in `safe_fork'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/rack/application_spawner.rb:165:in `handle_spawn_application'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/abstract_server.rb:357:in `__send__'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/abstract_server.rb:357:in `server_main_loop'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/abstract_server.rb:206:in `start_synchronously'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/abstract_server.rb:180:in `start'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/rack/application_spawner.rb:128:in `start'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/spawn_manager.rb:253:in `spawn_rack_application'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/abstract_server_collection.rb:132:in `lookup_or_add'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/spawn_manager.rb:246:in `spawn_rack_application'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/abstract_server_collection.rb:82:in `synchronize'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/spawn_manager.rb:244:in `spawn_rack_application'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/spawn_manager.rb:137:in `spawn_application'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/spawn_manager.rb:275:in `handle_spawn_application'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/abstract_server.rb:357:in `__send__'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/abstract_server.rb:357:in `server_main_loop'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/lib/phusion_passenger/abstract_server.rb:206:in `start_synchronously'
+/Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/passenger-3.0.0/helper-scripts/passenger-spawn-server:99
+Rendered sites/show.html.erb within layouts/application (1.0ms)
+Completed   in 28ms
+
+ActionView::Template::Error (compile error
+/Users/soner/Projects/YH/adbase/app/views/sites/show.html.erb:23: syntax error, unexpected '\n', expecting tCOLON2 or '[' or '.'):
+    20:       <ul>
+    21:         <% for @site.zones.each do |zone| %>
+    22:         <li><%= zone.name %></li>
+    23:         <% end %>
+    24:       </ul>
+    25:     </td>
+    26:   </tr>
+  app/views/sites/show.html.erb:32:in `compile'
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (223.4ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (230.5ms)
+
+
+Started GET "/sites/1" for 127.0.0.1 at Mon Oct 25 18:02:40 +0300 2010
+  Processing by SitesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered sites/show.html.erb within layouts/application (0.8ms)
+Completed   in 92ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h2>Site <%= @site.name %></h2>
+    2: <table class="cart">
+    3:   <tr>
+    4:     <td class="title"></td>
+  app/views/sites/show.html.erb:1:in `_app_views_sites_show_html_erb__1266162388_2179649180_0'
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (227.6ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (235.6ms)
+
+
+Started GET "/sites/1" for 127.0.0.1 at Mon Oct 25 18:03:09 +0300 2010
+  Processing by SitesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mZone Load (0.4ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.site_id = 1)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered sites/show.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 132ms (Views: 93.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 18:03:09 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sites/1" for 127.0.0.1 at Mon Oct 25 18:03:43 +0300 2010
+  Processing by SitesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.site_id = 1)
+Rendered shared/_header.html.erb (2.5ms)
+Rendered sites/show.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 142ms (Views: 34.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 18:03:43 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 18:03:58 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites`
+Rendered shared/_header.html.erb (2.7ms)
+Rendered sites/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 124ms (Views: 17.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 18:03:58 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sites/new" for 127.0.0.1 at Mon Oct 25 18:04:06 +0300 2010
+  Processing by SitesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users`
+Rendered sites/_form.html.erb (7.2ms)
+Rendered shared/_header.html.erb (2.8ms)
+Rendered sites/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 123ms (Views: 18.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 18:04:06 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 18:04:32 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[35mSite Load (0.4ms)[0m  SELECT `sites`.* FROM `sites`
+Rendered shared/_header.html.erb (3.5ms)
+Rendered sites/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 54ms (Views: 17.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 18:04:33 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/sites/1" for 127.0.0.1 at Mon Oct 25 18:04:34 +0300 2010
+  Processing by SitesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.site_id = 1)
+Rendered shared/_header.html.erb (2.8ms)
+Rendered sites/show.html.erb within layouts/application (100.0ms)
+Completed 200 OK in 142ms (Views: 102.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 18:04:34 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Mon Oct 25 18:04:35 +0300 2010
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered shared/_header.html.erb (2.8ms)
+Rendered users/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 34ms (Views: 10.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 18:04:36 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at Mon Oct 25 18:05:02 +0300 2010
+  Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.8ms)
+Rendered dashboard/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 37ms (Views: 9.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 18:05:03 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sites" for 127.0.0.1 at Mon Oct 25 18:05:03 +0300 2010
+  Processing by SitesController#index as HTML
+  [1m[35mUser Load (1.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/soner/Projects/YH/adbase/app/models/site.rb:9)
+  [1m[36mSite Load (0.3ms)[0m  [1mSELECT `sites`.* FROM `sites`[0m
+Rendered shared/_header.html.erb (2.9ms)
+Rendered sites/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 132ms (Views: 17.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 18:05:03 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/zones" for 127.0.0.1 at Mon Oct 25 18:05:04 +0300 2010
+  Processing by ZonesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered shared/_header.html.erb (2.5ms)
+Rendered zones/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 33ms (Views: 9.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at Mon Oct 25 18:05:04 +0300 2010
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)

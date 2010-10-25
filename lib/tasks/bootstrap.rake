@@ -1,9 +1,9 @@
 namespace :bootstrap do
-  # desc "Create Administrator Accounts."
-  # task :accounts => :environment do
-  #   User.delete_all
-  #   User.create(:email => "soner.eker@yh.com.tr", :password => "bardak", :password_confirmation => "bardak", :firstname => "Soner", :lastname => "Eker", :phone => "05079967952", :state_id => 27)
-  # end
+  desc "Create Administrator Accounts."
+    task :accounts => :environment do
+      User.delete_all
+      User.create(:email => "admin@", :password => "bardak", :password_confirmation => "bardak", :firstname => "Soner", :lastname => "Eker", :phone => "05079967952", :state_id => 27)
+  end
 
   desc "Add States."
   task :states => :environment do

@@ -3,3 +3,23 @@
 </div>
 
 <h2>Siteler</h2>
+
+<table class="list">
+  <tr>
+    <th>No#</th>
+    <th>Başlık</th>
+    <th>Adres</th>
+    <th>Reklam Alanı Sayısı</th>
+	  <th>Eklenme Tarihi</th>
+  </tr>
+
+  <% @sites.each do |site| %>
+  <tr>
+    <td><strong><%= site.id %></strong></td>
+    <td><%= link_to site.name, site %></td>
+    <td><%= site.url %></td>
+    <td></td>
+    <td><%= l site.created_at, :format => :short %></td>
+  </tr>
+  <% end %>
+</table>

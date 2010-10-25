@@ -9,4 +9,8 @@ class User < ActiveRecord::Base
   def name
     "#{firstname} #{lastname}"
   end
+
+  def info
+    "#{firstname} #{lastname} <#{email}>"
+  end
 end

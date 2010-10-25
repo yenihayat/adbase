@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :require_admin, :only => [:show, :edit]
+
   layout "application"
 
   def index
@@ -7,6 +9,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
   end
 
   def profile
@@ -20,6 +23,7 @@ class UsersController < ApplicationController
   def edit
     if current_user.is_admin?
       @user = User.find(params[:id])
+      @states = State.users
     else
       @user = current_user
     end

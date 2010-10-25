@@ -11,7 +11,7 @@ class CreateAds < ActiveRecord::Migration
       t.string :url, :null => false, :limit => 300
       t.boolean :track_clicks
       t.boolean :track_views
-      t.integer :state_id, :limit => 2
+      t.integer :status_id, :limit => 2
       t.timestamps
     end
   end

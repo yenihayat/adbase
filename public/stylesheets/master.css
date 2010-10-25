@@ -260,3 +260,44 @@ div#submenu a:hover {
   text-shadow: #fff 1px 1px;
   color: #ccc;
 }
+
+div#content table.cart {
+  width: 100%;
+}
+
+div#content table.cart td {
+  border-bottom: 1px solid #ededed;
+}
+
+div#content table.cart td.title {
+  text-align: right;
+  font-weight: bold;
+  width: 200px;
+}
+
+div#content table#user-statics {
+  width: 100%;
+  margin-top: 20px;
+  border-bottom: 3px double #ccc;
+}
+
+div#content table#user-statics td,
+div#content table#user-statics th {
+  text-align: left;
+  padding: 10px;
+}
+
+a.edit_user,
+a.edit_user:visited {
+  text-align: right;
+  display: block;
+  font-size: 13px;
+  color: #c41840;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+a.edit_user:hover {
+  color: #333;
+  text-decoration: none;
+}

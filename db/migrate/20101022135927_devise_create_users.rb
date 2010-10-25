@@ -17,6 +17,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :company, :limit => 300
       t.boolean :remember_me
       t.boolean :is_admin, :null => false, :default => 0
+      t.integer :status_id, :limit => 3
       t.timestamps
     end
 
