@@ -1,0 +1,42 @@
+<div id="login">
+<table class="login" style="display: none;">
+<%= form_tag new_user_session_path do -%>
+  <tr>
+    <td class="label"><%= label :user, :email, "E-posta" %></td>
+    <td class="field"><%= text_field :user, :email %></td>
+  </tr>
+  <tr>
+    <td class="label"><%= label :user, :password, "Şifre" %></td>
+    <td class="field"><%= password_field :user, :password %></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><%= check_box :user, :remember_me %> <%= label :user, :remember_me, "Bu bilgisayarda beni hatırla." %></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><%= submit_tag "Giriş Yap" %> <span><%= link_to "Şifremi Unuttum", "#", :class => "forgot-password" %></span></td>
+  </tr>
+<% end -%>
+</table>
+
+<table class="forgot-password">
+<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+  <tr>
+    <td></td>
+    <td>
+      <h2>Şifremi Unuttum</h2>
+      <p><%= devise_error_messages! %></p>
+    </td>
+  </tr>
+  <tr>
+    <td class="label"><%= f.label :email, "E-posta" %></td>
+    <td class="field"><%= f.text_field :email %></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><%= f.submit "Şifremi Sıfırla" %> <span><%= link_to "Vazgeç", "#", :class => "login" %></span></td>
+  </tr>
+<% end -%>
+</table>
+</div>

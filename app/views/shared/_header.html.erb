@@ -1,0 +1,19 @@
+<div id="header">
+  <div id="logo">
+    <h1><%= link_to "<span>YH AdBase</span>".html_safe, dashboard_path %></h1>
+  </div>
+  <div id="menu">
+    <ul id="nav">
+      <li><%= link_to "Aktivite", dashboard_path %></li>
+      <li><%= link_to "Siteler", sites_path %></li>
+      <li><%= link_to "Alanlar", zones_path %></li>
+      <li><%= link_to "Reklamlar", ads_path %></li>
+      <% if current_user.is_admin? %>
+        <li><%= link_to "Kullanıcılar", users_path %></li>
+      <% else %>
+        <li><%= link_to "Profil", profile_path %></li>
+      <% end %>
+      <li><%= link_to "Çıkış", destroy_user_session_path %></li>
+    </ul>
+  </div>
+</div>

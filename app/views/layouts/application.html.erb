@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YH Reklam Ağı / <%= params[:controller].capitalize %></title>
+  <%= stylesheet_link_tag "screen" %>
+  <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js', :cache => false %>
+  <%= javascript_include_tag 'application', :cache => false %>
+  <%= csrf_meta_tag %>  
+</head>
+<body>
+<div id="wrapper">
+<%= render :partial => 'shared/header' %>
+
+<% flash.each do |key, msg| %>
+  <%= content_tag :div, msg, :class => [key], :id => "message" %>
+<% end %>
+
+<div id="content">
+<%= yield %>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,262 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Corbel, Arial, sans-serif;
+  font-size: 100%;
+  color: #2b2b2b;
+  background: #ccc url(../../images/bg.jpg) repeat;
+	-webkit-font-smoothing: antialiased;
+}
+
+code {
+  font-family: Monaco, Menlo, "Courier New", fixed;
+  font-size: 12px;
+  color: #555;
+}
+
+a, a:visited {
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+div#message {
+  width: 860px;
+  margin: 20px auto 0 auto;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+div.notice {
+  background: #4db8ad;
+  color: #fff;
+}
+
+div.alert {
+  background: #c41840;
+  color: #fff;
+}
+
+div#wrapper {
+  width: 100%;
+}
+
+div#header {
+  background: #333;
+  overflow: hidden;
+  position: relative;
+  height: 60px;
+  border-bottom: 2px solid #fff;
+}
+
+div#header div#logo {
+  float: left;
+  width: 200px;
+  font-size: 19px;
+  margin-top: 16px;
+  margin-left: 40px;
+}
+
+div#header div#logo h1 {
+  color: #999;
+  width: 128px;
+  height: 14px;
+  margin-top: 6px;
+}
+
+div#header div#logo h1 a {
+  text-indent: -900px;
+  width: 128px;
+  height: 14px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  background: transparent url(../../images/logo.png) no-repeat;
+}
+
+div#header div#menu {
+  float: right;
+  width: 520px;
+  padding-right: 50px;
+  text-align: right;
+}
+
+div#header ul#nav li {
+  display: inline;
+}
+
+div#header ul#nav li a {
+  padding: 10px 10px;
+  background: #222;
+  color: #fff;
+  line-height: 80px;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+div#header ul#nav li a:hover {
+  background: #444;
+  color: #fff;
+}
+
+div#content {
+  width: 800px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 40px;
+
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow:0 2px 2px rgba(0,0,0,0.2);
+  -moz-box-shadow:0 2px 2px rgba(0,0,0,0.2);
+  box-shadow:0 2px 2px rgba(0,0,0,0.2);
+
+}
+
+div#content h2 {
+  padding: 10px 20px;
+  width: 200px;
+  background: #ededed;
+  text-shadow: #fff 1px 1px;
+  color: #555;
+  font-size: 19px;
+  margin-left: -50px;
+  margin-bottom: 20px;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+div#content table.list {
+  width: 100%;
+  text-align: left;
+  font-size: 13px;
+}
+
+div#content table a {
+  color: #c41840;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+div#content table a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+div#content table th,
+div#content table td {
+  padding: 5px;
+  font-size: 13px;
+}
+
+div#content table td ul li {
+  padding: 5px;
+  border-bottom: 1px solid #ededed;
+}
+
+div#content table.list td {
+  border-bottom: 1px solid #ededed;
+}
+
+div#content table th {
+  border-bottom: 2px solid #ccc;
+  color: #555;
+  background: #ededed;
+}
+
+div#content table.form {
+  border-spacing: 5px;
+  border-collapse: separate;
+}
+
+div#content table input[type=text],
+div#content table input[type=password],
+div#content table input[type=email],
+div#content table textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 5px;
+  font-size: 13px;
+  color: #555;
+  border: 1px solid #ccc;
+  width: 300px;
+}
+
+div#content table input[type=text]:focus,
+div#content table input[type=password]:focus,
+div#content table input[type=email]:focus,
+div#content table textarea:focus {
+  outline: 0;
+  border: 1px solid #4db8ad;
+}
+
+div#content table td.label {
+  text-align: right;
+  vertical-align: top;
+  color: #333;
+  width: 200px;
+  font-weight: bold;
+  font-size: 11px;
+  border-top: 1px solid #ddd;
+}
+
+div#content table td.label span.light {
+  color: #888;
+  font-weight: normal;
+}
+
+div#content table td.field {
+  background: #ededed;
+}
+
+div#content table td.fixed-width {
+  font-family: Menlo, Monaco, "Courier New", Courier, monospace;
+  font-size: 12px;
+}
+
+div#content table textarea {
+  line-height: 1.6em;
+  height: 100px;
+  width: 290px;
+  padding: 10px;
+}
+
+div#submenu {
+  margin: -68px 0 50px 0;
+  text-align: right;
+}
+
+div#submenu a {
+  padding: 10px;
+  background: #fff;
+  color: #333;
+  font-weight: bold;
+  font-size: 13px;
+  text-decoration: none;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+div#submenu a:hover {
+  background: #ededed;
+  text-shadow: #fff 1px 1px;
+  color: #ccc;
+}

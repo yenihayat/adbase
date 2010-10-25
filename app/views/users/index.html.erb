@@ -1,0 +1,25 @@
+<div id="submenu">
+  <%= link_to "Yeni Kullanıcı", new_user_path %>
+</div>
+
+<h2>Kayıtlı Kullanıcılar</h2>
+
+<table class="list">
+  <tr>
+    <th>No#</th>
+    <th>İsim Soyisim</th>
+	  <th>E-posta</th>
+    <th>Giriş Sayısı</th>
+    <th>Son Giriş</th>
+  </tr>
+
+  <% @users.each do |user| %>
+  <tr>
+    <td><strong><%= user.id %></strong></td>
+    <td><%= user.name %></td>
+    <td><%= link_to user.email, edit_user_path(user) %></td>
+    <td><%= user.sign_in_count %></td>
+    <td><%= user.last_sign_in_at == nil ? "&mdash;".html_safe : l(user.last_sign_in_at, :format => :short) %></td>
+  </tr>
+  <% end %>
+</table>

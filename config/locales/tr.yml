@@ -1,0 +1,185 @@
+# Turkish translations for Ruby on Rails 
+# by Ozgun Ataman (ozataman@gmail.com)
+
+tr:
+  locale:
+    native_name: Türkçe
+    address_separator: " "
+  date:
+    formats:
+      default: "%d.%m.%Y"
+      numeric: "%d.%m.%Y"
+      short: "%e %b"
+      long: "%e %B %Y, %A"
+      only_day: "%e"
+
+    day_names: [Pazar, Pazartesi, Salı, Çarşamba, Perşembe, Cuma, Cumartesi]
+    abbr_day_names: [Pzr, Pzt, Sal, Çrş, Prş, Cum, Cts]
+    month_names: [~, Ocak, Şubat, Mart, Nisan, Mayıs, Haziran, Temmuz, Ağustos, Eylül, Ekim, Kasım, Aralık]
+    abbr_month_names: [~, Oca, Şub, Mar, Nis, May, Haz, Tem, Ağu, Eyl, Eki, Kas, Ara]
+    order: [ :day, :month, :year ]
+  
+  time:
+    formats:
+      default: "%a %d.%b.%y %H:%M"
+      numeric: "%d.%b.%y %H:%M"
+      short: "%e %B, %H:%M"
+      long: "%e %B %Y, %A, %H:%M"
+      time: "%H:%M"
+
+    am: "öğleden önce"
+    pm: "öğleden sonra"
+      
+  datetime:
+    distance_in_words:
+      half_a_minute: 'yarım dakika'
+      less_than_x_seconds:
+        zero: '1 saniyeden az'
+        one: '1 saniyeden az'
+        other: '%{count} saniyeden az'
+      x_seconds:
+        one: '1 saniye'
+        other: '%{count} saniye'
+      less_than_x_minutes:
+        zero: '1 dakikadan az'
+        one: '1 dakikadan az'
+        other: '%{count} dakikadan az'
+      x_minutes:
+        one: '1 dakika'
+        other: '%{count} dakika'
+      about_x_hours:
+        one: '1 saat civarında'
+        other: '%{count} saat civarında'
+      x_days:
+        one: '1 gün'
+        other: '%{count} gün'
+      about_x_months:
+        one: '1 ay civarında'
+        other: '%{count} ay civarında'
+      x_months:
+        one: '1 ay'
+        other: '%{count} ay'
+      about_x_years:
+        one: '1 yıl civarında'
+        other: '%{count} yıl civarında'
+      over_x_years:
+        one: '1 yıldan fazla'
+        other: '%{count} yıldan fazla'
+      almost_x_years:
+        one:   "neredeyse 1 yıl"
+        other: "neredeyse %{count} yıl"
+      
+  number:
+    format:
+      precision: 2
+      separator: ','
+      delimiter: '.'
+    currency:
+      format:
+        unit: 'TL'
+        format: '%n %u'
+        separator: ','
+        delimiter: '.'
+        precision: 2
+    percentage:
+      format:
+        delimiter: '.'
+        separator: ','
+        precision: 2
+    precision:
+      format:
+        delimiter: '.'
+        separator: ','
+    human:
+      format:
+        delimiter: '.'
+        separator: ','
+        precision: 2
+
+  support:
+    select:
+      # default value for :prompt => true in FormOptionsHelper
+      prompt: "Lütfen seçiniz"
+    array:
+      sentence_connector: "ve"
+      skip_last_comma: true
+      words_connector: ", "
+      two_words_connector: " ve "
+      last_word_connector: " ve "
+        
+  activerecord:
+    errors:
+      template:
+        header:
+          one: "%{model} girişi kaydedilemedi: 1 hata."
+          other: "%{model} girişi kadedilemedi: %{count} hata."
+        body: "Lütfen aşağıdaki hataları düzeltiniz:"
+
+      messages:
+        inclusion: "kabul edilen bir kelime değil"
+        exclusion: "kullanılamaz"
+        invalid: "geçersiz"
+        confirmation: "teyidiyle uyuşmamakta"
+        accepted: "kabul edilmeli"
+        empty: "doldurulmalı"
+        blank: "doldurulmalı"
+        too_long: "çok uzun (en fazla %{count} karakter)"
+        too_short: "çok kısa (en az %{count} karakter)"
+        wrong_length: "yanlış uzunlukta (tam olarak %{count} karakter olmalı)"
+        taken: "hali hazırda kullanılmakta"
+        not_a_number: "geçerli bir sayı değil"
+        greater_than: "%{count} sayısından büyük olmalı"
+        greater_than_or_equal_to: "%{count} sayısına eşit veya büyük olmalı"
+        equal_to: "tam olarak %{count} olmalı"
+        less_than: "%{count} sayısından küçük olmalı"
+        less_than_or_equal_to: "%{count} sayısına eşit veya küçük olmalı"
+        odd: "tek olmalı"
+        even: "çift olmalı"
+        record_invalid: "Doğrulama başarısız oldu: %{errors}"
+      models:
+
+    attributes:
+      user:
+        email: "E-posta"
+
+# Devise
+
+  errors:
+    messages:
+      not_found: "bulunamadı."
+      already_confirmed: "daha önce doğrulanmıştı."
+      not_locked: "kilitli değil."
+
+  devise:
+    failure:
+      unauthenticated: 'İlgili sayfaya ulaşabilmek için lütfen kullanıcı girişi yapınız.'
+      unconfirmed: 'Devam etmeden önce hesabınızı doğrulamanız gerekiyor.'
+      locked: 'Hesabınız kilitlendi.'
+      invalid: 'E-posta ya da şifre geçerli değil.'
+      invalid_token: 'Invalid authentication token.'
+      timeout: 'Oturumunuz sonlandı, lütfen tekrar giriş yapınız.'
+      inactive: 'Hesabınız henüz aktifleştirilmedi.'
+    sessions:
+      signed_in: 'Giriş yapıldı.'
+      signed_out: 'Çıkış yapıldı.'
+    passwords:
+      send_instructions: 'You will receive an email with instructions about how to reset your password in a few minutes.'
+      updated: 'Şifreniz değiştirildi. Hoşgeldiniz.'
+    confirmations:
+      send_instructions: 'You will receive an email with instructions about how to confirm your account in a few minutes.'
+      confirmed: 'Your account was successfully confirmed. You are now signed in.'
+    users:
+      account_created: 'Yeni kullanıcı hesabı oluşturuldu.'
+      signed_up: 'You have signed up successfully. If enabled, a confirmation was sent to your e-mail.'
+      updated: 'Profil düzenlendi.'
+      destroyed: 'Bye! Your account was successfully cancelled. We hope to see you again soon.'
+    unlocks:
+      send_instructions: 'You will receive an email with instructions about how to unlock your account in a few minutes.'
+      unlocked: 'Your account was successfully unlocked. You are now signed in.'
+    mailer:
+      confirmation_instructions:
+        subject: 'Hesap Doğrulama İşlemi'
+      reset_password_instructions:
+        subject: 'Şifre Sıfırlama İşlemi'
+      unlock_instructions:
+        subject: 'Unlock Instructions'

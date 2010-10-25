@@ -1,0 +1,19 @@
+== AdBase
+
+AdBase ufak çaplı reklam yayın & yönetim uygulamasıdır.
+
+== Information
+
+=== Bug reports
+
+=== Contributing
+
+=== Installation
+
+== Additional information
+
+=== Maintainers
+
+== License
+
+MIT License. Copyright 2010 Yeni Hayat A.Ş. http://yh.com.tr

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YH Reklam Ağı</title>
+  <%= stylesheet_link_tag "home" %>
+  <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js', :cache => false %>
+  <%= javascript_include_tag 'home', :cache => false %>
+  <%= csrf_meta_tag %>  
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+<%= yield %>
+</div>
+</div>
+</body>
+</html>
