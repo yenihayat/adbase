@@ -6,7 +6,7 @@ class Ad < ActiveRecord::Base
 
   before_create :randomize_file_name, :set_state
 
-  belongs_to :zone
+  has_many :zones, :through => :zone_ad
   belongs_to :site
   belongs_to :user
   belongs_to :state
@@ -20,8 +20,8 @@ class Ad < ActiveRecord::Base
   scope :belongs_to_site, lambda { |site_id| { :conditions => ['site_id = ?', site_id] } }
 
   has_attached_file :ad,
-    :url => "/system/ads/:id_partition/:basename_:style.:extension",
-    :path => ":rails_root/public/system/ads/:id_partition/:basename_:style.:extension"
+    :url => "/system/ads/:id_partition/:basename.:extension",
+    :path => ":rails_root/public/system/ads/:id_partition/:basename.:extension"
 
   private
     def randomize_file_name

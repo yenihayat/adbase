@@ -1,8 +1,10 @@
 == AdBase
 
-AdBase ufak çaplı reklam yayın & yönetim uygulamasıdır.
+AdBase is a simple and joy-to-use ad management and serving app created with Rails framework.
 
 == Information
+
+Currently under development and not ready for production.
 
 === Bug reports
 
@@ -10,9 +12,15 @@ AdBase ufak çaplı reklam yayın & yönetim uygulamasıdır.
 
 === Installation
 
+  rake db:create
+  rake db:migrate
+  rake bootstrap:all
+
 == Additional information
 
 === Maintainers
+
+Soner Eker <soner.eker@yh.com>
 
 == License
 

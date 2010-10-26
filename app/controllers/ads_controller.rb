@@ -32,14 +32,11 @@ class AdsController < ApplicationController
 
   def create
     @ad = Ad.new(params[:ad])
-    unless @ad.user_id
-      @ad.user_id = current_user.id # TODO before_create
-    end
-
     @zone = Zone.find(@ad.zone_id)
 
     if @zone 
       @ad.site_id = @zone.site_id
+      @ad.user_id = @zone.user_id
     end
 
     if @ad.save
@@ -55,26 +52,32 @@ class AdsController < ApplicationController
   end
 
   def edit
-    @zone = Zone.find(params[:id])
+    @ad = Ad.find(params[:id])
 
     if current_user.is_admin?
-      @sites = Site.active
+      @zones = Site.active.with_zones
     else
-      @sites = Site.active.belongs_to_user(curret_user.id)
+      @zones = Zone.active.belongs_to_user(curret_user.id).with_zones
     end
   end
 
   def update
-    @zone = Zone.find(params[:id])
-    if @zone.update_attributes(params[:zone])
-      redirect_to zone_path(@zone)
+    @ad = Ad.find(params[:id])
+    @zone = Zone.find(@ad.zone_id)
+
+    if @zone 
+      @ad.site_id = @zone.site_id
+      @ad.user_id = @zone.user_id
+    end
+
+    if @ad.update_attributes(params[:ad])
+      redirect_to ad_path(@ad)
     else
       if current_user.is_admin?
-        @sites = Site.active
+        @zones = Site.active.with_zones
       else
-        @sites = Site.active.belongs_to_user(curret_user.id)
+        @zones = Zone.active.belongs_to_user(curret_user.id).with_zones
       end
-
       render :edit
     end
   end

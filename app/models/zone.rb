@@ -10,7 +10,7 @@ class Zone < ActiveRecord::Base
   belongs_to :user
   belongs_to :state
 
-  has_many :ads
+  has_many :ads, :through => :zone_ad
 
   scope :active, where(:state_id => STATE_ACTIVE)
   scope :belongs_to_user, lambda { |user_id| { :conditions => ['user_id = ?', user_id] } }

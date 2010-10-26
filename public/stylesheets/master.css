@@ -283,6 +283,7 @@ div#content table.cart td {
 
 div#content table.cart td.title {
   text-align: right;
+  vertical-align: top;
   font-weight: bold;
   width: 200px;
 }
@@ -312,4 +313,12 @@ a.bottom-act:visited {
 a.bottom-act:hover {
   color: #333;
   text-decoration: none;
+}
+
+table td textarea#code {
+  font-family: Monaco, Menlo, "Courier New", monospace;
+  width: 500px;
+  height: 150px;
+  font-size: 10px;
+  padding: 10px;
 }

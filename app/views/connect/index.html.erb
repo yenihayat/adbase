@@ -1,11 +1,6 @@
-// display the advertisement
-
+// AdBase.
 var advert = ''
-
 advert+='<a href="<%= @ad.url %>">';
 advert+='<img class="ad" alt="SVA" src="<%= "http://adbase.local" + @ad.ad.url %>" border="0"/>';
 advert+='</a>';
-advert+='<p class="ads">';
-advert+='</p>';
-
 document.write(advert);
