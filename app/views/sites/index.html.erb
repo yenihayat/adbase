@@ -1,16 +1,15 @@
 <div id="submenu">
-  <%= link_to "Yeni Site", new_site_path %>
+  <%= link_to "New Site", new_site_path %>
 </div>
 
-<h2>Siteler</h2>
+<h2>Sites</h2>
 
 <table class="list">
   <tr>
     <th>No#</th>
-    <th>Başlık</th>
-    <th>Adres</th>
-    <th>Reklam Alanı Sayısı</th>
-	  <th>Eklenme Tarihi</th>
+    <th>Title</th>
+    <th>URL</th>
+	  <th>Created</th>
   </tr>
 
   <% @sites.each do |site| %>
@@ -18,7 +17,6 @@
     <td><strong><%= site.id %></strong></td>
     <td><%= link_to site.name, site %></td>
     <td><%= site.url %></td>
-    <td></td>
     <td><%= l site.created_at, :format => :short %></td>
   </tr>
   <% end %>

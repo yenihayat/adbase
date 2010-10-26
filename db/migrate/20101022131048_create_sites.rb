@@ -4,7 +4,7 @@ class CreateSites < ActiveRecord::Migration
       t.integer :user_id, :limit => 10, :null => false
       t.string :name, :limit => 300
       t.string :url, :limit => 300
-      t.integer :status_id, :limit => 2
+      t.integer :state_id, :limit => 2
       t.timestamps
     end
   end

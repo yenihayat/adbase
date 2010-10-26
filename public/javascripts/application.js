@@ -1,5 +1,5 @@
 $(document).ready(function() {
   setTimeout(function() {
-    $("#message").fadeOut('slow')
+    $("#message, #form-errors").fadeOut('slow')
   }, 5000);
 });

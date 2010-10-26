@@ -2,20 +2,20 @@
 <table class="login">
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <tr>
-    <td class="label"><%= f.label :email, "E-posta" %></td>
+    <td class="label"><%= f.label :email, "E-mail" %></td>
     <td class="field"><%= f.text_field :email %></td>
   </tr>
   <tr>
-    <td class="label"><%= f.label :password, "Şifre" %></td>
+    <td class="label"><%= f.label :password, "Password" %></td>
     <td class="field"><%= f.password_field :password %></td>
   </tr>
   <tr>
     <td></td>
-    <td><%= f.check_box :remember_me %> <%= f.label :remember_me, "Bu bilgisayarda beni hatırla." %></td>
+    <td><%= f.check_box :remember_me %> <%= f.label :remember_me, "Remember me." %></td>
   </tr>
   <tr>
     <td></td>
-    <td><%= f.submit "Giriş Yap" %> <span><%= link_to "Şifremi Unuttum", "#", :class => "forgot-password" %></span></td>
+    <td><%= f.submit "Login" %> <span><%= link_to "Forgot Password", "#", :class => "forgot-password" %></span></td>
   </tr>
 <% end -%>
 </table>
@@ -25,17 +25,17 @@
   <tr>
     <td></td>
     <td>
-      <h2>Şifremi Unuttum</h2>
-      <p>Sıfırlamak için gerekli bilgileri e-posta adresinize gönderin.</p>
+      <h2>Forgot Password</h2>
+      <p>We can send you instructions to reset your password.</p>
     </td>
   </tr>
   <tr>
-    <td class="label"><%= label :user, :email, "E-posta" %></td>
+    <td class="label"><%= label :user, :email, "E-mail" %></td>
     <td class="field"><%= text_field :user, :email %></td>
   </tr>
   <tr>
     <td></td>
-    <td><%= submit_tag "Şifremi Sıfırla" %> <span><%= link_to "Vazgeç", "#", :class => "login" %></span></td>
+    <td><%= submit_tag "Send Instructions" %> <span><%= link_to "Cancel", "#", :class => "login" %></span></td>
   </tr>
 <% end -%>
 </table>

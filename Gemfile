@@ -3,6 +3,8 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.1'
 gem 'mysql2', '0.2.4'
 gem 'devise', '1.1.3'
+gem 'uuidtools', '2.1.1'
+gem 'paperclip', '2.3.4'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

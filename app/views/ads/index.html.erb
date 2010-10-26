@@ -1,23 +1,23 @@
 <div id="submenu">
-  <%= link_to "Yeni Reklam", new_ad_path %>
+  <%= link_to "New Ad", new_ad_path %>
 </div>
 
-<h2>Kayıtlı Reklamlar</h2>
+<h2>Ads</h2>
 
 <table class="list">
   <tr>
     <th>No#</th>
-    <th>Başlık</th>
-	  <th>Durumu</th>
-    <th>Son Güncelleme</th>
+    <th>Title</th>
+	  <th>Status</th>
+    <th>Last Update</th>
   </tr>
 
   <% @ads.each do |ad| %>
   <tr>
     <td><strong><%= ad.id %></strong></td>
-    <td><%= link_to ad.title, edit_ad_path(site) %></td>
-    <td></td>
-    <td><%= l site.updated_at, :format => :short %></td>
+    <td><%= link_to ad.name, ad_path(ad) %></td>
+    <td><%= ad.state.title %></td>
+    <td><%= l ad.updated_at, :format => :short %></td>
   </tr>
   <% end %>
 </table>

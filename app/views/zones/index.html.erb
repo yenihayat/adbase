@@ -1,5 +1,23 @@
 <div id="submenu">
-  <%= link_to "Yeni Alan", new_ad_path %>
+  <%= link_to "New Zone", new_zone_path %>
 </div>
 
-<h2>Alanlar</h2>
+<h2>Zones</h2>
+
+<table class="list">
+  <tr>
+    <th>No#</th>
+    <th>Title</th>
+    <th>Site</th>
+	  <th>Created</th>
+  </tr>
+
+  <% @zones.each do |zone| %>
+  <tr>
+    <td><strong><%= zone.id %></strong></td>
+    <td><%= link_to zone.name, zone %></td>
+    <td><%= zone.site.name %></td>
+    <td><%= l zone.created_at, :format => :short %></td>
+  </tr>
+  <% end %>
+</table>

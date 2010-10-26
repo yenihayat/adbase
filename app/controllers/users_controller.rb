@@ -20,6 +20,17 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def create
+    @user = User.new(params[:user])
+
+    if @user.save
+      flash[:notice] = "User created!"
+      redirect_to edit_user_path(@user)
+    else
+      render :new
+    end
+  end
+
   def edit
     if current_user.is_admin?
       @user = User.find(params[:id])
@@ -37,7 +48,7 @@ class UsersController < ApplicationController
     end
 
     if @user.update_attributes(params[:user])
-      flash[:notice] = "Profil güncellendi."
+      flash[:notice] = "Profile updated."
       redirect_to edit_user_path(@user)
     else
       render :edit

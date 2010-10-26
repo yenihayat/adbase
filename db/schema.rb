@@ -13,22 +13,30 @@
 ActiveRecord::Schema.define(:version => 20101022135927) do
 
   create_table "ads", :force => true do |t|
-    t.integer  "zone_id",                     :null => false
-    t.integer  "site_id",                     :null => false
-    t.integer  "user_id",                     :null => false
-    t.string   "name",         :limit => 40,  :null => false
+    t.integer  "zone_id",                        :null => false
+    t.integer  "site_id",                        :null => false
+    t.integer  "user_id",                        :null => false
+    t.string   "name",            :limit => 40,  :null => false
     t.text     "description"
     t.integer  "width"
     t.integer  "height"
-    t.string   "url",          :limit => 300, :null => false
+    t.string   "url",             :limit => 300, :null => false
+    t.string   "domain",          :limit => 300
     t.boolean  "track_clicks"
     t.boolean  "track_views"
-    t.integer  "state_id",     :limit => 2
+    t.boolean  "expire"
+    t.datetime "expire_at"
+    t.string   "ad_file_name"
+    t.string   "ad_content_type"
+    t.integer  "ad_file_size"
+    t.datetime "ad_updated_at"
+    t.integer  "state_id",        :limit => 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "sites", :force => true do |t|
+    t.integer  "user_id",                   :null => false
     t.string   "name",       :limit => 300
     t.string   "url",        :limit => 300
     t.integer  "state_id",   :limit => 2
@@ -44,9 +52,9 @@ ActiveRecord::Schema.define(:version => 20101022135927) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                :limit => 50,                  :null => false
-    t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
-    t.string   "password_salt",                       :default => "", :null => false
+    t.string   "email",                :limit => 50,                     :null => false
+    t.string   "encrypted_password",   :limit => 128, :default => "",    :null => false
+    t.string   "password_salt",                       :default => "",    :null => false
     t.string   "reset_password_token"
     t.string   "remember_token"
     t.datetime "remember_created_at"
@@ -58,8 +66,10 @@ ActiveRecord::Schema.define(:version => 20101022135927) do
     t.string   "firstname",            :limit => 30
     t.string   "lastname",             :limit => 20
     t.string   "phone",                :limit => 12
-    t.string   "password",             :limit => 20,                  :null => false
+    t.string   "company",              :limit => 300
     t.boolean  "remember_me"
+    t.boolean  "is_admin",                            :default => false, :null => false
+    t.integer  "state_id",             :limit => 3
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -68,9 +78,9 @@ ActiveRecord::Schema.define(:version => 20101022135927) do
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
   create_table "zones", :force => true do |t|
-    t.integer  "uuid"
-    t.integer  "user_id"
-    t.integer  "site_id"
+    t.string   "uuid",       :limit => 36,  :null => false
+    t.integer  "user_id",                   :null => false
+    t.integer  "site_id",                   :null => false
     t.string   "name",       :limit => 300
     t.integer  "width"
     t.integer  "height"

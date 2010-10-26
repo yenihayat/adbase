@@ -126,7 +126,7 @@ tr:
         too_long: "çok uzun (en fazla %{count} karakter)"
         too_short: "çok kısa (en az %{count} karakter)"
         wrong_length: "yanlış uzunlukta (tam olarak %{count} karakter olmalı)"
-        taken: "hali hazırda kullanılmakta"
+        taken: "hali hazırda kayıtlı"
         not_a_number: "geçerli bir sayı değil"
         greater_than: "%{count} sayısından büyük olmalı"
         greater_than_or_equal_to: "%{count} sayısına eşit veya büyük olmalı"
@@ -141,6 +141,11 @@ tr:
     attributes:
       user:
         email: "E-posta"
+        firstname: "İsim"
+        lastname: "Soyisim"
+      site:
+        name: "Site adı"
+        url: "Adres"
 
 # Devise
 

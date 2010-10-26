@@ -40,6 +40,18 @@ div.alert {
   color: #fff;
 }
 
+div#form-errors {
+  background: #c41840;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
 div#wrapper {
   width: 100%;
 }
@@ -74,7 +86,7 @@ div#header div#logo h1 a {
   display: block;
   overflow: hidden;
   white-space: nowrap;
-  background: transparent url(../../images/logo.png) no-repeat;
+  --background: transparent url(../../images/logo.png) no-repeat;
 }
 
 div#header div#menu {
@@ -287,8 +299,8 @@ div#content table#user-statics th {
   padding: 10px;
 }
 
-a.edit_user,
-a.edit_user:visited {
+a.bottom-act,
+a.bottom-act:visited {
   text-align: right;
   display: block;
   font-size: 13px;
@@ -297,7 +309,7 @@ a.edit_user:visited {
   margin-top: 20px;
 }
 
-a.edit_user:hover {
+a.bottom-act:hover {
   color: #333;
   text-decoration: none;
 }
