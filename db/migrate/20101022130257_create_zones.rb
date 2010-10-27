@@ -8,6 +8,7 @@ class CreateZones < ActiveRecord::Migration
       t.integer :width, :limit => 4
       t.integer :height, :limit => 4
       t.integer :state_id, :limit => 2
+      t.boolean :cycle, :default => false, :limit => 1
       t.timestamps
     end
   end

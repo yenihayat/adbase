@@ -1,19 +1,21 @@
 class CreateAds < ActiveRecord::Migration
   def self.up
     create_table :ads do |t|
-      t.integer :zone_id, :null => false, :limit => 4
-      t.integer :site_id, :null => false, :limit => 4
       t.integer :user_id, :null => false, :limit => 4
       t.string :name, :null => false, :unique => true, :limit => 40
       t.text :description, :limit => 300
       t.integer :width, :limit => 4
       t.integer :height, :limit => 4
-      t.string :url, :null => false, :limit => 300
-      t.string :domain, :limit => 300 # Published domain to track false views.
+      t.string :target_url, :null => false, :limit => 300
       t.boolean :track_clicks
       t.boolean :track_views
+      t.integer :clicks_count, :default => 0
+      t.integer :views_count, :default => 0
       t.boolean :expire
       t.datetime :expire_at
+      t.integer :max_clicks_count, :default => 0
+      t.integer :max_views_count, :default => 0
+      t.boolean
 
       # Paperclip
       t.string :ad_file_name

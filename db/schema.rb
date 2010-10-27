@@ -10,27 +10,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101022135927) do
+ActiveRecord::Schema.define(:version => 20101026145203) do
 
   create_table "ads", :force => true do |t|
-    t.integer  "zone_id",                        :null => false
-    t.integer  "site_id",                        :null => false
-    t.integer  "user_id",                        :null => false
-    t.string   "name",            :limit => 40,  :null => false
+    t.integer  "user_id",                                        :null => false
+    t.string   "name",             :limit => 40,                 :null => false
     t.text     "description"
     t.integer  "width"
     t.integer  "height"
-    t.string   "url",             :limit => 300, :null => false
-    t.string   "domain",          :limit => 300
+    t.string   "target_url",       :limit => 300,                :null => false
     t.boolean  "track_clicks"
     t.boolean  "track_views"
+    t.integer  "clicks_count",                    :default => 0
+    t.integer  "views_count",                     :default => 0
     t.boolean  "expire"
     t.datetime "expire_at"
+    t.integer  "max_clicks_count",                :default => 0
+    t.integer  "max_views_count",                 :default => 0
     t.string   "ad_file_name"
     t.string   "ad_content_type"
     t.integer  "ad_file_size"
     t.datetime "ad_updated_at"
-    t.integer  "state_id",        :limit => 2
+    t.integer  "state_id",         :limit => 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -77,14 +78,22 @@ ActiveRecord::Schema.define(:version => 20101022135927) do
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
+  create_table "zone_ads", :force => true do |t|
+    t.integer  "zone_id",    :null => false
+    t.integer  "ad_id",      :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "zones", :force => true do |t|
-    t.string   "uuid",       :limit => 36,  :null => false
-    t.integer  "user_id",                   :null => false
-    t.integer  "site_id",                   :null => false
+    t.string   "uuid",       :limit => 36,                     :null => false
+    t.integer  "user_id",                                      :null => false
+    t.integer  "site_id",                                      :null => false
     t.string   "name",       :limit => 300
     t.integer  "width"
     t.integer  "height"
     t.integer  "state_id",   :limit => 2
+    t.boolean  "cycle",                     :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -14,71 +14,51 @@ class AdsController < ApplicationController
     end
   end
 
-  def show # TODO: Clean up.
-    @ad = Ad.find(params[:id],
-      :joins => "LEFT JOIN zones ON zones.id = ads.zone_id",
-      :select => "ads.*, zones.name as zone_name")
+  def show
+    @ad = Ad.find(params[:id])
   end
 
   def new
     @ad = Ad.new
-
-    if current_user.is_admin?
-      @zones = Site.active.with_zones
-    else
-      @zones = Zone.active.belongs_to_user(curret_user.id).with_zones
-    end
+    @states = State.ads
+    @users = User.active
   end
 
   def create
     @ad = Ad.new(params[:ad])
-    @zone = Zone.find(@ad.zone_id)
-
-    if @zone 
-      @ad.site_id = @zone.site_id
-      @ad.user_id = @zone.user_id
-    end
+    set_user_id
 
     if @ad.save
       redirect_to ad_path(@ad)
     else
-      if current_user.is_admin?
-        @zones = Site.active.with_zones
-      else
-        @zones = Zone.active.belongs_to_user(curret_user.id).with_zones
-      end
+      @users = User.active
+      @states = State.ads
       render :new
     end
   end
 
   def edit
     @ad = Ad.find(params[:id])
-
-    if current_user.is_admin?
-      @zones = Site.active.with_zones
-    else
-      @zones = Zone.active.belongs_to_user(curret_user.id).with_zones
-    end
+    @states = State.ads
+    @users = User.active
   end
 
   def update
     @ad = Ad.find(params[:id])
-    @zone = Zone.find(@ad.zone_id)
-
-    if @zone 
-      @ad.site_id = @zone.site_id
-      @ad.user_id = @zone.user_id
-    end
 
     if @ad.update_attributes(params[:ad])
       redirect_to ad_path(@ad)
     else
-      if current_user.is_admin?
-        @zones = Site.active.with_zones
-      else
-        @zones = Zone.active.belongs_to_user(curret_user.id).with_zones
-      end
+      @users = User.active
+      @states = State.ads
       render :edit
     end
   end
+
+  private
+    def set_user_id
+      unless @ad.user_id and current_user.is_admin?
+        @ad.user_id = current_user.id
+      end
+    end
 end

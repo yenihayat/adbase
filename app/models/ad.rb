@@ -6,12 +6,14 @@ class Ad < ActiveRecord::Base
 
   before_create :randomize_file_name, :set_state
 
-  has_many :zones, :through => :zone_ad
+  has_many :zones, :through => :zone_ads
+  has_many :zone_ads
+
   belongs_to :site
   belongs_to :user
   belongs_to :state
 
-  validates_presence_of :name, :width, :height, :url, :site_id, :zone_id
+  validates_presence_of :name, :width, :height, :target_url
   # TODO: validates_attachment_content_type, validates_attachment_size.
   validates_attachment_presence :ad
 
@@ -26,7 +28,7 @@ class Ad < ActiveRecord::Base
   private
     def randomize_file_name
       extension = File.extname(ad_file_name).downcase
-      self.add.instance_write(:file_name, "#{ActiveSupport::SecureRandom.hex(16)}#{extension}")
+      self.ad.instance_write(:file_name, "#{ActiveSupport::SecureRandom.hex(16)}#{extension}")
     end
 
     def set_state

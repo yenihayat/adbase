@@ -18,6 +18,7 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    @states = State.users
   end
 
   def create

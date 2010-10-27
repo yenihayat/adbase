@@ -6,6 +6,18 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
+::-moz-selection {
+  color: #fff;
+  color: rgba(255,255,255,1);
+  background: #333;
+}
+
+::selection {
+  color: #fff;
+  color: rgba(255,255,255,1);
+  background: #333;
+}
+
 code {
   font-family: Monaco, Menlo, "Courier New", fixed;
   font-size: 12px;
@@ -177,8 +189,14 @@ div#content table td {
 }
 
 div#content table td ul li {
-  padding: 5px;
-  border-bottom: 1px solid #ededed;
+  padding: 2px;
+}
+
+div#content table td ul li a {
+  font-size: 11px;
+  font-weight: normal;
+  color: #333;
+  text-decoration: underline;
 }
 
 div#content table.list td {
@@ -192,6 +210,7 @@ div#content table th {
 }
 
 div#content table.form {
+  width: 600px;
   border-spacing: 5px;
   border-collapse: separate;
 }
@@ -204,8 +223,8 @@ div#content table textarea {
   padding: 5px;
   font-size: 13px;
   color: #555;
+  width: 350px;
   border: 1px solid #ccc;
-  width: 300px;
 }
 
 div#content table input[type=text]:focus,
@@ -220,7 +239,7 @@ div#content table td.label {
   text-align: right;
   vertical-align: top;
   color: #333;
-  width: 200px;
+  width: 250px;
   font-weight: bold;
   font-size: 11px;
   border-top: 1px solid #ddd;
@@ -232,6 +251,7 @@ div#content table td.label span.light {
 }
 
 div#content table td.field {
+  width: 350px;
   background: #ededed;
 }
 
@@ -242,9 +262,9 @@ div#content table td.fixed-width {
 
 div#content table textarea {
   line-height: 1.6em;
-  height: 100px;
-  width: 290px;
+  height: 50px;
   padding: 10px;
+  width: 340px;
 }
 
 div#submenu {

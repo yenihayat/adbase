@@ -10,6 +10,8 @@ class Site < ActiveRecord::Base
   has_many :zones
   has_many :ads
 
+  accepts_nested_attributes_for :zones
+
   scope :active, where(:state_id => STATE_ACTIVE)
   scope :belongs_to_user, lambda { |user_id| { :conditions => ['user_id = ?', user_id] } }
   scope :with_zones, :joins => "LEFT JOIN zones ON sites.id = zones.site_id", :select => "sites.name AS site_name, zones.name AS name, zones.id AS id"

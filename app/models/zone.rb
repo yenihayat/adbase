@@ -10,7 +10,10 @@ class Zone < ActiveRecord::Base
   belongs_to :user
   belongs_to :state
 
-  has_many :ads, :through => :zone_ad
+  has_many :ads, :through => :zone_ads
+  has_many :zone_ads, :dependent => :destroy
+
+  accepts_nested_attributes_for :zone_ads, :reject_if => lambda { |a| a[:ad_id].blank? }, :allow_destroy => true
 
   scope :active, where(:state_id => STATE_ACTIVE)
   scope :belongs_to_user, lambda { |user_id| { :conditions => ['user_id = ?', user_id] } }

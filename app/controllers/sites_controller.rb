@@ -26,7 +26,7 @@ class SitesController < ApplicationController
     end
   
     if @site.save
-      redirect_to new_zone_path(@site)
+      redirect_to site_path(@site)
     else
       @users = User.active
       render :new

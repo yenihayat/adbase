@@ -24,6 +24,10 @@ class User < ActiveRecord::Base
     "#{firstname} #{lastname} <#{email}>"
   end
 
+  def has_active_site?
+    Site.exists?(:user_id => self) or self.is_admin?
+  end
+
   private
     def set_state
       self.state_id = STATE_ACTIVE
