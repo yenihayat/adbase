@@ -1,6 +1,13 @@
-// AdBase.
-var advert = ''
-advert+='<a href="<%= @ad.url %>">';
-advert+='<img class="ad" alt="SVA" src="<%= "http://adbase.local" + @ad.ad.url %>" border="0"/>';
-advert+='</a>';
-document.write(advert);
+<% @zones.each do |zone| -%>
+// AdBase#<%= zone.uuid %> Content
+var target_url = document.createElement('a');
+target_url.href = '<%= zone.ad_target_url %>';
+var ad_content = document.createElement('img');
+ad_content.class = 'ad';
+ad_content.src = '<%= 'http://static.adbase.local/system/ads/' + partitionize(zone.ad_id) + '/' + zone.ad_file_name %>';
+ad_content.border = '0';
+target_url.appendChild(ad_content);
+
+var scr = document.getElementById('<%= zone.uuid %>');
+scr.parentNode.insertBefore(target_url, scr);
+<% end -%>

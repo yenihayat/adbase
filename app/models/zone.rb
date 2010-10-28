@@ -20,7 +20,16 @@ class Zone < ActiveRecord::Base
   scope :belongs_to_site, lambda { |site_id| { :conditions => ['site_id = ?', site_id] } }
 
   validates_presence_of :name, :width, :height, :site_id
-  
+
+  def classy_name
+    separator = '-'
+    self.name.gsub("'", separator)
+    classy_name = self.name.gsub("ş", "s").gsub("ğ", "g").gsub("ı", "i").gsub("ü", "u").gsub("ç", "c").gsub("ö", "o").gsub("İ", "i").gsub("Ö", "o").gsub("Ç", "c").gsub("Ş", "s").gsub("Ü", "u")
+    classy_name = classy_name.downcase!
+    classy_name.gsub!(/[^a-z0-9]+/, separator)
+    return classy_name.gsub(/^\\#{separator}+|\\#{separator}+$/, '')
+  end
+
   private
     def set_uuid
       self.uuid = UUIDTools::UUID.random_create.to_s
