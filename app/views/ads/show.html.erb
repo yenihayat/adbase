@@ -1,0 +1,34 @@
+<h2>Ad</h2>
+
+<table class="cart">
+  <tr>
+    <td class="title">Title</td>
+    <td><%= @ad.name %></td>
+  </tr>
+  <tr>
+    <td class="title">Dimensions</td>
+    <td><%= @ad.width.to_s %> &times; <%= @ad.height.to_s %>px</td>
+  </tr>
+  <tr>
+    <td class="title">Expiration</td>
+    <td><%= expire_status_message(@ad) %></td>
+  </tr>
+  <tr>
+    <td class="title">Tracking Status</td>
+    <td><%= tracking_status_message(@ad) %></td>
+  </tr>
+  <tr>
+    <td class="title">Views/Clicks Count</td>
+    <td><%= @ad.views_count.to_s %>/<%= @ad.clicks_count.to_s %></td>
+  </tr>
+  <tr>
+    <td class="title">File Info</td>
+    <td><%= @ad.ad_content_type %> [<%= @ad.ad_file_size/1024 %>kb]</td>
+  </tr>
+  <tr>
+    <td class="title"></td>
+    <td><%= link_to @ad.ad_file_name, @ad.ad.url %></td>
+  </tr>
+</table>
+
+<%= link_to "Edit", edit_ad_path(@ad), :class => "bottom-act" %>

@@ -1,0 +1,70 @@
+<% form_for @ad, :html => {:multipart => true} do |f| %>
+<table class="form">
+  <tr>
+    <td class="label"><%= f.label :name, "Title" %></td>
+    <td class="field"><%= f.text_field :name %></td>
+  </tr>
+  <tr>
+    <td class="label"><%= f.label :description, "Description" %></td>
+    <td class="field"><%= f.text_area :description %></td>
+  </tr>
+  <tr>
+    <td class="label"><%= f.label :width, "Width, px" %></td>
+    <td class="field"><%= f.text_field :width %></td>
+  </tr>
+  <tr>
+    <td class="label"><%= f.label :height, "Height, px" %></td>
+    <td class="field"><%= f.text_field :height %></td>
+  </tr>
+  <tr>
+    <td class="label"><%= f.label :target_url, "Target URL" %></td>
+    <td class="field"><%= f.text_field :target_url %></td>
+  </tr>
+  <tr>
+    <td class="label">Track Options</td>
+    <td><%= f.check_box :track_clicks %> <%= f.label :track_clicks, "Track clicks." %> &nbsp; <%= f.check_box :track_views %> <%= f.label :track_views, "Track views." %></td>
+  </tr>
+  <tr>
+    <td class="label"><%= f.label :expire, "Expiration" %></td>
+    <td><%= f.check_box :expire, :id => "expire-chk" %> <%= f.label :expire, "Expire on date or max view/click values." %></td>
+  </tr>
+  <tr <%= hide_unless_set_to_expire(@ad.expire) %> class="expiration-options">
+    <td class="label"><%= f.label :expire_at, "Expiration Date" %></td>
+    <td><%= f.datetime_select :expire_at %></td>
+  </tr>
+  <tr <%= hide_unless_set_to_expire(@ad.expire) %> class="expiration-options">
+    <td class="label"><%= f.label :max_clicks_count, "<p>Max Clicks Count<br /><span class='light'>Leave as is not to expire on value.</span></p>".html_safe %></td>
+    <td class="field"><%= f.text_field :max_clicks_count %></td>
+  </tr>
+  <tr <%= hide_unless_set_to_expire(@ad.expire) %> class="expiration-options">
+    <td class="label"><%= f.label :max_views_count, "<p>Max Views Count<br /><span class='light'>Leave as is not to expire on value.</span></p>".html_safe %></td>
+    <td class="field"><%= f.text_field :max_views_count %></td>
+  </tr>
+  <% unless new_record? %>
+  <tr>
+    <td class="label"><%= f.label :status_id, "Status" %></td>
+    <td><%= f.select :state_id, @states.map {|s| [s.title, s.id]}, :prompt => "Select State" %></td>
+  </tr>
+  <% end %>
+  <% if current_user.is_admin? %>
+  <tr>
+    <td class="label"><%= f.label :user_is, "Belongs to" %></td>
+    <td><%= f.select :user_id, @users.map {|u| [u.info, u.id]}, :prompt => "Select" %></td>
+  </tr>
+  <% end %>
+  <tr>
+    <td class="label">Content</td>
+    <td>
+    <% unless new_record? %>
+      <%= link_to @ad.ad_file_name, @ad.ad.url %> <%= link_to "&times;".html_safe %>
+    <% else %>
+      <%= f.file_field :ad %>
+    <% end %>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><%= f.submit params[:action] == 'edit' ? 'Update' : 'Create' %></td>
+  </tr>
+</table>
+<% end %>

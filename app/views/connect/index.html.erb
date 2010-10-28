@@ -7,7 +7,6 @@ ad_content.class = 'ad';
 ad_content.src = '<%= 'http://static.adbase.local/system/ads/' + partitionize(zone.ad_id) + '/' + zone.ad_file_name %>';
 ad_content.border = '0';
 target_url.appendChild(ad_content);
-
 var scr = document.getElementById('<%= zone.uuid %>');
 scr.parentNode.insertBefore(target_url, scr);
 <% end -%>

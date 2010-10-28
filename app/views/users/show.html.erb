@@ -1,0 +1,39 @@
+<h2>User No. <%= @user.id %></h2>
+<table class="cart">
+  <tr>
+    <td class="title">Name, Surname</td>
+    <td><%= @user.name %></td>
+  </tr>
+  <tr>
+    <td class="title">Company</td>
+    <td><%= @user.company %></td>
+  </tr>
+  <tr>
+    <td class="title">Phone</td>
+    <td><%= @user.phone %></td>
+  </tr>
+  <tr>
+    <td class="title">E-mail</td>
+    <td><%= @user.email %></td>
+  </tr>
+</table>
+
+<table id="user-statics">
+  <tr>
+    <th>Account Created</th>
+    <th>Last Update</th>
+    <th>Login Count</th>
+    <th>Last Login</th>
+    <th>Current Login</th>
+  </tr>
+
+  <tr>
+    <td><%= l(@user.created_at, :format => :short) %></td>
+    <td><%= l(@user.updated_at, :format => :short) %></td>
+    <td><%= @user.sign_in_count %></td>
+    <td><%= @user.last_sign_in_at == nil ? "&mdash;".html_safe : l(@user.last_sign_in_at, :format => :short) %></td>
+    <td><%= @user.current_sign_in_at == nil ? "&mdash;".html_safe : l(@user.current_sign_in_at, :format => :short) %></td>
+  </tr>
+</table>
+
+<%= link_to "Edit", edit_user_path(@user), :class => "bottom-act" %>

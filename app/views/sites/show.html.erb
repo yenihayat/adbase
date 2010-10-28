@@ -1,0 +1,33 @@
+<h2>Site: <%= @site.name %></h2>
+<table class="cart">
+  <tr>
+    <td class="title">Title</td>
+    <td><%= @site.name %></td>
+  </tr>
+  <tr>
+    <td class="title">URL</td>
+    <td><%= @site.url %></td>
+  </tr>
+  <% if current_user.is_admin? %>
+  <tr>
+    <td class="title">User</td>
+    <td><%= link_to @site.user.name, user_path(@site.user) %></td>
+  </tr>
+  <% end %>
+  <tr>
+    <td class="title">Zones</td>
+    <td>
+      <% if @site.zones.length > 0 %>
+      <ul>
+        <% @site.zones.each do |zone| %>
+        <li><%= link_to zone.name, zone %></li>
+        <% end %>
+      </ul>
+      <% else %>
+        <p>No zones found. Do you want to <%= link_to "add one?", new_zone_path(:site_id => @site) %></p>
+      <% end %>
+    </td>
+  </tr>
+</table>
+
+<%= link_to "Edit", edit_site_path(@site), :class => "bottom-act" %>

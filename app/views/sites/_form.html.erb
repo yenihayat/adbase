@@ -1,0 +1,30 @@
+<%= form_for @site do |f| %>
+<% if @site.errors.any? %>
+    <div id="form-errors">
+      <% @site.errors.full_messages.each do |msg| %>
+        <%= msg %><%= ", " unless msg == @site.errors.full_messages.last %>
+      <% end %>
+    </div>
+<% end %>
+
+<table class="form">
+  <tr>
+    <td class="label"><%= f.label :name, "Title" %></td>
+    <td class="field"><%= f.text_field :name %></td>
+  </tr>
+  <tr>
+    <td class="label"><%= f.label :url, "URL" %></td>
+    <td class="field"><%= f.text_field :url %></td>
+  </tr>
+  <% if current_user.is_admin? %>
+  <tr>
+    <td class="label"><%= f.label :user_is, "Belongs to" %></td>
+    <td><%= f.select :user_id, @users.map {|u| [u.info, u.id]}, :prompt => "Select" %></td>
+  </tr>
+  <% end %>
+  <tr>
+    <td></td>
+    <td><%= f.submit params[:action] == 'edit' ? 'Update' : 'Create' %></td>
+  </tr>
+</table>
+<% end %>
