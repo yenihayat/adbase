@@ -1,13 +1,26 @@
 class ConnectController < ApplicationController
   layout false
+  require 'uri'
 
   def index
     @uuids = extract_uuids(params[:ids])
-    @zones = Zone.find(:all,
-      :joins => "LEFT JOIN zone_ads ON zone_ads.zone_id = zones.id LEFT JOIN ads ON ads.id = zone_ads.ad_id",
-      :select => "zones.uuid AS uuid, ads.ad_file_name AS ad_file_name, ads.target_url AS ad_target_url, ads.id AS ad_id",
-      :group => "zones.id",
-      :conditions => ["zones.uuid IN (?)", @uuids])
+    @zones = Zone.find_all_by_uuid(@uuids)
+
+    @ads = []
+    for zone in @zones
+      ad = zone.ads.find_active.first
+      ad.zone_uuid = zone.uuid
+      ad.update_attribute(:views_count, (ad.views_count + 1))
+      @ads << ad
+    end
+  end
+
+  def redirect
+    @ad = Ad.find_by_target_url(params[:u]) # TODO: Should be something uniq!
+    if @ad.track_clicks?
+      @ad.update_attribute(:clicks_count, (@ad.clicks_count + 1))
+    end
+    redirect_to "#{@ad.target_url}"
   end
 
   private

@@ -1,6 +1,7 @@
 require 'uuidtools'
 
 class Zone < ActiveRecord::Base
+  ADS_STATE_ACTIVE = 9
   STATE_ACTIVE = 5
   STATE_PASSIVE = 6
 
@@ -10,7 +11,13 @@ class Zone < ActiveRecord::Base
   belongs_to :user
   belongs_to :state
 
-  has_many :ads, :through => :zone_ads
+  has_many :ads, :through => :zone_ads do
+    # Find active ads, and order them by their views count so we can serve each ad equal times.
+    def find_active
+      where(:state_id => ADS_STATE_ACTIVE).order(:views_count)
+    end
+  end
+
   has_many :zone_ads, :dependent => :destroy
 
   accepts_nested_attributes_for :zone_ads, :reject_if => lambda { |a| a[:ad_id].blank? }, :allow_destroy => true

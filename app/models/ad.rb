@@ -13,6 +13,8 @@ class Ad < ActiveRecord::Base
   belongs_to :user
   belongs_to :state
 
+  attr_accessor :zone_uuid
+
   validates_presence_of :name, :width, :height, :target_url
   # TODO: validates_attachment_content_type, validates_attachment_size.
   validates_attachment_presence :ad
