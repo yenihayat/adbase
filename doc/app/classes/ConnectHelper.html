@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: ConnectHelper</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">ConnectHelper</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/app/helpers/connect_helper_rb.html">
+                app/helpers/connect_helper.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000043">ad_content</a>&nbsp;&nbsp;
+      <a href="#M000045">encode_target_url</a>&nbsp;&nbsp;
+      <a href="#M000044">partitionize</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000043" class="method-detail">
+        <a name="M000043"></a>
+
+        <div class="method-heading">
+          <a href="#M000043" class="method-signature">
+          <span class="method-name">ad_content</span><span class="method-args">(content_type, zone_uuid, ad_target_url, ad_id, ad_file_name)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000043-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000043-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/helpers/connect_helper.rb, line 2</span>
+ 2:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ad_content</span>(<span class="ruby-identifier">content_type</span>, <span class="ruby-identifier">zone_uuid</span>, <span class="ruby-identifier">ad_target_url</span>, <span class="ruby-identifier">ad_id</span>, <span class="ruby-identifier">ad_file_name</span>)
+ 3:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">content_type</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-value str">'image'</span>)
+ 4:       <span class="ruby-identifier">content</span> = <span class="ruby-node">&quot;// AdBase##{zone_uuid} Content\n&quot;</span>
+ 5:       <span class="ruby-identifier">content</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;var target_url = document.createElement('a');\n&quot;</span>
+ 6:       <span class="ruby-identifier">content</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;target_url.href = 'http://connect.lvh.me:3000/redirect?u=#{encode_target_url(ad_target_url)}';\n&quot;</span>
+ 7:       <span class="ruby-identifier">content</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;var ad_content = document.createElement('img');\n&quot;</span>
+ 8:       <span class="ruby-identifier">content</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;ad_content.class = 'ad';\n&quot;</span>
+ 9:       <span class="ruby-identifier">content</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;ad_content.src = 'http://static.adbase.local/system/ads/#{partitionize(ad_id)}/#{ad_file_name}';\n&quot;</span>
+10:       <span class="ruby-identifier">content</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;ad_content.border = '0';\n&quot;</span>
+11:       <span class="ruby-identifier">content</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;target_url.appendChild(ad_content);\n&quot;</span>
+12:       <span class="ruby-identifier">content</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;var scr = document.getElementById('#{zone_uuid}');\n&quot;</span>
+13:       <span class="ruby-identifier">content</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;scr.parentNode.insertBefore(target_url, scr);\n&quot;</span>
+14:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">content_type</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">flash</span>)
+15:       <span class="ruby-identifier">content</span> = <span class="ruby-value str">&quot;Flash Content Test&quot;</span>
+16:     <span class="ruby-keyword kw">end</span>
+17:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">content</span>
+18:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000045" class="method-detail">
+        <a name="M000045"></a>
+
+        <div class="method-heading">
+          <a href="#M000045" class="method-signature">
+          <span class="method-name">encode_target_url</span><span class="method-args">(url)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000045-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000045-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/helpers/connect_helper.rb, line 24</span>
+24:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode_target_url</span>(<span class="ruby-identifier">url</span>)
+25:     <span class="ruby-constant">URI</span>.<span class="ruby-identifier">escape</span>(<span class="ruby-identifier">url</span>, <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;[^#{URI::PATTERN::UNRESERVED}]&quot;</span>))
+26:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000044" class="method-detail">
+        <a name="M000044"></a>
+
+        <div class="method-heading">
+          <a href="#M000044" class="method-signature">
+          <span class="method-name">partitionize</span><span class="method-args">(id)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000044-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000044-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/helpers/connect_helper.rb, line 20</span>
+20:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">partitionize</span> <span class="ruby-identifier">id</span>
+21:     (<span class="ruby-value str">&quot;%09d&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">id</span>).<span class="ruby-identifier">scan</span>(<span class="ruby-regexp re">/\d{3}/</span>).<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;/&quot;</span>)
+22:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>
