@@ -16,7 +16,7 @@ AdBase::Application.routes.draw do
 
   match 'dashboard' => 'dashboard#index'
   match '/out/:id' => 'connect#out'
-  match '/:ids' => 'connect#index', :constraints => { :subdomain => "connect" }
+  match '/connect/:ids' => 'connect#index'
 
   root :to => "home#index"
 
