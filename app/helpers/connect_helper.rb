@@ -3,7 +3,7 @@ module ConnectHelper
     if content_type.include?('image')
       content = "// AdBase##{zone_uuid} Content\n"
       content += "var target_url = document.createElement('a');\n"
-      content += "target_url.href = 'http://adbase.yh.com.tr/redirect/#{ad_id}';\n"
+      content += "target_url.href = 'http://adbase.yh.com.tr/out/#{ad_id}';\n"
       content += "var ad_content = document.createElement('img');\n"
       content += "ad_content.setAttribute('class', 'ad');\n"
       content += "ad_content.src = 'http://adbase.yh.com.tr/system/ads/#{partitionize(ad_id)}/#{ad_file_name}';\n"
