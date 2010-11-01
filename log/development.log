@@ -49289,3 +49289,886 @@ Rendered ads/show.html.erb within layouts/application (21.2ms)
 Completed 200 OK in 141ms (Views: 25.1ms | ActiveRecord: 0.7ms)
 DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
   [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe.js" for 127.0.0.1 at Mon Nov 01 11:15:07 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))
+  [1m[36mAd Load (3.9ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 09:15:08', `views_count` = 40 WHERE (`ads`.`id` = 5)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+  [1m[36mAd Load (2.0ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 09:15:08', `views_count` = 20 WHERE (`ads`.`id` = 3)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+Rendered connect/index.js.erb (0.6ms)
+Completed 200 OK in 298ms (Views: 3.5ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif" for 127.0.0.1 at Mon Nov 01 11:15:08 +0200 2010
+
+ActionController::RoutingError (No route matches "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe" for 127.0.0.1 at Mon Nov 01 11:16:09 +0200 2010
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))[0m
+  [1m[35mAd Load (3.0ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 09:16:10', `views_count` = 41 WHERE (`ads`.`id` = 5)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mAd Load (2.3ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 09:16:10', `views_count` = 21 WHERE (`ads`.`id` = 3)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+Rendered connect/index.js.erb (0.8ms)
+Completed 200 OK in 95ms (Views: 3.3ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif" for 127.0.0.1 at Mon Nov 01 11:16:10 +0200 2010
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+
+ActionController::RoutingError (No route matches "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe" for 127.0.0.1 at Mon Nov 01 11:16:27 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))
+  [1m[36mAd Load (2.2ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 09:16:27', `views_count` = 42 WHERE (`ads`.`id` = 5)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+  [1m[36mAd Load (2.2ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 09:16:27', `views_count` = 22 WHERE (`ads`.`id` = 3)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+Rendered connect/index.js.erb (0.6ms)
+Completed 200 OK in 181ms (Views: 3.0ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif" for 127.0.0.1 at Mon Nov 01 11:16:28 +0200 2010
+
+ActionController::RoutingError (No route matches "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe" for 127.0.0.1 at Mon Nov 01 11:16:41 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))[0m
+  [1m[35mAd Load (2.2ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 09:16:42', `views_count` = 43 WHERE (`ads`.`id` = 5)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mAd Load (2.2ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 09:16:42', `views_count` = 23 WHERE (`ads`.`id` = 3)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+Rendered connect/index.js.erb (0.5ms)
+Completed 200 OK in 171ms (Views: 2.7ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif" for 127.0.0.1 at Mon Nov 01 11:16:42 +0200 2010
+
+ActionController::RoutingError (No route matches "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+
+
+Started GET "/zones" for 127.0.0.1 at Mon Nov 01 11:52:31 +0200 2010
+  Processing by ZonesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mZone Load (0.4ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`state_id` = 5)
+  [1m[36mSite Load (0.3ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`id` = 1) LIMIT 1
+Rendered shared/_header.html.erb (2.6ms)
+Rendered zones/index.html.erb within layouts/application (64.8ms)
+Completed 200 OK in 129ms (Views: 83.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/zones/new" for 127.0.0.1 at Mon Nov 01 11:52:33 +0200 2010
+  Processing by ZonesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.`id` FROM `sites` WHERE (`sites`.`user_id` = 2) LIMIT 1
+  [1m[36mSite Load (0.4ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)[0m
+Rendered zones/_form.html.erb (32.5ms)
+Rendered shared/_header.html.erb (3.3ms)
+Rendered zones/new.html.erb within layouts/application (65.3ms)
+Completed 200 OK in 132ms (Views: 68.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/zones/1" for 127.0.0.1 at Mon Nov 01 11:52:37 +0200 2010
+  Processing by ZonesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1[0m
+  [1m[35mSite Load (0.4ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mAd Load (0.4ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1))
+Rendered shared/_header.html.erb (2.6ms)
+Rendered zones/show.html.erb within layouts/application (155.8ms)
+Completed 200 OK in 228ms (Views: 179.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 11:52:40 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1
+  [1m[36mZoneAd Load (0.7ms)[0m  [1mSELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 1)[0m
+Completed   in 173ms
+
+NameError (uninitialized constant ZonesController::EDIT_ZONE_DEFAULT_AD_FIELDS_COUNT):
+  app/controllers/zones_controller.rb:81:in `build_ad_fields'
+  app/controllers/zones_controller.rb:77:in `load_sites_ads'
+  app/controllers/zones_controller.rb:46:in `edit'
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  [1m[35mAd Load (0.3ms)[0m  SELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)
+  [1m[36mSite Load (0.3ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)[0m
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (246.0ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (258.3ms)
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 11:59:23 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1[0m
+  [1m[35mZoneAd Load (0.5ms)[0m  SELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 1)
+Completed   in 161ms
+
+NameError (uninitialized constant ZonesController::APP_CONFIG):
+  app/controllers/zones_controller.rb:81:in `build_ad_fields'
+  app/controllers/zones_controller.rb:77:in `load_sites_ads'
+  app/controllers/zones_controller.rb:46:in `edit'
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  [1m[36mAd Load (0.3ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)[0m
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (238.1ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (246.6ms)
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 11:59:41 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1[0m
+  [1m[35mZoneAd Load (0.3ms)[0m  SELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 1)
+Completed   in 323ms
+
+ArgumentError (comparison of Fixnum with nil failed):
+  app/controllers/zones_controller.rb:81:in `build_ad_fields'
+  app/controllers/zones_controller.rb:77:in `load_sites_ads'
+  app/controllers/zones_controller.rb:46:in `edit'
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  [1m[36mAd Load (0.3ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)[0m
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (245.2ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (253.7ms)
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 12:00:01 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1
+  [1m[36mZoneAd Load (0.5ms)[0m  [1mSELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 1)[0m
+Completed   in 173ms
+
+ArgumentError (comparison of Fixnum with nil failed):
+  app/controllers/zones_controller.rb:81:in `build_ad_fields'
+  app/controllers/zones_controller.rb:77:in `load_sites_ads'
+  app/controllers/zones_controller.rb:46:in `edit'
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  [1m[35mAd Load (0.3ms)[0m  SELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)
+  [1m[36mSite Load (0.3ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)[0m
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (258.1ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (267.3ms)
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 12:14:38 +0200 2010
+
+SyntaxError (/Users/soner/Projects/YH/AdBase/app/controllers/zones_controller.rb:82: syntax error, unexpected '<'
+        if @ads.length =< APP_CONFIG['edit_zone_ad_fields_count']
+                         ^
+/Users/soner/Projects/YH/AdBase/app/controllers/zones_controller.rb:90: syntax error, unexpected kEND, expecting $end):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (102.0ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (108.5ms)
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 12:14:39 +0200 2010
+
+SyntaxError (/Users/soner/Projects/YH/AdBase/app/controllers/zones_controller.rb:82: syntax error, unexpected '<'
+        if @ads.length =< APP_CONFIG['edit_zone_ad_fields_count']
+                         ^
+/Users/soner/Projects/YH/AdBase/app/controllers/zones_controller.rb:90: syntax error, unexpected kEND, expecting $end):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (117.3ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (123.8ms)
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 12:14:50 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1[0m
+  [1m[35mZoneAd Load (0.3ms)[0m  SELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 1)
+Completed   in 381ms
+
+ArgumentError (comparison of Fixnum with nil failed):
+  app/controllers/zones_controller.rb:81:in `build_ad_fields'
+  app/controllers/zones_controller.rb:77:in `load_sites_ads'
+  app/controllers/zones_controller.rb:46:in `edit'
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  [1m[36mAd Load (0.3ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)[0m
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (250.2ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (258.4ms)
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 12:15:26 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1
+  [1m[36mZoneAd Load (0.3ms)[0m  [1mSELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 1)[0m
+  [1m[35mSite Load (0.4ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `ads` WHERE (`ads`.`state_id` = 9)) AS subquery[0m
+  [1m[35mAd Load (0.3ms)[0m  SELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2172741220_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (36.3ms)
+Rendered shared/_header.html.erb (67.9ms)
+Rendered zones/edit.html.erb within layouts/application (110.2ms)
+Completed 200 OK in 306ms (Views: 133.2ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 12:15:57 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1
+  [1m[36mZoneAd Load (0.4ms)[0m  [1mSELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 1)[0m
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `ads` WHERE (`ads`.`state_id` = 9)) AS subquery[0m
+  [1m[35mAd Load (0.6ms)[0m  SELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2174835040_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (34.7ms)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered zones/edit.html.erb within layouts/application (41.6ms)
+Completed 200 OK in 228ms (Views: 43.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 12:16:12 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1
+  [1m[36mZoneAd Load (0.3ms)[0m  [1mSELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 1)[0m
+  [1m[35mSite Load (0.4ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `ads` WHERE (`ads`.`state_id` = 9)) AS subquery[0m
+  [1m[35mAd Load (0.3ms)[0m  SELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2172687980_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (35.9ms)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered zones/edit.html.erb within layouts/application (42.9ms)
+Completed 200 OK in 230ms (Views: 45.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 12:16:15 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1
+  [1m[36mZoneAd Load (0.4ms)[0m  [1mSELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 1)[0m
+  [1m[35mSite Load (0.4ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `ads` WHERE (`ads`.`state_id` = 9)) AS subquery[0m
+  [1m[35mAd Load (0.3ms)[0m  SELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2175584000_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (35.6ms)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered zones/edit.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 219ms (Views: 45.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 12:16:16 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mZone Load (0.4ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1
+  [1m[36mZoneAd Load (0.3ms)[0m  [1mSELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 1)[0m
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `ads` WHERE (`ads`.`state_id` = 9)) AS subquery[0m
+  [1m[35mAd Load (0.3ms)[0m  SELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2172935780_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (37.5ms)
+Rendered shared/_header.html.erb (2.8ms)
+Rendered zones/edit.html.erb within layouts/application (45.6ms)
+Completed 200 OK in 258ms (Views: 47.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 12:16:58 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1
+  [1m[36mZoneAd Load (0.3ms)[0m  [1mSELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 1)[0m
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `ads` WHERE (`ads`.`state_id` = 9)) AS subquery[0m
+  [1m[35mAd Load (0.3ms)[0m  SELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2172205160_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (98.9ms)
+Rendered shared/_header.html.erb (2.7ms)
+Rendered zones/edit.html.erb within layouts/application (106.2ms)
+Completed 200 OK in 289ms (Views: 108.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 12:17:00 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1
+  [1m[36mZoneAd Load (0.3ms)[0m  [1mSELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 1)[0m
+  [1m[35mSite Load (0.4ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `ads` WHERE (`ads`.`state_id` = 9)) AS subquery[0m
+  [1m[35mAd Load (0.3ms)[0m  SELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2173394740_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (35.2ms)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered zones/edit.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 230ms (Views: 44.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 12:17:00 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mZone Load (0.5ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1
+  [1m[36mZoneAd Load (0.3ms)[0m  [1mSELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 1)[0m
+  [1m[35mSite Load (0.4ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)
+  [1m[36mSQL (0.9ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `ads` WHERE (`ads`.`state_id` = 9)) AS subquery[0m
+  [1m[35mAd Load (0.3ms)[0m  SELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2172630700_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (101.5ms)
+Rendered shared/_header.html.erb (2.9ms)
+Rendered zones/edit.html.erb within layouts/application (109.0ms)
+Completed 200 OK in 304ms (Views: 111.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 12:17:01 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1
+  [1m[36mZoneAd Load (0.6ms)[0m  [1mSELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 1)[0m
+  [1m[35mSite Load (0.4ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `ads` WHERE (`ads`.`state_id` = 9)) AS subquery[0m
+  [1m[35mAd Load (0.3ms)[0m  SELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2174596420_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (46.5ms)
+Rendered shared/_header.html.erb (2.9ms)
+Rendered zones/edit.html.erb within layouts/application (57.2ms)
+Completed 200 OK in 255ms (Views: 59.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/zones" for 127.0.0.1 at Mon Nov 01 12:17:02 +0200 2010
+  Processing by ZonesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mZone Load (1.0ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`state_id` = 5)
+  [1m[36mSite Load (0.5ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`id` = 1) LIMIT 1
+Rendered shared/_header.html.erb (3.3ms)
+Rendered zones/index.html.erb within layouts/application (52.5ms)
+Completed 200 OK in 185ms (Views: 54.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/zones/2" for 127.0.0.1 at Mon Nov 01 12:17:04 +0200 2010
+  Processing by ZonesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 2) LIMIT 1
+  [1m[36mSite Load (0.3ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mAd Load (0.4ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2))[0m
+Rendered shared/_header.html.erb (68.7ms)
+Rendered zones/show.html.erb within layouts/application (160.6ms)
+Completed 200 OK in 278ms (Views: 163.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/zones/2/edit" for 127.0.0.1 at Mon Nov 01 12:17:06 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.4ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 2) LIMIT 1[0m
+  [1m[35mZoneAd Load (0.3ms)[0m  SELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 2)
+  [1m[36mSite Load (0.4ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `ads` WHERE (`ads`.`state_id` = 9)) AS subquery
+  [1m[36mAd Load (0.3ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2174932380_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (36.1ms)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered zones/edit.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 235ms (Views: 45.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/zones/2/edit" for 127.0.0.1 at Mon Nov 01 12:17:21 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.4ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 2) LIMIT 1[0m
+  [1m[35mZoneAd Load (0.3ms)[0m  SELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 2)
+  [1m[36mSite Load (0.3ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `ads` WHERE (`ads`.`state_id` = 9)) AS subquery
+  [1m[36mAd Load (0.4ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2172773960_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (36.2ms)
+Rendered shared/_header.html.erb (2.5ms)
+Rendered zones/edit.html.erb within layouts/application (43.1ms)
+Completed 200 OK in 233ms (Views: 45.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/zones/2/edit" for 127.0.0.1 at Mon Nov 01 12:17:23 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 2) LIMIT 1[0m
+  [1m[35mZoneAd Load (0.4ms)[0m  SELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 2)
+  [1m[36mSite Load (0.3ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `ads` WHERE (`ads`.`state_id` = 9)) AS subquery
+  [1m[36mAd Load (0.4ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2175481160_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (38.7ms)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered zones/edit.html.erb within layouts/application (45.7ms)
+Completed 200 OK in 220ms (Views: 47.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/zones/2/edit" for 127.0.0.1 at Mon Nov 01 12:17:23 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.4ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 2) LIMIT 1[0m
+  [1m[35mZoneAd Load (0.3ms)[0m  SELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 2)
+  [1m[36mSite Load (0.4ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)[0m
+  [1m[35mSQL (0.7ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `ads` WHERE (`ads`.`state_id` = 9)) AS subquery
+  [1m[36mAd Load (0.3ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2172783120_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (65.1ms)
+Rendered shared/_header.html.erb (2.9ms)
+Rendered zones/edit.html.erb within layouts/application (74.2ms)
+Completed 200 OK in 265ms (Views: 76.1ms | ActiveRecord: 2.3ms)
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+
+
+Started GET "/zones/2/edit" for 127.0.0.1 at Mon Nov 01 12:17:39 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 2) LIMIT 1[0m
+  [1m[35mZoneAd Load (0.3ms)[0m  SELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 2)
+  [1m[36mSite Load (0.4ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `ads` WHERE (`ads`.`state_id` = 9)) AS subquery
+  [1m[36mAd Load (0.3ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2175053600_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (37.9ms)
+Rendered shared/_header.html.erb (2.9ms)
+Rendered zones/edit.html.erb within layouts/application (45.8ms)
+Completed 200 OK in 375ms (Views: 48.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/zones/2/edit" for 127.0.0.1 at Mon Nov 01 12:20:57 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 2) LIMIT 1[0m
+  [1m[35mZoneAd Load (0.6ms)[0m  SELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 2)
+  [1m[36mSite Load (0.4ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `ads` WHERE (`ads`.`state_id` = 9)) AS subquery
+  [1m[36mAd Load (0.3ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2172394100_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (98.1ms)
+Rendered shared/_header.html.erb (2.7ms)
+Rendered zones/edit.html.erb within layouts/application (105.6ms)
+Completed 200 OK in 280ms (Views: 107.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/zones/2/edit" for 127.0.0.1 at Mon Nov 01 12:20:58 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 2) LIMIT 1[0m
+  [1m[35mZoneAd Load (0.5ms)[0m  SELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 2)
+  [1m[36mSite Load (0.3ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `ads` WHERE (`ads`.`state_id` = 9)) AS subquery
+  [1m[36mAd Load (0.4ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2172720620_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (36.1ms)
+Rendered shared/_header.html.erb (2.9ms)
+Rendered zones/edit.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 220ms (Views: 45.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/zones/2/edit" for 127.0.0.1 at Mon Nov 01 12:21:13 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 2) LIMIT 1[0m
+  [1m[35mZoneAd Load (0.4ms)[0m  SELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 2)
+  [1m[36mSite Load (0.3ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `ads` WHERE (`ads`.`state_id` = 9)) AS subquery
+  [1m[36mAd Load (0.5ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2174925420_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (36.1ms)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered zones/edit.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 215ms (Views: 45.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/zones/2/edit" for 127.0.0.1 at Mon Nov 01 12:21:14 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 2) LIMIT 1[0m
+  [1m[35mZoneAd Load (0.5ms)[0m  SELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 2)
+  [1m[36mSite Load (0.3ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `ads` WHERE (`ads`.`state_id` = 9)) AS subquery
+  [1m[36mAd Load (0.4ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2172350360_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (103.4ms)
+Rendered shared/_header.html.erb (2.8ms)
+Rendered zones/edit.html.erb within layouts/application (111.1ms)
+Completed 200 OK in 301ms (Views: 113.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/zones/2/edit" for 127.0.0.1 at Mon Nov 01 12:21:35 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 2) LIMIT 1[0m
+  [1m[35mZoneAd Load (0.3ms)[0m  SELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 2)
+  [1m[36mSite Load (0.4ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `ads` WHERE (`ads`.`state_id` = 9)) AS subquery
+  [1m[36mAd Load (0.4ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2173396280_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (36.2ms)
+Rendered shared/_header.html.erb (2.8ms)
+Rendered zones/edit.html.erb within layouts/application (43.4ms)
+Completed 200 OK in 227ms (Views: 45.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/zones/2/edit" for 127.0.0.1 at Mon Nov 01 12:21:46 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 2) LIMIT 1[0m
+  [1m[35mZoneAd Load (0.3ms)[0m  SELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 2)
+  [1m[36mAd Load (0.3ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)[0m
+  [1m[35mSite Load (0.4ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2175516560_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (33.9ms)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered zones/edit.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 213ms (Views: 43.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/zones/2/edit" for 127.0.0.1 at Mon Nov 01 12:21:54 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 2) LIMIT 1
+  [1m[36mZoneAd Load (0.5ms)[0m  [1mSELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 2)[0m
+  [1m[35mAd Load (0.3ms)[0m  SELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)
+  [1m[36mSite Load (0.3ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2172381960_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (95.3ms)
+Rendered shared/_header.html.erb (2.8ms)
+Rendered zones/edit.html.erb within layouts/application (102.6ms)
+Completed 200 OK in 295ms (Views: 105.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/zones/2/edit" for 127.0.0.1 at Mon Nov 01 12:22:19 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.4ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 2) LIMIT 1[0m
+  [1m[35mZoneAd Load (0.5ms)[0m  SELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 2)
+  [1m[36mAd Load (0.3ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)[0m
+  [1m[35mSite Load (0.4ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2173934900_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (33.3ms)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered zones/edit.html.erb within layouts/application (40.3ms)
+Completed 200 OK in 227ms (Views: 43.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/zones/2/edit" for 127.0.0.1 at Mon Nov 01 12:22:26 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 2) LIMIT 1
+  [1m[36mZoneAd Load (0.4ms)[0m  [1mSELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 2)[0m
+  [1m[35mAd Load (0.3ms)[0m  SELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)
+Completed   in 248ms
+
+ArgumentError (comparison of Fixnum with nil failed):
+  app/controllers/zones_controller.rb:82:in `build_ad_fields'
+  app/controllers/zones_controller.rb:77:in `load_sites_ads'
+  app/controllers/zones_controller.rb:46:in `edit'
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  [1m[36mSite Load (0.3ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)[0m
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (263.4ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (272.7ms)
+
+
+Started GET "/zones/2/edit" for 127.0.0.1 at Mon Nov 01 12:23:17 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 2) LIMIT 1[0m
+  [1m[35mZoneAd Load (0.3ms)[0m  SELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 2)
+  [1m[36mAd Load (0.3ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)[0m
+Completed   in 169ms
+
+ArgumentError (comparison of Fixnum with nil failed):
+  app/controllers/zones_controller.rb:82:in `build_ad_fields'
+  app/controllers/zones_controller.rb:77:in `load_sites_ads'
+  app/controllers/zones_controller.rb:46:in `edit'
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (257.6ms)
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (265.5ms)
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+
+
+Started GET "/zones/2/edit" for 127.0.0.1 at Mon Nov 01 12:23:39 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.4ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 2) LIMIT 1[0m
+  [1m[35mZoneAd Load (0.3ms)[0m  SELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 2)
+  [1m[36mAd Load (0.3ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)[0m
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2174814480_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (32.4ms)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered zones/edit.html.erb within layouts/application (40.4ms)
+Completed 200 OK in 381ms (Views: 43.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/zones/2/edit" for 127.0.0.1 at Mon Nov 01 12:23:53 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 2) LIMIT 1
+  [1m[36mZoneAd Load (0.4ms)[0m  [1mSELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 2)[0m
+  [1m[35mAd Load (0.3ms)[0m  SELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)
+  [1m[36mSite Load (0.4ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2175667180_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (30.7ms)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered zones/edit.html.erb within layouts/application (37.8ms)
+Completed 200 OK in 278ms (Views: 40.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/zones" for 127.0.0.1 at Mon Nov 01 12:24:28 +0200 2010
+  Processing by ZonesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`state_id` = 5)[0m
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`id` = 1) LIMIT 1[0m
+Rendered shared/_header.html.erb (2.8ms)
+Rendered zones/index.html.erb within layouts/application (52.5ms)
+Completed 200 OK in 178ms (Views: 57.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/zones/1" for 127.0.0.1 at Mon Nov 01 12:24:30 +0200 2010
+  Processing by ZonesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1[0m
+  [1m[35mSite Load (83.8ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mAd Load (0.5ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1))
+Rendered shared/_header.html.erb (2.5ms)
+Rendered zones/show.html.erb within layouts/application (248.8ms)
+Completed 200 OK in 367ms (Views: 168.0ms | ActiveRecord: 85.0ms)
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 12:24:32 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1
+  [1m[36mZoneAd Load (0.7ms)[0m  [1mSELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 1)[0m
+  [1m[35mAd Load (0.3ms)[0m  SELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)
+  [1m[36mSite Load (0.3ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2172331640_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (29.4ms)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered zones/edit.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 226ms (Views: 39.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 12:24:59 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1[0m
+  [1m[35mZoneAd Load (0.5ms)[0m  SELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 1)
+  [1m[36mAd Load (0.3ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)[0m
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2174800800_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (29.9ms)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered zones/edit.html.erb within layouts/application (36.9ms)
+Completed 200 OK in 215ms (Views: 39.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 12:25:09 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mZone Load (0.4ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1
+  [1m[36mZoneAd Load (0.3ms)[0m  [1mSELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 1)[0m
+  [1m[35mAd Load (0.3ms)[0m  SELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)
+  [1m[36mSite Load (0.3ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2172252540_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (95.7ms)
+Rendered shared/_header.html.erb (2.7ms)
+Rendered zones/edit.html.erb within layouts/application (103.3ms)
+Completed 200 OK in 298ms (Views: 106.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 12:25:34 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1[0m
+  [1m[35mZoneAd Load (0.3ms)[0m  SELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 1)
+  [1m[36mAd Load (0.3ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)[0m
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2173092020_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (29.6ms)
+Rendered shared/_header.html.erb (2.5ms)
+Rendered zones/edit.html.erb within layouts/application (36.6ms)
+Completed 200 OK in 229ms (Views: 39.3ms | ActiveRecord: 1.6ms)
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 12:25:45 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1[0m
+  [1m[35mZoneAd Load (0.3ms)[0m  SELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 1)
+  [1m[36mAd Load (0.4ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)[0m
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2174812680_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (31.7ms)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered zones/edit.html.erb within layouts/application (39.6ms)
+Completed 200 OK in 380ms (Views: 43.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 12:28:08 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1
+  [1m[36mZoneAd Load (0.4ms)[0m  [1mSELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 1)[0m
+  [1m[35mAd Load (0.3ms)[0m  SELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)
+  [1m[36mSite Load (0.4ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2175793620_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (30.3ms)
+Rendered shared/_header.html.erb (2.7ms)
+Rendered zones/edit.html.erb within layouts/application (37.6ms)
+Completed 200 OK in 281ms (Views: 40.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 12:28:09 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1[0m
+  [1m[35mZoneAd Load (0.3ms)[0m  SELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 1)
+  [1m[36mAd Load (0.3ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)[0m
+  [1m[35mSite Load (0.3ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2172295940_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (31.3ms)
+Rendered shared/_header.html.erb (2.9ms)
+Rendered zones/edit.html.erb within layouts/application (104.0ms)
+Completed 200 OK in 297ms (Views: 107.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 12:28:22 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1
+  [1m[36mZoneAd Load (0.6ms)[0m  [1mSELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 1)[0m
+  [1m[35mAd Load (0.3ms)[0m  SELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)
+  [1m[36mSite Load (0.3ms)[0m  [1mSELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2173877740_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (30.1ms)
+Rendered shared/_header.html.erb (2.9ms)
+Rendered zones/edit.html.erb within layouts/application (37.5ms)
+Completed 200 OK in 230ms (Views: 40.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/zones/1/edit" for 127.0.0.1 at Mon Nov 01 12:29:16 +0200 2010
+  Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mZone Load (0.5ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`id` = 1) LIMIT 1[0m
+  [1m[35mZoneAd Load (0.4ms)[0m  SELECT `zone_ads`.* FROM `zone_ads` WHERE (`zone_ads`.zone_id = 1)
+  [1m[36mAd Load (0.3ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)[0m
+  [1m[35mSite Load (0.4ms)[0m  SELECT `sites`.* FROM `sites` WHERE (`sites`.`state_id` = 3)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_zones__form_html_erb___163136889_2174814980_1164830 at /Users/soner/Projects/YH/AdBase/app/views/zones/_form.html.erb:39)
+Rendered zones/_form.html.erb (30.4ms)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered zones/edit.html.erb within layouts/application (37.7ms)
+Completed 200 OK in 293ms (Views: 40.6ms | ActiveRecord: 2.0ms)

@@ -77,12 +77,13 @@ class ZonesController < ApplicationController
       build_ad_fields
     end
 
+    # FIXME
     def build_ad_fields
-      if @zone.zone_ads.length < EDIT_ZONE_DEFAULT_AD_FIELDS_COUNT
-        if @ads.length <= EDIT_ZONE_DEFAULT_AD_FIELDS_COUNT
-          missing_fields_count = @ads.length - @zone.zone_ads.length.to_i
+      if @zone.zone_ads.length < CONFIG['edit_zone_ad_fields_count']
+        if @ads.length <= CONFIG['edit_zone_ad_fields_count']
+          missing_fields_count = @ads.length - @zone.zone_ads.length
         else
-          missing_fields_count = EDIT_ZONE_DEFAULT_AD_FIELDS_COUNT - @zone.zone_ads.length.to_i
+          missing_fields_count = CONFIG['edit_zone_ad_fields_count'] - @zone.zone_ads.length
         end
         missing_fields_count.times { @zone.zone_ads.build }
       end
