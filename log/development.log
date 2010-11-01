@@ -48568,3 +48568,724 @@ ActionController::RoutingError (No route matches "/system/ads/000/000/003/d135d7
   
 
 Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+  [1m[36mSQL (3.1ms)[0m  [1mSHOW TABLES[0m
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe" for 127.0.0.1 at Mon Nov 01 09:26:50 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[35mZone Load (0.4ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))
+  [1m[36mAd Load (4.0ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:26:51', `views_count` = 14 WHERE (`ads`.`id` = 5)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+  [1m[36mAd Load (2.4ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:26:51', `views_count` = 6 WHERE (`ads`.`id` = 3)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+Rendered connect/index.html.erb (0.7ms)
+Completed 200 OK in 311ms (Views: 25.1ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe" for 127.0.0.1 at Mon Nov 01 09:27:31 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))[0m
+  [1m[35mAd Load (2.2ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 07:27:31', `views_count` = 15 WHERE (`ads`.`id` = 5)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mAd Load (2.7ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 07:27:31', `views_count` = 7 WHERE (`ads`.`id` = 3)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+Rendered connect/index.html.erb (0.6ms)
+Completed 200 OK in 154ms (Views: 6.1ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe" for 127.0.0.1 at Mon Nov 01 09:28:33 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))
+  [1m[36mAd Load (2.1ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:28:34', `views_count` = 16 WHERE (`ads`.`id` = 5)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+  [1m[36mAd Load (2.4ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:28:34', `views_count` = 8 WHERE (`ads`.`id` = 3)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+Rendered connect/index.html.erb (0.6ms)
+Completed 200 OK in 163ms (Views: 6.1ms | ActiveRecord: 7.3ms)
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+
+
+Started GET "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif" for 127.0.0.1 at Mon Nov 01 09:28:36 +0200 2010
+
+ActionController::RoutingError (No route matches "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe" for 127.0.0.1 at Mon Nov 01 09:28:43 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[36mZone Load (0.4ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))[0m
+  [1m[35mAd Load (2.2ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 07:28:44', `views_count` = 17 WHERE (`ads`.`id` = 5)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mAd Load (2.2ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 07:28:44', `views_count` = 9 WHERE (`ads`.`id` = 1)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+Rendered connect/index.html.erb (0.6ms)
+Completed 200 OK in 771ms (Views: 7.7ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe" for 127.0.0.1 at Mon Nov 01 09:28:54 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))
+  [1m[36mAd Load (2.1ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:28:54', `views_count` = 18 WHERE (`ads`.`id` = 5)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+  [1m[36mAd Load (2.2ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:28:54', `views_count` = 9 WHERE (`ads`.`id` = 3)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+Rendered connect/index.html.erb (0.7ms)
+Completed 200 OK in 162ms (Views: 7.0ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe" for 127.0.0.1 at Mon Nov 01 09:29:01 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))[0m
+  [1m[35mAd Load (2.4ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 07:29:01', `views_count` = 19 WHERE (`ads`.`id` = 5)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mAd Load (2.1ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 07:29:01', `views_count` = 10 WHERE (`ads`.`id` = 1)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+Rendered connect/index.html.erb (0.9ms)
+Completed 200 OK in 155ms (Views: 6.5ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/system/ads/000/000/001/aaca10edf9b37e6f8ee8ca2202200057.gif" for 127.0.0.1 at Mon Nov 01 09:29:01 +0200 2010
+
+ActionController::RoutingError (No route matches "/system/ads/000/000/001/aaca10edf9b37e6f8ee8ca2202200057.gif"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe" for 127.0.0.1 at Mon Nov 01 09:29:42 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[35mZone Load (15.2ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))
+  [1m[36mAd Load (28.2ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:29:43', `views_count` = 20 WHERE (`ads`.`id` = 5)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (20.3ms)[0m  COMMIT
+  [1m[36mAd Load (26.7ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:29:43', `views_count` = 10 WHERE (`ads`.`id` = 3)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (1.4ms)[0m  COMMIT
+Rendered connect/index.html.erb (0.8ms)
+Completed 200 OK in 485ms (Views: 9.8ms | ActiveRecord: 93.3ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe" for 127.0.0.1 at Mon Nov 01 09:34:20 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[36mZone Load (1.2ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))[0m
+  [1m[35mAd Load (4.9ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (14.3ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 07:34:21', `views_count` = 21 WHERE (`ads`.`id` = 5)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mAd Load (2.5ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 07:34:21', `views_count` = 11 WHERE (`ads`.`id` = 1)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+Rendered connect/index.html.erb (0.7ms)
+Completed 200 OK in 342ms (Views: 6.6ms | ActiveRecord: 24.7ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe" for 127.0.0.1 at Mon Nov 01 09:34:30 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))
+  [1m[36mAd Load (2.1ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:34:31', `views_count` = 22 WHERE (`ads`.`id` = 5)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+  [1m[36mAd Load (3.2ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:34:31', `views_count` = 11 WHERE (`ads`.`id` = 3)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Rendered connect/index.html.erb (0.6ms)
+Completed 200 OK in 93ms (Views: 6.7ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe" for 127.0.0.1 at Mon Nov 01 09:36:13 +0200 2010
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+
+ActionController::RoutingError (No route matches "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe" for 127.0.0.1 at Mon Nov 01 09:36:36 +0200 2010
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))[0m
+  [1m[35mAd Load (2.4ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 07:36:36', `views_count` = 23 WHERE (`ads`.`id` = 5)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mAd Load (2.7ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 07:36:36', `views_count` = 12 WHERE (`ads`.`id` = 1)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+Rendered connect/index.html.erb (0.6ms)
+Completed 200 OK in 153ms (Views: 6.0ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/system/ads/000/000/001/aaca10edf9b37e6f8ee8ca2202200057.gif" for 127.0.0.1 at Mon Nov 01 09:36:36 +0200 2010
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+
+ActionController::RoutingError (No route matches "/system/ads/000/000/001/aaca10edf9b37e6f8ee8ca2202200057.gif"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe" for 127.0.0.1 at Mon Nov 01 09:36:43 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))
+  [1m[36mAd Load (2.5ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:36:43', `views_count` = 24 WHERE (`ads`.`id` = 5)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+  [1m[36mAd Load (2.5ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:36:43', `views_count` = 12 WHERE (`ads`.`id` = 3)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Rendered connect/index.html.erb (0.7ms)
+Completed 200 OK in 169ms (Views: 6.4ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif" for 127.0.0.1 at Mon Nov 01 09:36:43 +0200 2010
+
+ActionController::RoutingError (No route matches "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe" for 127.0.0.1 at Mon Nov 01 09:37:48 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))[0m
+  [1m[35mAd Load (2.4ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 07:37:49', `views_count` = 25 WHERE (`ads`.`id` = 5)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mAd Load (2.4ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 07:37:49', `views_count` = 13 WHERE (`ads`.`id` = 1)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.7ms)[0m  [1mCOMMIT[0m
+Rendered connect/index.html.erb (0.6ms)
+Completed 200 OK in 160ms (Views: 6.4ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/system/ads/000/000/001/aaca10edf9b37e6f8ee8ca2202200057.gif" for 127.0.0.1 at Mon Nov 01 09:37:49 +0200 2010
+
+ActionController::RoutingError (No route matches "/system/ads/000/000/001/aaca10edf9b37e6f8ee8ca2202200057.gif"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe" for 127.0.0.1 at Mon Nov 01 09:37:53 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[35mZone Load (7.6ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))
+  [1m[36mAd Load (2.1ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:37:53', `views_count` = 26 WHERE (`ads`.`id` = 5)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+  [1m[36mAd Load (2.2ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:37:53', `views_count` = 13 WHERE (`ads`.`id` = 3)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+Rendered connect/index.html.erb (0.7ms)
+Completed 200 OK in 219ms (Views: 6.9ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe.js" for 127.0.0.1 at Mon Nov 01 09:41:13 +0200 2010
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))[0m
+  [1m[35mAd Load (2.4ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 07:41:13', `views_count` = 27 WHERE (`ads`.`id` = 5)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mAd Load (2.5ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 07:41:13', `views_count` = 14 WHERE (`ads`.`id` = 1)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+Rendered connect/index.html.erb (0.6ms)
+Completed 200 OK in 294ms (Views: 6.6ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe.js" for 127.0.0.1 at Mon Nov 01 09:41:22 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))
+  [1m[36mAd Load (3.0ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:41:22', `views_count` = 28 WHERE (`ads`.`id` = 5)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+  [1m[36mAd Load (2.9ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:41:22', `views_count` = 14 WHERE (`ads`.`id` = 3)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+Rendered connect/index.html.erb (0.8ms)
+Completed 200 OK in 165ms (Views: 7.3ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif" for 127.0.0.1 at Mon Nov 01 09:41:22 +0200 2010
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+
+ActionController::RoutingError (No route matches "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif" for 127.0.0.1 at Mon Nov 01 09:42:04 +0200 2010
+
+ActionController::RoutingError (No route matches "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+  [1m[36mSQL (0.8ms)[0m  [1mSHOW TABLES[0m
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe.js" for 127.0.0.1 at Mon Nov 01 09:44:09 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))
+  [1m[36mAd Load (2.4ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:44:09', `views_count` = 29 WHERE (`ads`.`id` = 5)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+  [1m[36mAd Load (2.8ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:44:09', `views_count` = 15 WHERE (`ads`.`id` = 1)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+Rendered connect/index.js.erb (0.6ms)
+Completed 200 OK in 175ms (Views: 3.2ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/system/ads/000/000/001/aaca10edf9b37e6f8ee8ca2202200057.gif" for 127.0.0.1 at Mon Nov 01 09:44:09 +0200 2010
+
+ActionController::RoutingError (No route matches "/system/ads/000/000/001/aaca10edf9b37e6f8ee8ca2202200057.gif"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe.js" for 127.0.0.1 at Mon Nov 01 09:44:14 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[36mZone Load (0.5ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))[0m
+  [1m[35mAd Load (3.1ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 07:44:14', `views_count` = 30 WHERE (`ads`.`id` = 5)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mAd Load (2.5ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (2.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 07:44:14', `views_count` = 15 WHERE (`ads`.`id` = 3)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+Rendered connect/index.js.erb (1.0ms)
+Completed 200 OK in 464ms (Views: 4.5ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe.js" for 127.0.0.1 at Mon Nov 01 09:44:21 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))
+  [1m[36mAd Load (2.2ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:44:21', `views_count` = 31 WHERE (`ads`.`id` = 5)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+  [1m[36mAd Load (2.5ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:44:21', `views_count` = 16 WHERE (`ads`.`id` = 1)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+Rendered connect/index.js.erb (1.0ms)
+Completed 200 OK in 424ms (Views: 3.2ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe.js" for 127.0.0.1 at Mon Nov 01 09:47:12 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[36mZone Load (0.4ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))[0m
+  [1m[35mAd Load (24.5ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 07:47:12', `views_count` = 32 WHERE (`ads`.`id` = 5)
+[paperclip] Saving attachments.
+  [1m[36mSQL (12.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mAd Load (2.6ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 07:47:12', `views_count` = 16 WHERE (`ads`.`id` = 3)
+[paperclip] Saving attachments.
+  [1m[36mSQL (1.9ms)[0m  [1mCOMMIT[0m
+Rendered connect/index.js.erb (0.7ms)
+Completed 200 OK in 561ms (Views: 3.4ms | ActiveRecord: 44.4ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe.js" for 127.0.0.1 at Mon Nov 01 09:47:20 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[35mZone Load (1.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))
+  [1m[36mAd Load (3.5ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:47:21', `views_count` = 33 WHERE (`ads`.`id` = 5)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+  [1m[36mAd Load (2.7ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:47:21', `views_count` = 17 WHERE (`ads`.`id` = 1)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Rendered connect/index.js.erb (1.4ms)
+Completed 200 OK in 377ms (Views: 3.8ms | ActiveRecord: 10.5ms)
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe.js" for 127.0.0.1 at Mon Nov 01 09:47:30 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[35mZone Load (5.1ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))
+  [1m[36mAd Load (3.2ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:47:31', `views_count` = 34 WHERE (`ads`.`id` = 5)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+  [1m[36mAd Load (2.4ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:47:31', `views_count` = 17 WHERE (`ads`.`id` = 3)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Rendered connect/index.js.erb (0.6ms)
+Completed 200 OK in 309ms (Views: 3.1ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe.js" for 127.0.0.1 at Mon Nov 01 09:47:38 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))[0m
+  [1m[35mAd Load (2.6ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 07:47:38', `views_count` = 35 WHERE (`ads`.`id` = 5)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mAd Load (2.3ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 07:47:38', `views_count` = 18 WHERE (`ads`.`id` = 1)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+Rendered connect/index.js.erb (0.7ms)
+Completed 200 OK in 155ms (Views: 3.0ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe.js" for 127.0.0.1 at Mon Nov 01 09:48:02 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[35mZone Load (0.6ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))
+  [1m[36mAd Load (15.8ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:48:02', `views_count` = 36 WHERE (`ads`.`id` = 5)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (2.0ms)[0m  COMMIT
+  [1m[36mAd Load (2.9ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:48:02', `views_count` = 18 WHERE (`ads`.`id` = 3)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+Rendered connect/index.js.erb (1.5ms)
+Completed 200 OK in 421ms (Views: 5.0ms | ActiveRecord: 24.3ms)
+
+
+Started GET "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif" for 127.0.0.1 at Mon Nov 01 09:48:02 +0200 2010
+
+ActionController::RoutingError (No route matches "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif" for 127.0.0.1 at Mon Nov 01 09:48:02 +0200 2010
+
+ActionController::RoutingError (No route matches "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe.js" for 127.0.0.1 at Mon Nov 01 09:48:13 +0200 2010
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[36mZone Load (0.3ms)[0m  [1mSELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))[0m
+  [1m[35mAd Load (2.3ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 07:48:14', `views_count` = 37 WHERE (`ads`.`id` = 5)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mAd Load (2.3ms)[0m  SELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `ads` SET `updated_at` = '2010-11-01 07:48:14', `views_count` = 19 WHERE (`ads`.`id` = 1)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+Rendered connect/index.js.erb (0.6ms)
+Completed 200 OK in 159ms (Views: 3.0ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/system/ads/000/000/001/aaca10edf9b37e6f8ee8ca2202200057.gif" for 127.0.0.1 at Mon Nov 01 09:48:14 +0200 2010
+
+ActionController::RoutingError (No route matches "/system/ads/000/000/001/aaca10edf9b37e6f8ee8ca2202200057.gif"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe.js" for 127.0.0.1 at Mon Nov 01 09:50:12 +0200 2010
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))
+  [1m[36mAd Load (2.8ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:50:12', `views_count` = 38 WHERE (`ads`.`id` = 5)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+  [1m[36mAd Load (2.5ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:50:12', `views_count` = 19 WHERE (`ads`.`id` = 3)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+Rendered connect/index.js.erb (0.7ms)
+Completed 200 OK in 170ms (Views: 2.9ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif" for 127.0.0.1 at Mon Nov 01 09:50:12 +0200 2010
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+
+ActionController::RoutingError (No route matches "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif" for 127.0.0.1 at Mon Nov 01 09:50:13 +0200 2010
+
+ActionController::RoutingError (No route matches "/system/ads/000/000/003/d135d7882321bbfcea555b3505044703.gif"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/redirect/5" for 127.0.0.1 at Mon Nov 01 09:50:14 +0200 2010
+  Processing by ConnectController#redirect as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAd Load (0.4ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`id` = 5) LIMIT 1[0m
+Redirected to http://sonereker.com
+Completed 302 Found in 35ms
+
+
+Started GET "/21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe.js" for 127.0.0.1 at Mon Nov 01 09:51:17 +0200 2010
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+  Processing by ConnectController#index as */*
+  Parameters: {"ids"=>"21b8460d-bffe-475c-9034-c749193c0e06d8008f39-688f-46ae-afca-8f00b9a9cafe"}
+  [1m[35mZone Load (0.3ms)[0m  SELECT `zones`.* FROM `zones` WHERE (`zones`.`uuid` IN ('21b8460d-bffe-475c-9034-c749193c0e06', 'd8008f39-688f-46ae-afca-8f00b9a9cafe'))
+  [1m[36mAd Load (3.4ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 1)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:51:18', `views_count` = 39 WHERE (`ads`.`id` = 5)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+  [1m[36mAd Load (2.5ms)[0m  [1mSELECT `ads`.* FROM `ads` INNER JOIN `zone_ads` ON `ads`.id = `zone_ads`.ad_id WHERE ((`zone_ads`.zone_id = 2)) AND (`ads`.`state_id` = 9) ORDER BY views_count LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `ads` SET `updated_at` = '2010-11-01 07:51:18', `views_count` = 20 WHERE (`ads`.`id` = 1)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+Rendered connect/index.js.erb (0.6ms)
+Completed 200 OK in 168ms (Views: 3.5ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/system/ads/000/000/001/aaca10edf9b37e6f8ee8ca2202200057.gif" for 127.0.0.1 at Mon Nov 01 09:51:18 +0200 2010
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+
+ActionController::RoutingError (No route matches "/system/ads/000/000/001/aaca10edf9b37e6f8ee8ca2202200057.gif"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/system/ads/000/000/001/aaca10edf9b37e6f8ee8ca2202200057.gif" for 127.0.0.1 at Mon Nov 01 09:51:18 +0200 2010
+
+ActionController::RoutingError (No route matches "/system/ads/000/000/001/aaca10edf9b37e6f8ee8ca2202200057.gif"):
+  
+
+Rendered /Users/soner/.rvm/gems/ruby-1.8.7-p302/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Nov 01 10:19:19 +0200 2010
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/sessions (7.0ms)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login" for 127.0.0.1 at Mon Nov 01 10:19:30 +0200 2010
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Giriş Yap", "authenticity_token"=>"GiIbZswXJU5fV2h6s1JmkJywsPSVYuq74vM5hLyiOco=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"soner@sonereker.com"}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`email` = 'soner@sonereker.com') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `users` SET `current_sign_in_at` = '2010-11-01 08:19:31', `last_sign_in_at` = '2010-10-30 12:39:13', `sign_in_count` = 8, `updated_at` = '2010-11-01 08:19:31' WHERE (`users`.`id` = 2)
+  [1m[36mSQL (0.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://adbase.local/
+Completed 302 Found in 199ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Nov 01 10:19:31 +0200 2010
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+Redirected to http://adbase.local/dashboard
+Completed 302 Found in 26ms
+
+
+Started GET "/dashboard" for 127.0.0.1 at Mon Nov 01 10:19:31 +0200 2010
+  Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendered shared/_header.html.erb (4.6ms)
+Rendered dashboard/index.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 352ms (Views: 67.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/ads" for 127.0.0.1 at Mon Nov 01 10:19:34 +0200 2010
+  Processing by AdsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mAd Load (0.5ms)[0m  [1mSELECT `ads`.* FROM `ads` WHERE (`ads`.`state_id` = 9)[0m
+  [1m[35mState Load (0.4ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 9) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 9) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 9) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 9) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 9) LIMIT 1
+Rendered shared/_header.html.erb (2.5ms)
+Rendered ads/index.html.erb within layouts/application (71.9ms)
+Completed 200 OK in 145ms (Views: 92.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/ads/1" for 127.0.0.1 at Mon Nov 01 10:19:36 +0200 2010
+  Processing by AdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mAd Load (0.4ms)[0m  SELECT `ads`.* FROM `ads` WHERE (`ads`.`id` = 1) LIMIT 1
+Rendered shared/_header.html.erb (2.8ms)
+Rendered ads/show.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 88ms (Views: 41.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ads/1/edit" for 127.0.0.1 at Mon Nov 01 10:19:39 +0200 2010
+  Processing by AdsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mAd Load (0.4ms)[0m  SELECT `ads`.* FROM `ads` WHERE (`ads`.`id` = 1) LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`category_id` = 400)[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`state_id` = 1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_ads__form_html_erb___442813911_2176794680_1163550 at /Users/soner/Projects/YH/AdBase/app/views/ads/_form.html.erb:1)
+Rendered ads/_form.html.erb (38.3ms)
+Rendered shared/_header.html.erb (2.6ms)
+Rendered ads/edit.html.erb within layouts/application (56.8ms)
+Completed 200 OK in 149ms (Views: 78.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/ads/1" for 127.0.0.1 at Mon Nov 01 10:29:31 +0200 2010
+  Processing by AdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mAd Load (0.4ms)[0m  SELECT `ads`.* FROM `ads` WHERE (`ads`.`id` = 1) LIMIT 1
+Rendered shared/_header.html.erb (2.6ms)
+Rendered ads/show.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 72ms (Views: 24.9ms | ActiveRecord: 0.7ms)
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAd Load (0.4ms)[0m  SELECT `ads`.* FROM `ads` WHERE (`ads`.`expire` = 1)
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `ads` SET `state_id` = 8, `updated_at` = '2010-11-01 08:29:56' WHERE (`ads`.`id` = 1)
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/ads/1" for 127.0.0.1 at Mon Nov 01 10:30:00 +0200 2010
+  Processing by AdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mAd Load (0.4ms)[0m  SELECT `ads`.* FROM `ads` WHERE (`ads`.`id` = 1) LIMIT 1
+Rendered shared/_header.html.erb (2.5ms)
+Rendered ads/show.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 141ms (Views: 25.1ms | ActiveRecord: 0.7ms)
+DEPRECATION WARNING: :as is deprecated, please use :path instead. (called from /Users/soner/Projects/YH/AdBase/config/routes.rb:7)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m

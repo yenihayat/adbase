@@ -15,8 +15,8 @@ AdBase::Application.routes.draw do
   resources :zones
 
   match 'dashboard' => 'dashboard#index'
-  match '/redirect' => 'connect#redirect'
-  match '/:ids' => 'connect#index', :constraints => { :subdomain => "connect" }
+  match '/out/:id' => 'connect#out'
+  match '/:ids.js' => 'connect#index', :constraints => { :subdomain => "connect" }
 
   root :to => "home#index"
 

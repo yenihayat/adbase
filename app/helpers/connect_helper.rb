@@ -3,9 +3,9 @@ module ConnectHelper
     if content_type.include?('image')
       content = "// AdBase##{zone_uuid} Content\n"
       content += "var target_url = document.createElement('a');\n"
-      content += "target_url.href = 'http://connect.lvh.me:3000/redirect?u=#{encode_target_url(ad_target_url)}';\n"
+      content += "target_url.href = 'http://connect.lvh.me:3000/redirect/#{ad_id}';\n"
       content += "var ad_content = document.createElement('img');\n"
-      content += "ad_content.class = 'ad';\n"
+      content += "ad_content.setAttribute('class', 'ad');\n"
       content += "ad_content.src = 'http://static.adbase.local/system/ads/#{partitionize(ad_id)}/#{ad_file_name}';\n"
       content += "ad_content.border = '0';\n"
       content += "target_url.appendChild(ad_content);\n"

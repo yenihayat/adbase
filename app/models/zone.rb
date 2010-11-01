@@ -12,6 +12,7 @@ class Zone < ActiveRecord::Base
   belongs_to :state
 
   has_many :ads, :through => :zone_ads do
+
     # Find active ads, and order them by their views count so we can serve each ad equal times.
     def find_active
       where(:state_id => ADS_STATE_ACTIVE).order(:views_count)
