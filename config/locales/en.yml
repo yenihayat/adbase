@@ -1,5 +1,35 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  # Flash messages.
+  ad_created: "Ad created."
+  ad_updated: "Ad updated."
+  site_created: "Site created."
+  site_updated: "Site updated."
+  user_created: "User created."
+  profile_updated: "Profile updated."
+  zone_created: "Zone created."
+  zone_updated: "Zone updated."
+
+  ads:
+    form:
+      title: "Title"
+      description: "Description"
+      width: "Width, px"
+      height: "Height, px"
+      target_url: "Target URL"
+      track_options: "Track Options"
+      track_clicks: "Track Clicks"
+      track_views: "Track Views"
+      expiration: "Expiration"
+      expire: "Expire on date or max views/clicks values."
+      expiration_options: "Expiration Options"
+      max_clicks_count: "<p>Max Clicks Count<br /><span class='light'>Leave as is not to expire on value.</span></p>"
+      max_views_count: "<p>Max Views Count<br /><span class='light'>Leave as is not to expire on value.</span></p>"
+      status: "Status"
+      belongs_to: "Belongs to"
+      select: "Select"
+      content: "Content"
+      update: "Update"
+      create: "Create"
+    index:
+      new_ad: "New Ad"
+      ads: "Ads"

@@ -25,7 +25,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
 
     if @user.save
-      flash[:notice] = "User created!"
+      set_flash(:user_created)
       redirect_to edit_user_path(@user)
     else
       render :new
@@ -49,7 +49,7 @@ class UsersController < ApplicationController
     end
 
     if @user.update_attributes(params[:user])
-      flash[:notice] = "Profile updated."
+      set_flash(:profile_updated)
       redirect_to edit_user_path(@user)
     else
       render :edit

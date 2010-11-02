@@ -29,6 +29,7 @@ class AdsController < ApplicationController
     set_user_id
 
     if @ad.save
+      set_flash(:ad_created)
       redirect_to ad_path(@ad)
     else
       @users = User.active
@@ -47,6 +48,7 @@ class AdsController < ApplicationController
     @ad = Ad.find(params[:id])
 
     if @ad.update_attributes(params[:ad])
+      set_flash(:ad_updated)
       redirect_to ad_path(@ad)
     else
       @users = User.active

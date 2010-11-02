@@ -3,8 +3,8 @@
 <head>
   <title>AdBase / <%= params[:controller].capitalize %></title>
   <%= stylesheet_link_tag "screen" %>
-  <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js', :cache => false %>
-  <%= javascript_include_tag 'application', :cache => false %>
+  <%= javascript_include_tag 'jquery-1.3.2.min', :cache => true %>
+  <%= javascript_include_tag 'application', :cache => true %>
   <%= csrf_meta_tag %>  
 </head>
 <body>

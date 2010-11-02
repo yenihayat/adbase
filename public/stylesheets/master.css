@@ -43,7 +43,7 @@ div#message {
 }
 
 div.notice {
-  background: #4db8ad;
+  background: #64c29b;
   color: #fff;
 }
 
@@ -78,27 +78,27 @@ div#header {
 
 div#header div#logo {
   float: left;
-  width: 200px;
-  font-size: 19px;
-  margin-top: 16px;
+  width: 73px;
+  font-size: 18px;
+  margin-top: 14px;
   margin-left: 40px;
 }
 
 div#header div#logo h1 {
   color: #999;
-  width: 128px;
-  height: 14px;
+  width: 73px;
+  height: 18px;
   margin-top: 6px;
 }
 
 div#header div#logo h1 a {
   text-indent: -900px;
-  width: 128px;
-  height: 14px;
+  width: 73px;
+  height: 18px;
   display: block;
   overflow: hidden;
   white-space: nowrap;
-  --background: transparent url(../../images/logo.png) no-repeat;
+  background: transparent url(../../images/logo.png) no-repeat;
 }
 
 div#header div#menu {
@@ -138,14 +138,12 @@ div#content {
   margin: 60px auto;
   background: #fff;
   padding: 40px;
-
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   -webkit-box-shadow:0 2px 2px rgba(0,0,0,0.2);
   -moz-box-shadow:0 2px 2px rgba(0,0,0,0.2);
   box-shadow:0 2px 2px rgba(0,0,0,0.2);
-
 }
 
 div#content h2 {
@@ -172,7 +170,7 @@ div#content table.list {
 }
 
 div#content table a {
-  color: #c41840;
+  color: #35addf;
   font-weight: bold;
   text-decoration: none;
 }
@@ -184,8 +182,11 @@ div#content table a:hover {
 
 div#content table th,
 div#content table td {
-  padding: 5px;
+  padding: 3px;
   font-size: 13px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
 }
 
 div#content table td ul li {
@@ -205,6 +206,9 @@ div#content table.list td {
 
 div#content table th {
   border-bottom: 2px solid #ccc;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
   color: #555;
   background: #ededed;
 }
@@ -220,11 +224,15 @@ div#content table input[type=password],
 div#content table input[type=email],
 div#content table textarea {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 5px;
+  padding: 8px;
+  margin: 0;
   font-size: 13px;
   color: #555;
   width: 350px;
   border: 1px solid #ccc;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 
 div#content table input[type=text]:focus,
@@ -232,7 +240,7 @@ div#content table input[type=password]:focus,
 div#content table input[type=email]:focus,
 div#content table textarea:focus {
   outline: 0;
-  border: 1px solid #4db8ad;
+  border: 1px solid #35addf;
 }
 
 div#content table td.label {
@@ -243,6 +251,9 @@ div#content table td.label {
   font-weight: bold;
   font-size: 11px;
   border-top: 1px solid #ddd;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
 
 div#content table td.label span.light {
@@ -264,7 +275,8 @@ div#content table textarea {
   line-height: 1.6em;
   height: 50px;
   padding: 10px;
-  width: 340px;
+  width: 346px;
+  resize: none;
 }
 
 div#submenu {

@@ -1,9 +1,4 @@
 class Ad < ActiveRecord::Base
-  STATE_ACTIVE = 9
-  STATE_ARCHIVE = 10
-  STATE_PUBLISHED = 7
-  STATE_EXPIRED = 8
-
   before_create :randomize_file_name, :set_state
 
   has_many :zones, :through => :zone_ads
@@ -19,7 +14,7 @@ class Ad < ActiveRecord::Base
   # TODO: validates_attachment_content_type, validates_attachment_size.
   validates_attachment_presence :ad
 
-  scope :active, where(:state_id => STATE_ACTIVE)
+  scope :active, where(:state_id => CONFIG['state_ad_active'])
   scope :belongs_to_user, lambda { |user_id| { :conditions => ['user_id = ?', user_id] } }
   scope :belongs_to_site, lambda { |site_id| { :conditions => ['site_id = ?', site_id] } }
 
@@ -34,6 +29,6 @@ class Ad < ActiveRecord::Base
     end
 
     def set_state
-      self.state_id = STATE_ACTIVE
+      self.state_id = CONFIG['state_ad_active']
     end
 end

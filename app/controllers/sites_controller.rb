@@ -26,6 +26,7 @@ class SitesController < ApplicationController
     end
   
     if @site.save
+      set_flash(:site_created)
       redirect_to site_path(@site)
     else
       @users = User.active
@@ -41,6 +42,7 @@ class SitesController < ApplicationController
   def update
     @site = Site.find(params[:id])
     if @site.update_attributes(params[:site])
+      set_flash(:site_updated)
       redirect_to site_path(@site)
     else
       @users = User.active

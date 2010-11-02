@@ -1,10 +1,6 @@
 require 'uuidtools'
 
 class Zone < ActiveRecord::Base
-  ADS_STATE_ACTIVE = 9
-  STATE_ACTIVE = 5
-  STATE_PASSIVE = 6
-
   before_create :set_uuid, :set_state
 
   belongs_to :site
@@ -15,7 +11,7 @@ class Zone < ActiveRecord::Base
 
     # Find active ads, and order them by their views count so we can serve each ad equal times.
     def find_active
-      where(:state_id => ADS_STATE_ACTIVE).order(:views_count)
+      where(:state_id => CONFIG['state_ad_active']).order(:views_count)
     end
   end
 
@@ -23,7 +19,7 @@ class Zone < ActiveRecord::Base
 
   accepts_nested_attributes_for :zone_ads, :reject_if => lambda { |a| a[:ad_id].blank? }, :allow_destroy => true
 
-  scope :active, where(:state_id => STATE_ACTIVE)
+  scope :active, where(:state_id => CONFIG['state_zone_active'])
   scope :belongs_to_user, lambda { |user_id| { :conditions => ['user_id = ?', user_id] } }
   scope :belongs_to_site, lambda { |site_id| { :conditions => ['site_id = ?', site_id] } }
 
@@ -44,6 +40,6 @@ class Zone < ActiveRecord::Base
     end
 
     def set_state
-      self.state_id = STATE_ACTIVE
+      self.state_id = CONFIG['state_zone_active']
     end
 end

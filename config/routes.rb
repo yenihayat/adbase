@@ -1,9 +1,5 @@
 AdBase::Application.routes.draw do
 
-  devise_scope :user do
-    get "/login" => "devise/sessions#new"
-  end
-
   devise_for :users,
     :as => '', :path_names => {:sign_in => '/login', :sign_up => 'users/new', :sign_out => '/logout'}
 

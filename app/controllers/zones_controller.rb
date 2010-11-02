@@ -34,6 +34,7 @@ class ZonesController < ApplicationController
     @zone.user_id = @site.user_id if @site
 
     if @zone.save
+      set_flash(:zone_created)
       redirect_to edit_zone_path(@zone)
     else
       load_sites
@@ -49,6 +50,7 @@ class ZonesController < ApplicationController
   def update
     @zone = Zone.find(params[:id])
     if @zone.update_attributes(params[:zone])
+      set_flash(:zone_updated)
       redirect_to zone_path(@zone)
     else
       load_sites_ads

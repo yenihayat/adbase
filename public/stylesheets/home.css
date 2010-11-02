@@ -30,7 +30,7 @@ div.alert {
 }
 
 div.notice {
-  background: #4db8ad;
+  background: #64c29b;
   color: #fff;
 }
 
@@ -73,6 +73,9 @@ div#content div#login table th,
 div#content div#login table td {
   padding: 3px;
   font-size: 13px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
 }
 
 div#content div#login table.login,
@@ -88,17 +91,21 @@ div#content div#login table.forgot-password {
 div#content div#login table input[type=text],
 div#content div#login table input[type=password] {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 5px;
+  padding: 8px;
   font-size: 13px;
   font-weight: bold;
+  margin: 0;
   color: #555;
   border: 1px solid #ccc;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 
 div#content div#login table input[type=text]:focus,
 div#content div#login table input[type=password]:focus {
   outline: 0;
-  border: 1px solid #4db8ad;
+  border: 1px solid #35addf;
 }
 
 div#content div#login table span a,
@@ -108,7 +115,7 @@ div#content div#login table span a:visited {
 }
 
 div#content div#login table span a:hover {
-  color: #c41840;
+  color: #35addf;
   text-decoration: none;
 }
 

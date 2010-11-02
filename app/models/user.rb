@@ -1,7 +1,4 @@
 class User < ActiveRecord::Base
-  STATE_ACTIVE = 1
-  STATE_PASSIVE = 2
-
   before_create :set_state
 
   # Include default devise modules. Others available are:
@@ -14,7 +11,7 @@ class User < ActiveRecord::Base
   validates_presence_of :firstname, :lastname, :email
   validates_uniqueness_of :email
 
-  scope :active, where(:state_id => STATE_ACTIVE)
+  scope :active, where(:state_id => CONFIG['state_user_active'])
 
   def name
     "#{firstname} #{lastname}"
@@ -30,6 +27,6 @@ class User < ActiveRecord::Base
 
   private
     def set_state
-      self.state_id = STATE_ACTIVE
+      self.state_id = CONFIG['state_user_active']
     end
 end
