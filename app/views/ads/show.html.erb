@@ -1,28 +1,28 @@
-<h2>Ad</h2>
+<h2><%= t('.ad') %></h2>
 
 <table class="cart">
   <tr>
-    <td class="title">Title</td>
+    <td class="title"><%= t('title') %></td>
     <td><%= @ad.name %></td>
   </tr>
   <tr>
-    <td class="title">Dimensions</td>
+    <td class="title"><%= t('dimensions') %></td>
     <td><%= @ad.width.to_s %> &times; <%= @ad.height.to_s %>px</td>
   </tr>
   <tr>
-    <td class="title">Expiration</td>
+    <td class="title"><%= t('expiration') %></td>
     <td><%= expire_status_message(@ad) %></td>
   </tr>
   <tr>
-    <td class="title">Tracking Status</td>
+    <td class="title"><%= t('.tracking_status') %></td>
     <td><%= tracking_status_message(@ad) %></td>
   </tr>
   <tr>
-    <td class="title">Views/Clicks Count</td>
+    <td class="title"><%= t('.views_clicks_count') %></td>
     <td><%= @ad.views_count.to_s %>/<%= @ad.clicks_count.to_s %></td>
   </tr>
   <tr>
-    <td class="title">File Info</td>
+    <td class="title"><%= t('.file_info') %></td>
     <td><%= @ad.ad_content_type %> [<%= @ad.ad_file_size/1024 %>kb]</td>
   </tr>
   <tr>
@@ -31,4 +31,4 @@
   </tr>
 </table>
 
-<%= link_to "Edit", edit_ad_path(@ad), :class => "bottom-act" %>
+<%= link_to t('edit'), edit_ad_path(@ad), :class => "bottom-act" %>

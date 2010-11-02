@@ -1,15 +1,15 @@
 <div id="submenu">
-  <%= link_to "New Site", new_site_path %>
+  <%= link_to t('new_site'), new_site_path %>
 </div>
 
-<h2>Sites</h2>
+<h2><%= t('sites_title') %></h2>
 
 <table class="list">
   <tr>
-    <th>No#</th>
-    <th>Title</th>
-    <th>URL</th>
-	  <th>Created</th>
+    <th><%= t('nu') %></th>
+    <th><%= t('title') %></th>
+    <th><%= t('url') %></th>
+	  <th><%= t('created_at') %></th>
   </tr>
 
   <% @sites.each do |site| %>

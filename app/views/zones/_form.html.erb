@@ -9,51 +9,51 @@
 
 <table class="form">
   <tr>
-    <td class="label"><%= f.label :name, "Title" %></td>
+    <td class="label"><%= f.label :name, t('title') %></td>
     <td class="field"><%= f.text_field :name %></td>
   </tr>
   <tr>
-    <td class="label"><%= f.label :width, "Width, px" %></td>
+    <td class="label"><%= f.label :width, t('width') %></td>
     <td class="field"><%= f.text_field :width %></td>
   </tr>
   <tr>
-    <td class="label"><%= f.label :height, "Height, px" %></td>
+    <td class="label"><%= f.label :height, t('height') %></td>
     <td class="field"><%= f.text_field :height %></td>
   </tr>
   <tr>
-    <td class="label"><%= f.label :site_id, "Found in" %></td>
-    <td><%= f.select :site_id, @sites.map {|s| [s.name, s.id]}, :prompt => "Choose Site", :selected => params[:site_id].present? ? params[:site_id] : @zone.site_id %></td>
+    <td class="label"><%= f.label :site_id, t('.found_in') %></td>
+    <td><%= f.select :site_id, @sites.map {|s| [s.name, s.id]}, :prompt => t('.choose_site'), :selected => params[:site_id].present? ? params[:site_id] : @zone.site_id %></td>
   </tr>
   <% if @ads.present? and @ads.length > 1 %>
   <tr>
-    <td class="label"><%= f.label :cycle, "<p>Cycle Ads<br /><span class='light'>Check this to serve multiple ads in random order. Otherwise first one found will be served.</span>".html_safe %></td>
+    <td class="label"><%= f.label :cycle, t('.cycle_ads_with_tip').html_safe %></td>
     <td><%= f.check_box :cycle %></td>
   </tr>
   <% end %>
   <% unless new_record? %>
   <tr>
-    <td class="label">Active Ads</td>
+    <td class="label"><%= t('.active_ads') %></td>
     <td>
       <% if @ads.present? %>
       <ul>
     <% f.fields_for :zone_ads do |zone_ad| %>
         <li>
-          <%= zone_ad.select :ad_id, @ads.map {|a| [a.name, a.id]}, :prompt => "Choose Ad" %>
+          <%= zone_ad.select :ad_id, @ads.map {|a| [a.name, a.id]}, :prompt => t('.choose_ad') %>
           <% unless zone_ad.object.new_record? %>
-            <%= zone_ad.check_box :_destroy %> <%= zone_ad.label :_destroy, "Remove" %>
+            <%= zone_ad.check_box :_destroy %> <%= zone_ad.label :_destroy, t('remove') %>
           <% end %>
         </li>
     <% end %>
       </ul>
       <% else %>
-      <p>Currently you don't have any ads.<br />Do you want to <%= link_to "add one?", new_ad_path %>
+      <p><%= t('.not_found_any_ads') %><br /><%= link_to t('.add_one'), new_ad_path %>
       <% end %>
     </td>
   </tr>
   <% end %>
   <tr>
     <td></td>
-    <td><%= f.submit params[:action] == 'edit' ? 'Update' : 'Create' %></td>
+    <td><%= f.submit params[:action] == 'edit' ? t('update') : t('create') %></td>
   </tr>
 </table>
 <% end %>

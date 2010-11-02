@@ -4,16 +4,16 @@
   </div>
   <div id="menu">
     <ul id="nav">
-      <li><%= link_to "Dashboard", dashboard_path %></li>
-      <li><%= link_to "Sites", sites_path %></li>
-      <li><%= link_to "Zones", zones_path %></li>
-      <li><%= link_to "Ads", ads_path %></li>
+      <li><%= link_to t('dashboard_title'), dashboard_path %></li>
+      <li><%= link_to t('sites_title'), sites_path %></li>
+      <li><%= link_to t('zones_title'), zones_path %></li>
+      <li><%= link_to t('ads_title'), ads_path %></li>
       <% if current_user.is_admin? %>
-        <li><%= link_to "Users", users_path %></li>
+        <li><%= link_to t('users_title'), users_path %></li>
       <% else %>
-        <li><%= link_to "Profile", profile_path %></li>
+        <li><%= link_to t('profile'), profile_path %></li>
       <% end %>
-      <li><%= link_to "Logout", destroy_user_session_path %></li>
+      <li><%= link_to t('logout'), destroy_user_session_path %></li>
     </ul>
   </div>
 </div>

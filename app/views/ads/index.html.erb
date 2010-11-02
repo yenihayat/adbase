@@ -1,15 +1,15 @@
 <div id="submenu">
-  <%= link_to t('.new_ad'), new_ad_path %>
+  <%= link_to t('new_ad'), new_ad_path %>
 </div>
 
-<h2><%= t('ads') %></h2>
+<h2><%= t('ads_title') %></h2>
 
 <table class="list">
   <tr>
-    <th>No#</th>
-    <th>Title</th>
-	  <th>Status</th>
-    <th>Last Update</th>
+    <th><%= t('nu') %></th>
+    <th><%= t('title') %></th>
+	  <th><%= t('status') %></th>
+    <th><%= t('last_update') %></th>
   </tr>
 
   <% @ads.each do |ad| %>

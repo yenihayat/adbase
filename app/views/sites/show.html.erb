@@ -1,21 +1,21 @@
-<h2>Site: <%= @site.name %></h2>
+<h2><%= t('.site') %></h2>
 <table class="cart">
   <tr>
-    <td class="title">Title</td>
+    <td class="title"><%= t('title') %></td>
     <td><%= @site.name %></td>
   </tr>
   <tr>
-    <td class="title">URL</td>
+    <td class="title"><%= t('url') %></td>
     <td><%= @site.url %></td>
   </tr>
   <% if current_user.is_admin? %>
   <tr>
-    <td class="title">User</td>
+    <td class="title"><%= t('.user') %></td>
     <td><%= link_to @site.user.name, user_path(@site.user) %></td>
   </tr>
   <% end %>
   <tr>
-    <td class="title">Zones</td>
+    <td class="title"><%= t('zones_title') %></td>
     <td>
       <% if @site.zones.length > 0 %>
       <ul>
@@ -24,10 +24,10 @@
         <% end %>
       </ul>
       <% else %>
-        <p>No zones found. Do you want to <%= link_to "add one?", new_zone_path(:site_id => @site) %></p>
+        <p><%= t('.no_zones_found') %> <%= link_to t('.do_you_want_to_add_one'), new_zone_path(:site_id => @site) %></p>
       <% end %>
     </td>
   </tr>
 </table>
 
-<%= link_to "Edit", edit_site_path(@site), :class => "bottom-act" %>
+<%= link_to t('edit'), edit_site_path(@site), :class => "bottom-act" %>

@@ -1,19 +1,19 @@
 <% form_for @ad, :html => {:multipart => true} do |f| %>
 <table class="form">
   <tr>
-    <td class="label"><%= f.label :name, t('.title') %></td>
+    <td class="label"><%= f.label :name, t('title') %></td>
     <td class="field"><%= f.text_field :name %></td>
   </tr>
   <tr>
-    <td class="label"><%= f.label :description, t('.description') %></td>
+    <td class="label"><%= f.label :description, t('description') %></td>
     <td class="field"><%= f.text_area :description %></td>
   </tr>
   <tr>
-    <td class="label"><%= f.label :width, t('.width') %></td>
+    <td class="label"><%= f.label :width, t('width') %></td>
     <td class="field"><%= f.text_field :width %></td>
   </tr>
   <tr>
-    <td class="label"><%= f.label :height, t('.height') %></td>
+    <td class="label"><%= f.label :height, t('height') %></td>
     <td class="field"><%= f.text_field :height %></td>
   </tr>
   <tr>
@@ -25,7 +25,7 @@
     <td><%= f.check_box :track_clicks %> <%= f.label :track_clicks, t('.track_clicks') %> &nbsp; <%= f.check_box :track_views %> <%= f.label :track_views, t('.track_views') %></td>
   </tr>
   <tr>
-    <td class="label"><%= f.label :expire, t('.expiration') %></td>
+    <td class="label"><%= f.label :expire, t('expiration') %></td>
     <td><%= f.check_box :expire, :id => "expire-chk" %> <%= f.label :expire, t('.expire') %></td>
   </tr>
   <tr <%= hide_unless_set_to_expire(@ad.expire) %> class="expiration-options">
@@ -48,7 +48,7 @@
   <% end %>
   <% if current_user.is_admin? %>
   <tr>
-    <td class="label"><%= f.label :user_is, t('.belongs_to') %></td>
+    <td class="label"><%= f.label :user_is, t('belongs_to') %></td>
     <td><%= f.select :user_id, @users.map {|u| [u.info, u.id]}, :prompt => t('.select') %></td>
   </tr>
   <% end %>
@@ -64,7 +64,7 @@
   </tr>
   <tr>
     <td></td>
-    <td><%= f.submit params[:action] == 'edit' ? t('.update') : t('.create') %></td>
+    <td><%= f.submit params[:action] == 'edit' ? t('update') : t('create') %></td>
   </tr>
 </table>
 <% end %>

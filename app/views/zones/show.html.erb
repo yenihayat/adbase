@@ -1,33 +1,33 @@
-<h2>Zone Details</h2>
+<h2><%= t('.zone') %></h2>
 
 <table class="cart">
   <tr>
-    <td class="title">Title</td>
+    <td class="title"><%= t('title') %></td>
     <td><%= @zone.name %></td>
   </tr>
   <tr>
-    <td class="title">Site</td>
+    <td class="title"><%= t('.site') %></td>
     <td><%= link_to @zone.site.name, site_path(@zone.site_id) %></td>
   </tr>
   <% if current_user.is_admin? %>
   <tr>
-    <td class="title">User</td>
+    <td class="title"><%= t('.user') %></td>
     <td><%= link_to @zone.user.name, user_path(@zone.user) %></td>
   </tr>
   <% end %>
   <tr>
-    <td class="title">Dimensions</td>
+    <td class="title"><%= t('dimensions') %></td>
     <td><%= @zone.width.to_s %> &times; <%= @zone.height.to_s %>px</td>
   </tr>
   <% if @zone.ads.length > 1 %>
   <tr>
-    <td class="title">Cycle Ads</td>
-    <td><%= @zone.cycle ? "Serving multiple ads in random order." : "Serving first ad found." %></td>
+    <td class="title"><%= t('.cycle_ads') %></td>
+    <td><%= @zone.cycle ? t('.serving_multiple_ads') : t('.serving_first_ad') %></td>
   </tr>
   <% end %>
   <% if @zone.ads.present? %>
   <tr>
-    <td class="title">Active Ads</td>
+    <td class="title"><%= t('.active_ads') %></td>
     <td>
       <ul>
       <%  @zone.ads.each do |ad| %>
@@ -37,7 +37,7 @@
     </td>
   </tr>
   <tr>
-    <td class="title">Publish &amp; Track Code</td>
+    <td class="title"><%= t('.publish_track_code').html_safe %></td>
     <td>
       <textarea id="code">
 <div class="adbase">
@@ -52,4 +52,4 @@
   <% end %>
 </table>
 
-<%= link_to "Düzenle", edit_zone_path(@zone), :class => "bottom-act" %>
+<%= link_to t('edit'), edit_zone_path(@zone), :class => "bottom-act" %>

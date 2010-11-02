@@ -9,19 +9,19 @@
 
 <table class="form">
   <tr>
-    <td class="label"><%= f.label :company, "Company" %></td>
+    <td class="label"><%= f.label :company, t('company') %></td>
     <td class="field"><%= f.text_field :company %></td>
   </tr>
   <tr>
-    <td class="label"><%= f.label :firstname, "Name" %></td>
+    <td class="label"><%= f.label :firstname, t('firstname') %></td>
     <td class="field"><%= f.text_field :firstname %></td>
   </tr>
   <tr>
-    <td class="label"><%= f.label :lastname, "Surname" %></td>
+    <td class="label"><%= f.label :lastname, t('lastname') %></td>
     <td class="field"><%= f.text_field :lastname %></td>
   </tr>
   <tr>
-    <td class="label"><%= f.label :email, "E-mail" %></td>
+    <td class="label"><%= f.label :email, t('email') %></td>
     <% if current_user %>
     <td class="field"><%= f.email_field :email %></td>
     <% else %>
@@ -29,30 +29,30 @@
     <% end %>
   </tr>
   <tr>
-    <td class="label"><%= f.label :password, params[:action] == "new" ? "Password" : "<p>Password<br /><span class='light'>Leave blank if you don't want to change.</span></p>".html_safe %></td>
+    <td class="label"><%= f.label :password, params[:action] == "new" ? t('password') : t('password_with_tip').html_safe %></td>
     <td class="field"><%= f.password_field :password %></td>
   </tr>
   <tr>
-    <td class="label"><%= f.label :password_confirmation, params[:action] == "new" ? "Confirm Password" : "<p>Confirm Password<br /><span class='light'>Leave blank if you don't want to change.</span></p>".html_safe %></td>
+    <td class="label"><%= f.label :password_confirmation, params[:action] == "new" ? t('confirm_password') : t('confirm_password_with_tip').html_safe %></td>
     <td class="field"><%= f.password_field :password_confirmation %></td>
   </tr>
   <tr>
-    <td class="label"><%= f.label :phone, "Phone" %></td>
+    <td class="label"><%= f.label :phone, t('phone') %></td>
     <td class="field"><%= f.text_field :phone %></td>
   </tr>
   <% if current_user.is_admin? %>
   <tr>
-    <td class="label"><%= f.label :state_id, "Account Status" %></td>
-    <td class="field"><%= f.select :state_id, @states.map {|s| [s.title, s.id]} %></td>
+    <td class="label"><%= f.label :state_id, t('account_status') %></td>
+    <td><%= f.select :state_id, @states.map {|s| [s.title, s.id]} %></td>
   </tr>
   <tr>
     <td></td>
-    <td><%= f.check_box :is_admin %> <%= f.label :is_admin, "Administrator Account." %></td>
+    <td><%= f.check_box :is_admin %> <%= f.label :is_admin, t('administrator_account') %></td>
   </tr>
   <% end %>
   <tr>
     <td></td>
-    <td><%= f.submit params[:action] == 'edit' ? 'Update' : 'Create' %></td>
+    <td><%= f.submit params[:action] == 'edit' ? t('update') : t('create') %></td>
   </tr>
 </table>
 <% end %>

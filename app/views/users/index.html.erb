@@ -1,16 +1,16 @@
 <div id="submenu">
-  <%= link_to "New User", new_user_path %>
+  <%= link_to t('new_user'), new_user_path %>
 </div>
 
-<h2>Users</h2>
+<h2><%= t('users_title') %></h2>
 
 <table class="list">
   <tr>
-    <th>No#</th>
-    <th>Name, Surname</th>
-	  <th>E-mail</th>
-    <th>Login Count</th>
-    <th>Last Login</th>
+    <th><%= t('nu') %></th>
+    <th><%= t('firstname') + ", " + t('lastname') %></th>
+	  <th><%= t('email') %></th>
+    <th><%= t('logins_count') %></th>
+    <th><%= t('last_login_at') %></th>
   </tr>
 
   <% @users.each do |user| %>

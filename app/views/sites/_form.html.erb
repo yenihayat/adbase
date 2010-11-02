@@ -9,22 +9,22 @@
 
 <table class="form">
   <tr>
-    <td class="label"><%= f.label :name, "Title" %></td>
+    <td class="label"><%= f.label :name, t('title') %></td>
     <td class="field"><%= f.text_field :name %></td>
   </tr>
   <tr>
-    <td class="label"><%= f.label :url, "URL" %></td>
+    <td class="label"><%= f.label :url, t('url') %></td>
     <td class="field"><%= f.text_field :url %></td>
   </tr>
   <% if current_user.is_admin? %>
   <tr>
-    <td class="label"><%= f.label :user_is, "Belongs to" %></td>
-    <td><%= f.select :user_id, @users.map {|u| [u.info, u.id]}, :prompt => "Select" %></td>
+    <td class="label"><%= f.label :user_is, t('belongs_to') %></td>
+    <td><%= f.select :user_id, @users.map {|u| [u.info, u.id]}, :prompt => t('select') %></td>
   </tr>
   <% end %>
   <tr>
     <td></td>
-    <td><%= f.submit params[:action] == 'edit' ? 'Update' : 'Create' %></td>
+    <td><%= f.submit params[:action] == 'edit' ? t('update') : t('create') %></td>
   </tr>
 </table>
 <% end %>

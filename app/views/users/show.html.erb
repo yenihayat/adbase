@@ -1,30 +1,30 @@
-<h2>User No. <%= @user.id %></h2>
+<h2><%= t('.user') %></h2>
 <table class="cart">
   <tr>
-    <td class="title">Name, Surname</td>
+    <td class="title"><%= t('firstname') %>, <%= t('lastname') %></td>
     <td><%= @user.name %></td>
   </tr>
   <tr>
-    <td class="title">Company</td>
+    <td class="title"><%= t('company') %></td>
     <td><%= @user.company %></td>
   </tr>
   <tr>
-    <td class="title">Phone</td>
+    <td class="title"><%= t('phone') %></td>
     <td><%= @user.phone %></td>
   </tr>
   <tr>
-    <td class="title">E-mail</td>
+    <td class="title"><%= t('email') %></td>
     <td><%= @user.email %></td>
   </tr>
 </table>
 
 <table id="user-statics">
   <tr>
-    <th>Account Created</th>
-    <th>Last Update</th>
-    <th>Login Count</th>
-    <th>Last Login</th>
-    <th>Current Login</th>
+    <th><%= t('account_created') %></th>
+    <th><%= t('last_update') %></th>
+    <th><%= t('logins_count') %></th>
+    <th><%= t('last_login_at') %></th>
+    <th><%= t('current_login')%></th>
   </tr>
 
   <tr>
@@ -36,4 +36,4 @@
   </tr>
 </table>
 
-<%= link_to "Edit", edit_user_path(@user), :class => "bottom-act" %>
+<%= link_to t('edit'), edit_user_path(@user), :class => "bottom-act" %>
