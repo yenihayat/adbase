@@ -11,7 +11,8 @@ class Ad < ActiveRecord::Base
   attr_accessor :zone_uuid
 
   validates_presence_of :name, :width, :height, :target_url
-  # TODO: validates_attachment_content_type, validates_attachment_size.
+  validates_attachment_content_type :ad, :content_type => [ 'image/png', 'image/jpeg', 'image/gif', 'application/x-shockwave-flash' ]
+  validates_attachment_size :ad, :less_than => 1.megabytes       
   validates_attachment_presence :ad
 
   scope :active, where(:state_id => CONFIG['state_ad_active'])

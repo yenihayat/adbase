@@ -28,6 +28,7 @@ class UsersController < ApplicationController
       set_flash(:user_created)
       redirect_to edit_user_path(@user)
     else
+      @states = State.users
       render :new
     end
   end
@@ -44,6 +45,7 @@ class UsersController < ApplicationController
   def update
     if current_user.is_admin?
       @user = User.find(params[:id])
+      @states = State.users
     else
       @user = current_user
     end

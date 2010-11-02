@@ -1,6 +1,5 @@
-TODO
-====
-
-- Fix Devise routes.
-- Make ad content editable.
-+ Convert messages.
+- Ad content not editable.
+- Recover password not working.
+- Can not serve shockwave-flash content yet.
+- If ad expired, send a default not-found image.
+- Tests

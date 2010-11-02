@@ -27,6 +27,7 @@ module AdsHelper
     end
   end
 
+  # Hide expiration options unless expire = true.
   def hide_unless_set_to_expire(expire)
     unless expire
       "style='display: none;'"

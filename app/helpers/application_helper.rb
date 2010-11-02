@@ -3,6 +3,7 @@ module ApplicationHelper
     params[:action] == "new"
   end
 
+  # Collect & recraft form error messages. Simpler than default one.
   def form_error_messages(errors)
     if errors.any?
       message = "<div id='form-errors'>"

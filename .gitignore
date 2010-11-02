@@ -4,3 +4,4 @@ tmp/*
 config/database.yml
 config/deploy.rb
 public/system
+public/javascripts/all.js

@@ -55,7 +55,7 @@
   </tr>
   <% end %>
   <tr>
-    <td class="label"><%= t('.content') %></td>
+    <td class="label"><%= t('.content').html_safe %></td>
     <td>
     <% unless new_record? %>
       <%= link_to @ad.ad_file_name, @ad.ad.url %> <%= link_to "&times;".html_safe %>

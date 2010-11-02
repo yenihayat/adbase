@@ -1,8 +1,7 @@
 class User < ActiveRecord::Base
   before_create :set_state
 
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :confirmable, :lockable and :timeoutable
+  # Include devise modules.
   devise :database_authenticatable, :recoverable, :rememberable, :trackable
 
   # Setup accessible (or protected) attributes for your model

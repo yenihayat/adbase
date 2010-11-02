@@ -1,4 +1,5 @@
 module ConnectHelper
+  # Build ad content by content type.
   def ad_content(content_type, zone_uuid, ad_target_url, ad_id, ad_file_name)
     if content_type.include?('image')
       content = "// AdBase##{zone_uuid} Content\n"
@@ -17,11 +18,8 @@ module ConnectHelper
     return content
   end
 
+  # Create url of content.
   def partitionize id
     ("%09d" % id).scan(/\d{3}/).join("/")
-  end
-
-  def encode_target_url(url)
-    URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
   end
 end

@@ -23,7 +23,7 @@ class ZonesController < ApplicationController
       @zone = Zone.new
       load_sites
     else
-      flash[:alert] = "You have to create a site before creating a zone." # TODO: set_flash_message
+      set_flash(:first_create_a_site)
       redirect_to new_site_path
     end
   end
@@ -79,15 +79,9 @@ class ZonesController < ApplicationController
       build_ad_fields
     end
 
-    # FIXME
-    def build_ad_fields
-      if @zone.zone_ads.length < CONFIG['edit_zone_ad_fields_count']
-        if @ads.length <= CONFIG['edit_zone_ad_fields_count']
-          missing_fields_count = @ads.length - @zone.zone_ads.length
-        else
-          missing_fields_count = CONFIG['edit_zone_ad_fields_count'] - @zone.zone_ads.length
-        end
+    # Build zone's ads. Default value can be changed from config/config.yml
+    def build_ad_fields# :doc:
+        missing_fields_count = CONFIG['edit_zone_ad_fields_count'] - @zone.zone_ads.length
         missing_fields_count.times { @zone.zone_ads.build }
-      end
     end
 end

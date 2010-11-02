@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  # Set message. Default is notice.
+  # Set message. Default type is notice.
   def set_flash(name, type=nil)
     type ||= 'notice'
     flash[type] = t(name)
