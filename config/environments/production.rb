@@ -48,5 +48,5 @@ AdBase::Application.configure do
   config.active_support.deprecation = :notify
 
   # Devise required configuration.
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => 'adbase.yh.com.tr' }
 end
