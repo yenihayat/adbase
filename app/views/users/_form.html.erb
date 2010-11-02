@@ -1,11 +1,5 @@
 <%= form_for @user do |f| %>
-<% if @user.errors.any? %>
-    <div id="form-errors">
-      <% @user.errors.full_messages.each do |msg| %>
-        <%= msg %><%= ", " unless msg == @user.errors.full_messages.last %>
-      <% end %>
-    </div>
-<% end %>
+<%= form_error_messages(@user.errors) %>
 
 <table class="form">
   <tr>

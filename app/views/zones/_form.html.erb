@@ -1,11 +1,5 @@
 <%= form_for @zone do |f| %>
-<% if @zone.errors.any? %>
-  <div id="form-errors">
-    <% @zone.errors.full_messages.each do |msg| %>
-      <%= msg %><%= ", " unless msg == @zone.errors.full_messages.last %>
-    <% end %>
-  </div>
-<% end %>
+<%= form_error_messages(@zone.errors) %>
 
 <table class="form">
   <tr>
@@ -30,7 +24,7 @@
     <td><%= f.check_box :cycle %></td>
   </tr>
   <% end %>
-  <% unless new_record? %>
+  <% unless nw_record? %>
   <tr>
     <td class="label"><%= t('.active_ads') %></td>
     <td>

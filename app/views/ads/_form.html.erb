@@ -1,4 +1,6 @@
 <% form_for @ad, :html => {:multipart => true} do |f| %>
+<%= form_error_messages(@ad.errors) %>
+
 <table class="form">
   <tr>
     <td class="label"><%= f.label :name, t('title') %></td>
@@ -43,7 +45,7 @@
   <% unless new_record? %>
   <tr>
     <td class="label"><%= f.label :status_id, t('.status') %></td>
-    <td><%= f.select :state_id, @states.map {|s| [s.title, s.id]}, :prompt => t('Select State') %></td>
+    <td><%= f.select :state_id, @states.map {|s| [s.title, s.id]}, :prompt => t('.select_state') %></td>
   </tr>
   <% end %>
   <% if current_user.is_admin? %>

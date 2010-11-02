@@ -72,6 +72,7 @@ en:
       max_views_count: "<p>Max Views Count<br /><span class='light'>Leave as is not to expire on value.</span></p>"
       status: "Status"
       content: "Content"
+      select_state: "Select State"
     edit:
       edit_ad: "Edit Ad"
     show:
