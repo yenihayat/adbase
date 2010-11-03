@@ -29,6 +29,8 @@ And to create default user and populate states;
 
   rake db:seed
 
+Default urls set in <tt>config/config.yml</tt> and <tt>public/assets/ad.js</tt>. You may need to change them.
+
 That's all! Now you can login with default user credentials;
 
   admin@domain.com

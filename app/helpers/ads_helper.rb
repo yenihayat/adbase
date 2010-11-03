@@ -1,4 +1,4 @@
-module AdsHelper
+module AdsHelper # TODO: Convert messages to i18n.
   def expire_status_message(ad)
     if ad.expire?
       if ad.max_clicks_count > 0 and ad.max_views_count > 0
