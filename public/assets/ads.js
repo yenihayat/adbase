@@ -22,7 +22,7 @@ var AdBase = function() {
     var b = zones.join("")
     var tag = (document.createElementNS) ? document.createElementNS('http://www.w3.org/1999/xhtml', 'script') : document.createElement('script');
     tag.type = 'text/javascript';
-    tag.src = 'http://adbase.yh.com.tr/connect/' + b;
+    tag.src = 'http://adbase.local/connect/' + b + '.js';
     document.getElementsByTagName('head')[0].appendChild(tag);
   }
 

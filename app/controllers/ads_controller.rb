@@ -63,4 +63,8 @@ class AdsController < ApplicationController
         @ad.user_id = current_user.id
       end
     end
+
+    def new_content?
+      ! params[:ad]['ad'].nil?
+    end
 end

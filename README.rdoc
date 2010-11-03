@@ -12,9 +12,27 @@ Currently under development and not ready for production.
 
 === Installation
 
+First clone repository to your local directory,
+
+  git clone http://github.com/yenihayat/adbase.git
+
+Then install missing gems required by AdBase;
+
+  bundle install
+
+After setting up db params in <tt>database.yml</tt>, create db and run migrations.
+
   rake db:create
   rake db:migrate
-  rake bootstrap:all
+
+And to create default user and populate states;
+
+  rake db:seed
+
+That's all! Now you can login with default user credentials;
+
+  admin@domain.com
+  12345
 
 == Additional information
 

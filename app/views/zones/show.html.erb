@@ -40,13 +40,12 @@
     <td class="title"><%= t('.publish_track_code').html_safe %></td>
     <td>
       <textarea id="code">
-<div class="adbase">
 <script type="text/javascript">
   //<![CDATA[
   AdBase.ad('<%= @zone.uuid %>');
   //]]>
 </script>
-</div></textarea>
+</textarea>
     </td>
   </tr>
   <% end %>

@@ -12,7 +12,7 @@ AdBase::Application.routes.draw do
 
   match 'dashboard' => 'dashboard#index'
   match '/out/:id' => 'connect#out'
-  match '/connect/:ids' => 'connect#index'
+  match '/connect/:ids.js' => 'connect#index'
 
   root :to => "home#index"
 

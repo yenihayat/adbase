@@ -72,7 +72,8 @@ en:
       max_clicks_count: "<p>Max Clicks Count<br /><span class='light'>Leave as is not to expire on value.</span></p>"
       max_views_count: "<p>Max Views Count<br /><span class='light'>Leave as is not to expire on value.</span></p>"
       status: "Status"
-      content: "<p>Content<br /><span class='light'>Max 1mb only .jpg, .gif, .png or .swf allowed.</span></p>"
+      content: "Content"
+      use_another: "<p>Use Another?<br /><span class='light'>Max 1mb only .jpg, .gif, .png or .swf allowed.</span></p>"
       select_state: "Select State"
     edit:
       edit_ad: "Edit Ad"

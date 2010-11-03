@@ -18,10 +18,12 @@
     <td class="label"><%= f.label :height, t('height') %></td>
     <td class="field"><%= f.text_field :height %></td>
   </tr>
+  <% if !@ad.flash_content? or new_record? %>
   <tr>
     <td class="label"><%= f.label :target_url, t('.target_url') %></td>
     <td class="field"><%= f.text_field :target_url %></td>
   </tr>
+  <% end %>
   <tr>
     <td class="label"><%= t('.track_options') %></td>
     <td><%= f.check_box :track_clicks %> <%= f.label :track_clicks, t('.track_clicks') %> &nbsp; <%= f.check_box :track_views %> <%= f.label :track_views, t('.track_views') %></td>
@@ -51,17 +53,21 @@
   <% if current_user.is_admin? %>
   <tr>
     <td class="label"><%= f.label :user_is, t('belongs_to') %></td>
-    <td><%= f.select :user_id, @users.map {|u| [u.info, u.id]}, :prompt => t('.select') %></td>
+    <td><%= f.select :user_id, @users.map {|u| [u.info, u.id]}, :prompt => t('select') %></td>
   </tr>
   <% end %>
+  <% unless new_record? %>
   <tr>
     <td class="label"><%= t('.content').html_safe %></td>
     <td>
-    <% unless new_record? %>
-      <%= link_to @ad.ad_file_name, @ad.ad.url %> <%= link_to "&times;".html_safe %>
-    <% else %>
+      <%= link_to @ad.ad_file_name, @ad.ad.url %> (<%= number_to_human_size(@ad.ad.size) %>)
+    </td>
+  </tr>
+  <% end %>
+  <tr>
+    <td class="label"><%= new_record? ? t('.content').html_safe : t('.use_another').html_safe %></td>
+    <td>
       <%= f.file_field :ad %>
-    <% end %>
     </td>
   </tr>
   <tr>
