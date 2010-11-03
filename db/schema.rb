@@ -36,6 +36,9 @@ ActiveRecord::Schema.define(:version => 20101026145203) do
     t.datetime "updated_at"
   end
 
+  add_index "ads", ["state_id"], :name => "index_ads_on_state_id"
+  add_index "ads", ["user_id"], :name => "index_ads_on_user_id"
+
   create_table "sites", :force => true do |t|
     t.integer  "user_id",                   :null => false
     t.string   "name",       :limit => 300
@@ -44,6 +47,9 @@ ActiveRecord::Schema.define(:version => 20101026145203) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "sites", ["state_id"], :name => "index_sites_on_state_id"
+  add_index "sites", ["user_id"], :name => "index_sites_on_user_id"
 
   create_table "states", :force => true do |t|
     t.integer  "category_id", :limit => 3
@@ -76,7 +82,9 @@ ActiveRecord::Schema.define(:version => 20101026145203) do
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["firstname", "lastname"], :name => "index_users_name"
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+  add_index "users", ["state_id"], :name => "index_users_on_state_id"
 
   create_table "zone_ads", :force => true do |t|
     t.integer  "zone_id",    :null => false
@@ -84,6 +92,8 @@ ActiveRecord::Schema.define(:version => 20101026145203) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "zone_ads", ["zone_id"], :name => "index_zone_ads_on_zone_id"
 
   create_table "zones", :force => true do |t|
     t.string   "uuid",       :limit => 36,                     :null => false
@@ -97,5 +107,9 @@ ActiveRecord::Schema.define(:version => 20101026145203) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "zones", ["site_id"], :name => "index_zones_on_site_id"
+  add_index "zones", ["user_id"], :name => "index_zones_on_user_id"
+  add_index "zones", ["uuid"], :name => "index_zones_on_uuid"
 
 end

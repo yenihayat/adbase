@@ -30,14 +30,14 @@
     <td>
       <% if @ads.present? %>
       <ul>
-    <% f.fields_for :zone_ads do |zone_ad| %>
+    <%= f.fields_for :zone_ads do |zone_ad| -%>
         <li>
           <%= zone_ad.select :ad_id, @ads.map {|a| [a.name, a.id]}, :prompt => t('.choose_ad') %>
           <% unless zone_ad.object.new_record? %>
             <%= zone_ad.check_box :_destroy %> <%= zone_ad.label :_destroy, t('remove') %>
           <% end %>
         </li>
-    <% end %>
+    <% end -%>
       </ul>
       <% else %>
       <p><%= t('.not_found_any_ads') %><br /><%= link_to t('.add_one'), new_ad_path %>

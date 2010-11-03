@@ -1,6 +1,6 @@
 class CreateAds < ActiveRecord::Migration
   def self.up
-    create_table :ads do |t|
+    create_table :ads, :options => "ENGINE=MyISAM" do |t|
       t.integer :user_id, :null => false, :limit => 4
       t.string :name, :null => false, :unique => true, :limit => 40
       t.text :description, :limit => 300
@@ -26,9 +26,14 @@ class CreateAds < ActiveRecord::Migration
       t.integer :state_id, :limit => 2
       t.timestamps
     end
+    add_index :ads, :state_id
+    add_index :ads, :user_id
   end
 
   def self.down
+    remove_index :ads, :column_name
+    remove_index :ads, :name => :index_name
+    remove_index :ads, :column_name
     drop_table :ads
   end
 end

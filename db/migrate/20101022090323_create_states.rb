@@ -1,6 +1,6 @@
 class CreateStates < ActiveRecord::Migration
   def self.up
-    create_table :states do |t|
+    create_table :states, :options => "ENGINE=MyISAM" do |t|
       t.integer :category_id, :limit => 3
       t.string :title, :limit => 300
       t.timestamps
