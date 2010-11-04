@@ -3,19 +3,16 @@ class ZonesController < ApplicationController
   layout 'application'
 
   def index
-    if params[:site_id]
-      @zones = Zone.active.belongs_to_site(params[:site_id])
+    if current_user.is_admin?
+      @zones = Zone.active
     else
-      if current_user.is_admin?
-        @zones = Zone.active
-      else
-        @zones = Zone.active.belongs_to_user(current_user.id)
-      end
+      @zones = current_user.sites.collect{ |site| site.zones }.flatten
     end
   end
 
   def show
     @zone = Zone.find(params[:id])
+    redirect_to destroy_user_session_path unless belongs_to_user_site?
   end
 
   def new
@@ -30,8 +27,6 @@ class ZonesController < ApplicationController
 
   def create
     @zone = Zone.new(params[:zone])
-    @site = Site.find(@zone.site_id)
-    @zone.user_id = @site.user_id if @site
 
     if @zone.save
       set_flash(:zone_created)
@@ -59,11 +54,16 @@ class ZonesController < ApplicationController
   end
 
   private
+    def belongs_to_user_site?
+      @site = Site.find(@zone.site_id)
+      @site.users.include?(current_user) or current_user.is_admin?
+    end
+
     def load_sites
       if current_user.is_admin?
         @sites = Site.active
       else
-        @sites = Site.active.belongs_to_user(curret_user.id)
+        @sites = current_user.sites.active
       end
     end
 
@@ -72,8 +72,8 @@ class ZonesController < ApplicationController
         @sites = Site.active
         @ads = Ad.active
       else
-        @sites = Site.active.belongs_to_user(curret_user.id)
-        @ads = Ad.active.belongs_to_user(curret_user.id)
+        @sites = current_user.sites.active
+        @ads = Site.find(@zone.site_id).ads.active
       end
 
       build_ad_fields

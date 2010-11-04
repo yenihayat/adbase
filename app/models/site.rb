@@ -1,19 +1,23 @@
 class Site < ActiveRecord::Base
   before_create :set_state
 
-  belongs_to :user
-  belongs_to :state
+  has_many :users, :through => :user_sites
+  has_many :user_sites
+  accepts_nested_attributes_for :user_sites, :reject_if => lambda { |a| a[:user_id].blank? }, :allow_destroy => true
+
+  has_many :ads, :through => :site_ads
+  has_many :site_ads
 
   has_many :zones
-  has_many :ads
-
   accepts_nested_attributes_for :zones
 
+  belongs_to :state
+
   scope :active, where(:state_id => CONFIG['state_site_active'])
-  scope :belongs_to_user, lambda { |user_id| { :conditions => ['user_id = ?', user_id] } }
+  # scope :that_has_zone, lambda { |zone_id| { where() } }
 
   validates_presence_of :name, :url
-  validates_uniqueness_of :name, :url
+  validates_uniqueness_of :url
 
   private
     def set_state

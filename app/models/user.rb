@@ -12,6 +12,9 @@ class User < ActiveRecord::Base
 
   scope :active, where(:state_id => CONFIG['state_user_active'])
 
+  has_many :sites, :through => :user_sites
+  has_many :user_sites
+
   def name
     "#{firstname} #{lastname}"
   end
@@ -21,7 +24,7 @@ class User < ActiveRecord::Base
   end
 
   def has_active_site?
-    Site.exists?(:user_id => self) or self.is_admin?
+    UserSite.exists?(:user_id => self) or self.is_admin? # TODO: Check state also.
   end
 
   private

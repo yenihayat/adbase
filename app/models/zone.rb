@@ -4,7 +4,6 @@ class Zone < ActiveRecord::Base
   before_create :set_uuid, :set_state
 
   belongs_to :site
-  belongs_to :user
   belongs_to :state
 
   has_many :ads, :through => :zone_ads do
@@ -15,12 +14,9 @@ class Zone < ActiveRecord::Base
   end
 
   has_many :zone_ads, :dependent => :destroy
-
   accepts_nested_attributes_for :zone_ads, :reject_if => lambda { |a| a[:ad_id].blank? }, :allow_destroy => true
 
   scope :active, where(:state_id => CONFIG['state_zone_active'])
-  scope :belongs_to_user, lambda { |user_id| { :conditions => ['user_id = ?', user_id] } }
-  scope :belongs_to_site, lambda { |site_id| { :conditions => ['site_id = ?', site_id] } }
 
   validates_presence_of :name, :width, :height, :site_id
 

@@ -1,6 +1,8 @@
+<% if current_user.is_admin? -%>
 <div id="submenu">
   <%= link_to t('new_site'), new_site_path %>
 </div>
+<% end -%>
 
 <h2><%= t('sites_title') %></h2>
 

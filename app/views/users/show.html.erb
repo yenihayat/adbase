@@ -16,6 +16,16 @@
     <td class="title"><%= t('email') %></td>
     <td><%= @user.email %></td>
   </tr>
+  <tr>
+    <td class="title"><%= t('.owner') %></td>
+    <td>
+      <ul>
+      <% @user.sites.each do |site| %>
+        <li><%= link_to site.name, site_path(site) %></li>
+      <% end %>
+      </ul>
+    </td>
+  </tr>
 </table>
 
 <table id="user-statics">

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!
-  before_filter :require_admin, :only => [:show, :edit]
+  before_filter :require_admin, :except => [:profile, :update]
 
   layout "application"
 

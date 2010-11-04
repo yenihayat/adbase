@@ -9,12 +9,6 @@
     <td class="title"><%= t('.site') %></td>
     <td><%= link_to @zone.site.name, site_path(@zone.site_id) %></td>
   </tr>
-  <% if current_user.is_admin? %>
-  <tr>
-    <td class="title"><%= t('.user') %></td>
-    <td><%= link_to @zone.user.name, user_path(@zone.user) %></td>
-  </tr>
-  <% end %>
   <tr>
     <td class="title"><%= t('dimensions') %></td>
     <td><%= @zone.width.to_s %> &times; <%= @zone.height.to_s %>px</td>
@@ -39,7 +33,7 @@
   <tr>
     <td class="title"><%= t('.publish_track_code').html_safe %></td>
     <td>
-      <textarea id="code">
+      <textarea class="code">
 <script type="text/javascript">
   //<![CDATA[
   AdBase.ad('<%= @zone.uuid %>');

@@ -1,0 +1,30 @@
+== SENARYOLAR
+
++ Kullanıcının birden fazla sitesi olabilir.
++ Aynı zamanda site, birden fazla kullanıcıya ait olabilir.
+
++ Site, birden fazla alana sahip olabilir.
++ Ama alan sadece bir siteye ait olabilir.
+
++ Alan, birden fazla reklama sahip olabilir.
++ Aynı zamanda reklam, birden fazla alana *ve siteye* ait olabilir.
+
+=== İŞ AKIŞI
+
+==== Yönetici
+
++ Yönetici, yeni kullanıcı açar.
++ Yeni site ekler.
++ Kullanıcıyı site sahibi olarak tanımlar.
+
+==== Kullanıcı
+
++ Kullanıcı açılan hesaptan giriş yapar.
++ Yöneticinin *site sahibi* olarak tanımladığı siteleri görebilir.
++ Sahibi olduğu herhangi bir site için alan ekleyebilir.
+
++ Sahibi olduğu siteler için eklenmiş reklamları görebilir.
++ Sahibi olduğu herhangi bir site için reklam ekleyebilir.
+  + Sahibi olduğu site içindeki alanda yayınlanacak reklamları (sahibi olduğu siteler için eklenen reklamlardan) seçip yayınlayabilir.
+
+

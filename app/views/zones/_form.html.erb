@@ -28,20 +28,21 @@
   <tr>
     <td class="label"><%= t('.active_ads') %></td>
     <td>
-      <% if @ads.present? %>
       <ul>
-    <%= f.fields_for :zone_ads do |zone_ad| -%>
+      <% if @ads.present? %>
+        <%= f.fields_for :zone_ads do |zone_ad| -%>
         <li>
           <%= zone_ad.select :ad_id, @ads.map {|a| [a.name, a.id]}, :prompt => t('.choose_ad') %>
           <% unless zone_ad.object.new_record? %>
             <%= zone_ad.check_box :_destroy %> <%= zone_ad.label :_destroy, t('remove') %>
           <% end %>
         </li>
-    <% end -%>
-      </ul>
+        <% end -%>
       <% else %>
-      <p><%= t('.not_found_any_ads') %><br /><%= link_to t('.add_one'), new_ad_path %>
+        <li><%= t('.not_found_any_ads') %></li>
+        <li><%= link_to t('.add_one'), new_ad_path, :class => "act" %></li>
       <% end %>
+      </ul>
     </td>
   </tr>
   <% end %>

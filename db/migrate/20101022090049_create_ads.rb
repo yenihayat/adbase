@@ -1,11 +1,10 @@
 class CreateAds < ActiveRecord::Migration
   def self.up
     create_table :ads, :options => "ENGINE=MyISAM" do |t|
-      t.integer :user_id, :null => false, :limit => 4
       t.string :name, :null => false, :unique => true, :limit => 40
       t.text :description, :limit => 300
-      t.integer :width, :limit => 4
-      t.integer :height, :limit => 4
+      t.integer :width, :limit => 11
+      t.integer :height, :limit => 11
       t.string :target_url, :null => false, :limit => 300
       t.boolean :track_clicks
       t.boolean :track_views
@@ -27,7 +26,6 @@ class CreateAds < ActiveRecord::Migration
       t.timestamps
     end
     add_index :ads, :state_id
-    add_index :ads, :user_id
   end
 
   def self.down

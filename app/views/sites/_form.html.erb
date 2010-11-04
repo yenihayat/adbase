@@ -12,8 +12,19 @@
   </tr>
   <% if current_user.is_admin? %>
   <tr>
-    <td class="label"><%= f.label :user_is, t('belongs_to') %></td>
-    <td><%= f.select :user_id, @users.map {|u| [u.info, u.id]}, :prompt => t('select') %></td>
+    <td class="label"><%= t('owners') %></td>
+    <td>
+      <ul>
+        <%= f.fields_for :user_sites do |user_site| -%>
+        <li>
+          <%= user_site.select :user_id, @users.map {|a| [a.info, a.id]}, :prompt => t('.choose_user'), :include_blank => true %>
+          <% unless user_site.object.new_record? %>
+            <%= user_site.hidden_field :_destroy %> <%= link_to t('remove').html_safe, "#", :class => "remove-field" %>
+          <% end %>
+        </li>
+        <% end -%>
+      </ul>
+    </td>
   </tr>
   <% end %>
   <tr>

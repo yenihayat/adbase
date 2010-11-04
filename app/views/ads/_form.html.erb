@@ -50,12 +50,21 @@
     <td><%= f.select :state_id, @states.map {|s| [s.title, s.id]}, :prompt => t('.select_state') %></td>
   </tr>
   <% end %>
-  <% if current_user.is_admin? %>
   <tr>
-    <td class="label"><%= f.label :user_is, t('belongs_to') %></td>
-    <td><%= f.select :user_id, @users.map {|u| [u.info, u.id]}, :prompt => t('select') %></td>
+    <td class="label"><%= t('.allow_to_publish_at') %></td>
+    <td>
+      <ul>
+      <%= f.fields_for :site_ads do |site_ad| -%>
+        <li>
+          <%= site_ad.select :site_id, @sites.map {|a| [a.name, a.id]}, :prompt => t('.choose_site') %>
+          <% unless site_ad.object.new_record? %>
+            <%= site_ad.check_box :_destroy %> <%= site_ad.label :_destroy, t('remove') %>
+          <% end %>
+        </li>
+        <% end -%>
+      </ul>
+    </td>
   </tr>
-  <% end %>
   <% unless new_record? %>
   <tr>
     <td class="label"><%= t('.content').html_safe %></td>

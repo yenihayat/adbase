@@ -10,24 +10,35 @@
   </tr>
   <% if current_user.is_admin? %>
   <tr>
-    <td class="title"><%= t('.user') %></td>
-    <td><%= link_to @site.user.name, user_path(@site.user) %></td>
+    <td class="title"><%= t('owners') %></td>
+    <td>
+      <ul>
+        <% @site.users.each do |user| -%>
+        <li><%= link_to user.name, user_path(user) %></li>
+        <% end -%>
+      </ul>
+    </td>
   </tr>
   <% end %>
   <tr>
     <td class="title"><%= t('zones_title') %></td>
     <td>
-      <% if @site.zones.length > 0 %>
       <ul>
-        <% @site.zones.each do |zone| %>
+      <% if @site.zones.length > 0 -%>
+        <% @site.zones.each do |zone| -%>
         <li><%= link_to zone.name, zone %></li>
-        <% end %>
+        <% end -%>
+        <li><%= link_to t('.add_another'), new_zone_path(:site_id => @site), :class => "act" %></li>
       </ul>
-      <% else %>
-        <p><%= t('.no_zones_found') %> <%= link_to t('.do_you_want_to_add_one'), new_zone_path(:site_id => @site) %></p>
-      <% end %>
+      <% else -%>
+        <li><%= t('.no_zones_found') %></li>
+        <li><%= link_to t('.add_one'), new_zone_path(:site_id => @site) %></li>
+      <% end -%>
+      </ul>
     </td>
   </tr>
 </table>
 
+<% if current_user.is_admin? -%>
 <%= link_to t('edit'), edit_site_path(@site), :class => "bottom-act" %>
+<% end %>

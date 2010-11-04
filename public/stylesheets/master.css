@@ -6,6 +6,9 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
+/* General
+----------------------------------------------------*/
+
 ::-moz-selection {
   color: #fff;
   color: rgba(255,255,255,1);
@@ -64,9 +67,15 @@ div#form-errors {
   border-radius: 5px;
 }
 
+/* Layout
+----------------------------------------------------*/
+
 div#wrapper {
   width: 100%;
 }
+
+/* Header
+----------------------------------------------------*/
 
 div#header {
   background: #333;
@@ -133,6 +142,9 @@ div#header ul#nav li a:hover {
   color: #fff;
 }
 
+/* Content
+----------------------------------------------------*/
+
 div#content {
   width: 800px;
   margin: 60px auto;
@@ -163,121 +175,8 @@ div#content h2 {
   border-bottom-right-radius: 3px;
 }
 
-div#content table.list {
-  width: 100%;
-  text-align: left;
-  font-size: 13px;
-}
-
-div#content table a {
-  color: #35addf;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-div#content table a:hover {
-  color: #333;
-  text-decoration: none;
-}
-
-div#content table th,
-div#content table td {
-  padding: 3px;
-  font-size: 13px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-}
-
-div#content table td ul li {
-  padding: 2px;
-}
-
-div#content table td ul li a {
-  font-size: 11px;
-  font-weight: normal;
-  color: #333;
-  text-decoration: underline;
-}
-
-div#content table.list td {
-  border-bottom: 1px solid #ededed;
-}
-
-div#content table th {
-  border-bottom: 2px solid #ccc;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  color: #555;
-  background: #ededed;
-}
-
-div#content table.form {
-  width: 600px;
-  border-spacing: 5px;
-  border-collapse: separate;
-}
-
-div#content table input[type=text],
-div#content table input[type=password],
-div#content table input[type=email],
-div#content table textarea {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 8px;
-  margin: 0;
-  font-size: 13px;
-  color: #555;
-  width: 350px;
-  border: 1px solid #ccc;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-}
-
-div#content table input[type=text]:focus,
-div#content table input[type=password]:focus,
-div#content table input[type=email]:focus,
-div#content table textarea:focus {
-  outline: 0;
-  border: 1px solid #35addf;
-}
-
-div#content table td.label {
-  text-align: right;
-  vertical-align: top;
-  color: #333;
-  width: 250px;
-  font-weight: bold;
-  font-size: 11px;
-  border-top: 1px solid #ddd;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-}
-
-div#content table td.label span.light {
-  color: #888;
-  font-weight: normal;
-}
-
-div#content table td.field {
-  width: 350px;
-  background: #ededed;
-}
-
-div#content table td.fixed-width {
-  font-family: Menlo, Monaco, "Courier New", Courier, monospace;
-  font-size: 12px;
-}
-
-div#content table textarea {
-  line-height: 1.6em;
-  height: 50px;
-  padding: 10px;
-  width: 346px;
-  resize: none;
-}
+/* Submenu
+----------------------------------------------------*/
 
 div#submenu {
   margin: -68px 0 50px 0;
@@ -305,33 +204,8 @@ div#submenu a:hover {
   color: #ccc;
 }
 
-div#content table.cart {
-  width: 100%;
-}
-
-div#content table.cart td {
-  border-bottom: 1px solid #ededed;
-  padding: 10px 5px;
-  vertical-align: top;
-}
-
-div#content table.cart td.title {
-  text-align: right;
-  font-weight: bold;
-  width: 200px;
-}
-
-div#content table#user-statics {
-  width: 100%;
-  margin-top: 20px;
-  border-bottom: 3px double #ccc;
-}
-
-div#content table#user-statics td,
-div#content table#user-statics th {
-  text-align: left;
-  padding: 10px;
-}
+/* Bottom Actions
+----------------------------------------------------*/
 
 a.bottom-act,
 a.bottom-act:visited {
@@ -348,10 +222,171 @@ a.bottom-act:hover {
   text-decoration: none;
 }
 
-table td textarea#code {
+/* Tables
+----------------------------------------------------*/
+
+div#content table a {
+  color: #35addf;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+div#content table a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+div#content table th,
+div#content table td {
+  padding: 3px;
+  font-size: 13px;
+}
+
+div#content table td {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+div#content table th {
+  border-bottom: 2px solid #ccc;
+  color: #555;
+  background: #ededed;
+}
+
+div#content table td.label span.light {
+  color: #888;
+  font-weight: normal;
+}
+
+div#content table td.label {
+  text-align: right;
+  vertical-align: top;
+  color: #333;
+  width: 250px;
+  font-weight: bold;
+  font-size: 11px;
+  border-top: 1px solid #ddd;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+div#content table td.field {
+  width: 350px;
+  background: #ededed;
+}
+
+div#content table td.fixed-width {
+  font-family: Menlo, Monaco, "Courier New", Courier, monospace;
+  font-size: 12px;
+}
+
+div#content table td ul li {
+  list-style: none;
+  padding: 2px;
+}
+
+div#content table td ul li a {
+  font-size: 11px;
+  font-weight: normal;
+  color: #333;
+  text-decoration: underline;
+}
+
+div#content table td ul li a.act {
+  font-weight: bold;
+}
+
+div#content table input[type=text],
+div#content table input[type=password],
+div#content table input[type=email],
+div#content table textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 8px;
+  margin: 0;
+  font-size: 13px;
+  color: #555;
+  width: 350px;
+  border: 1px solid #ccc;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+div#content table input[type=text]:focus,
+div#content table input[type=password]:focus,
+div#content table input[type=email]:focus,
+div#content table textarea:focus {
+  outline: 0;
+  border: 1px solid #35addf;
+}
+
+div#content table textarea {
+  line-height: 1.6em;
+  height: 50px;
+  padding: 10px;
+  width: 346px;
+  resize: none;
+}
+
+div#content table td textarea.code {
   font-family: Monaco, Menlo, "Courier New", monospace;
   width: 500px;
-  height: 150px;
-  font-size: 10px;
+  height: 100px;
+  line-height: 1.4em;
+  font-size: 12px;
+  padding: 10px;
+}
+
+/* list table */
+
+div#content table.list {
+  width: 100%;
+  text-align: left;
+  font-size: 13px;
+}
+
+div#content table.list td {
+  border-bottom: 1px solid #ededed;
+}
+
+/* form table */
+
+div#content table.form {
+  width: 600px;
+  border-spacing: 5px;
+  border-collapse: separate;
+}
+
+/* cart table */
+
+div#content table.cart {
+  width: 100%;
+}
+
+div#content table.cart td {
+  border-bottom: 1px solid #ededed;
+  padding: 10px 5px;
+}
+
+div#content table.cart td.title {
+  vertical-align: top;
+  text-align: right;
+  font-weight: bold;
+  width: 200px;
+}
+
+/* user statics table */
+
+div#content table#user-statics {
+  width: 100%;
+  margin-top: 20px;
+  border-bottom: 3px double #ccc;
+}
+
+div#content table#user-statics td,
+div#content table#user-statics th {
+  text-align: left;
   padding: 10px;
 }

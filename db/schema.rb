@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101026145203) do
+ActiveRecord::Schema.define(:version => 20101104095827) do
 
   create_table "ads", :force => true do |t|
     t.integer  "user_id",                                        :null => false
@@ -39,8 +39,17 @@ ActiveRecord::Schema.define(:version => 20101026145203) do
   add_index "ads", ["state_id"], :name => "index_ads_on_state_id"
   add_index "ads", ["user_id"], :name => "index_ads_on_user_id"
 
+  create_table "site_ads", :force => true do |t|
+    t.integer  "ad_id",      :null => false
+    t.integer  "site_id",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "site_ads", ["ad_id"], :name => "index_site_ads_on_ad_id"
+  add_index "site_ads", ["site_id"], :name => "index_site_ads_on_site_id"
+
   create_table "sites", :force => true do |t|
-    t.integer  "user_id",                   :null => false
     t.string   "name",       :limit => 300
     t.string   "url",        :limit => 300
     t.integer  "state_id",   :limit => 2
@@ -49,7 +58,6 @@ ActiveRecord::Schema.define(:version => 20101026145203) do
   end
 
   add_index "sites", ["state_id"], :name => "index_sites_on_state_id"
-  add_index "sites", ["user_id"], :name => "index_sites_on_user_id"
 
   create_table "states", :force => true do |t|
     t.integer  "category_id", :limit => 3
@@ -57,6 +65,16 @@ ActiveRecord::Schema.define(:version => 20101026145203) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "user_sites", :force => true do |t|
+    t.integer  "user_id",    :null => false
+    t.integer  "site_id",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "user_sites", ["site_id"], :name => "index_user_sites_on_site_id"
+  add_index "user_sites", ["user_id"], :name => "index_user_sites_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                :limit => 50,                     :null => false
@@ -97,7 +115,6 @@ ActiveRecord::Schema.define(:version => 20101026145203) do
 
   create_table "zones", :force => true do |t|
     t.string   "uuid",       :limit => 36,                     :null => false
-    t.integer  "user_id",                                      :null => false
     t.integer  "site_id",                                      :null => false
     t.string   "name",       :limit => 300
     t.integer  "width"
@@ -109,7 +126,6 @@ ActiveRecord::Schema.define(:version => 20101026145203) do
   end
 
   add_index "zones", ["site_id"], :name => "index_zones_on_site_id"
-  add_index "zones", ["user_id"], :name => "index_zones_on_user_id"
   add_index "zones", ["uuid"], :name => "index_zones_on_uuid"
 
 end

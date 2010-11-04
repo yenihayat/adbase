@@ -2,6 +2,7 @@ $(document).ready(function() {
   $("#login table.login a.forgot-password").click(showForgotPassword);
   $("#login table.forgot-password a.login").click(showLogin);
 
+  // Hide flash messages.
   setTimeout(function() {
     $("#message").slideUp(300);
   }, 5000);

@@ -22,6 +22,16 @@
     <td><%= @ad.views_count.to_s %>/<%= @ad.clicks_count.to_s %></td>
   </tr>
   <tr>
+    <td class="title"><%= t('.sites_ad_published') %></td>
+    <td>
+      <ul>
+        <% @ad.sites.each do |site| %>
+        <li><%= link_to site.name, site_path(site) %></li>
+        <% end %>
+      </ul>
+    </td>
+  </tr>
+  <tr>
     <td class="title"><%= t('.file_info') %></td>
     <td><%= @ad.ad_content_type %> (<%= number_to_human_size(@ad.ad.size) %>)</td>
   </tr>

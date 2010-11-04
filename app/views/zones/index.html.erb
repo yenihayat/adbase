@@ -15,7 +15,7 @@
   <% @zones.each do |zone| %>
   <tr>
     <td><strong><%= zone.id %></strong></td>
-    <td><%= link_to zone.name, zone %></td>
+    <td><%= link_to zone.name, zone_path(zone.id) %></td>
     <td><%= zone.site.name %></td>
     <td><%= l zone.created_at, :format => :short %></td>
   </tr>
