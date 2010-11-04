@@ -1,0 +1,36 @@
+defaults: &defaults
+  user_sites_fields_count: 5
+  edit_zone_ad_fields_count: 5
+  site_fields_count: 5
+
+  # States#category_id
+  users_state_category_id: 100
+  sites_state_category_id: 200
+  zones_state_category_id: 300
+  ads_state_category_id: 400
+
+  # States#id
+  state_user_active: 1
+  state_user_passive: 2
+
+  state_site_active: 3
+  state_site_passive: 4
+
+  state_zone_active: 5
+  state_zone_passive: 6
+
+  state_ad_published: 7
+  state_ad_expired: 8
+  state_ad_active: 9
+  state_ad_archive: 10
+
+# CHANGE BELOW WITH YOUR OWN DOMAINS.
+development:
+  <<: *defaults
+  ad_contents_url: "http://ADBASE.LOCAL/system/ads/"
+  redirect_out_url: "http://ADBASE.LOCAL/out/"
+
+production:
+  <<: *defaults
+  ad_contents_url: "http://DOMAIN.COM/system/ads/"
+  redirect_out_url: "http://DOMAIN.COM/out/"
