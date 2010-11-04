@@ -7,12 +7,9 @@ class CreateSites < ActiveRecord::Migration
       t.timestamps
     end
     add_index :sites, :state_id
-    add_index :sites, :user_id
   end
 
   def self.down
-    remove_index :sites, :column_name
-    remove_index :sites, :column_name
     drop_table :sites
   end
 end
