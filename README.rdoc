@@ -10,26 +10,15 @@ Currently under development and not ready for production.
 
 === Contributing
 
-=== Installation
+=== 3 Steps Installation
 
-First clone repository to a location in your local directory,
+Clone repository to a location in your local directory,
 
   git clone http://github.com/yenihayat/adbase.git
 
-Then install missing gems required by AdBase;
+Update <tt>config/examples/database.yml</tt>, <tt>config/examples/config.yml</tt> with your environments config.
 
-  bundle install
-
-After setting up db params in <tt>database.yml</tt>, create db and run migrations.
-
-  rake db:create
-  rake db:migrate
-
-And to create default user and populate states;
-
-  rake db:seed
-
-Default urls set in <tt>config/config.yml</tt> and <tt>public/assets/ad.js</tt>. You may need to change them.
+Run <tt>script/setup</tt> to generate config files, install gems, create/migrate databases and seed data required.
 
 That's all! Now you can login with default user credentials;
 
@@ -38,9 +27,11 @@ That's all! Now you can login with default user credentials;
 
 == Additional information
 
+* Don't forget to change default URLs in <tt>config/config.yml</tt> and <tt>public/assets/ad.js</tt>.
+
 === Maintainers
 
-Soner Eker <soner.eker@yh.com>
+Soner Eker <soner.eker@yh.com.tr>
 
 == License
 

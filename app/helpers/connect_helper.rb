@@ -24,6 +24,8 @@ module ConnectHelper
       content += "ad_content.appendChild(param1);\n"
       content += "var scr = document.getElementById('#{zone_uuid}');\n"
       content += "scr.parentNode.insertBefore(ad_content, scr);\n"
+    else
+      content += ""
     end
     return content
   end

@@ -1,16 +1,47 @@
-<h2>Change your password</h2>
+<div id="login">
+<table class="login" style="display: none;">
+<%= form_tag new_user_session_path do -%>
+  <tr>
+    <td class="label"><%= label :user, :email, "E-mail" %></td>
+    <td class="field"><%= text_field :user, :email %></td>
+  </tr>
+  <tr>
+    <td class="label"><%= label :user, :password, "Password" %></td>
+    <td class="field"><%= password_field :user, :password %></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><%= check_box :user, :remember_me %> <%= label :user, :remember_me, "Remember me." %></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><%= submit_tag "Login" %> <span><%= link_to "Change Password", "#", :class => "forgot-password" %></span></td>
+  </tr>
+<% end -%>
+</table>
 
+<table class="forgot-password">
 <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
-  <%= devise_error_messages! %>
   <%= f.hidden_field :reset_password_token %>
-
-  <p><%= f.label :password %><br />
-  <%= f.password_field :password %></p>
-
-  <p><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></p>
-
-  <p><%= f.submit "Change my password" %></p>
-<% end %>
-
-<%= render :partial => "devise/shared/links" %>
+  <tr>
+    <td></td>
+    <td>
+      <h2>Change Password</h2>
+      <p><%= devise_error_messages! %></p>
+    </td>
+  </tr>
+  <tr>
+    <td class="label"><%= f.label :password, "Password:" %></td>
+    <td class="field"><%= f.text_field :password %></td>
+  </tr>
+  <tr>
+    <td class="label"><%= f.label :password_confirmation, "Password Confirmation" %></td>
+    <td class="field"><%= f.password_field :password_confirmation %></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><%= f.submit "Change Password" %> <span><%= link_to "Login", "#", :class => "login" %></span></td>
+  </tr>
+<% end -%>
+</table>
+</div>

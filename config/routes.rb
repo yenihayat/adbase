@@ -1,10 +1,9 @@
 AdBase::Application.routes.draw do
 
-  devise_for :users,
-    :as => '', :path_names => {:sign_in => '/login', :sign_up => 'users/new', :sign_out => '/logout'}
+  devise_for :users, :path => '', :path_names => {:sign_in => '/login', :sign_up => 'users/new', :sign_out => '/logout'}
 
   resources :users
-  match 'profile' => 'users#profile', :as => :profile
+  match 'profile' => 'users#profile', :path => :profile
 
   resources :ads
   resources :sites

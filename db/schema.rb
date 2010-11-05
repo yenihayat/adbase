@@ -13,7 +13,6 @@
 ActiveRecord::Schema.define(:version => 20101104095827) do
 
   create_table "ads", :force => true do |t|
-    t.integer  "user_id",                                        :null => false
     t.string   "name",             :limit => 40,                 :null => false
     t.text     "description"
     t.integer  "width"
@@ -37,7 +36,6 @@ ActiveRecord::Schema.define(:version => 20101104095827) do
   end
 
   add_index "ads", ["state_id"], :name => "index_ads_on_state_id"
-  add_index "ads", ["user_id"], :name => "index_ads_on_user_id"
 
   create_table "site_ads", :force => true do |t|
     t.integer  "ad_id",      :null => false
@@ -52,7 +50,7 @@ ActiveRecord::Schema.define(:version => 20101104095827) do
   create_table "sites", :force => true do |t|
     t.string   "name",       :limit => 300
     t.string   "url",        :limit => 300
-    t.integer  "state_id",   :limit => 2
+    t.integer  "state_id",   :limit => 3
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -60,7 +58,7 @@ ActiveRecord::Schema.define(:version => 20101104095827) do
   add_index "sites", ["state_id"], :name => "index_sites_on_state_id"
 
   create_table "states", :force => true do |t|
-    t.integer  "category_id", :limit => 3
+    t.integer  "category_id"
     t.string   "title",       :limit => 300
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -119,7 +117,7 @@ ActiveRecord::Schema.define(:version => 20101104095827) do
     t.string   "name",       :limit => 300
     t.integer  "width"
     t.integer  "height"
-    t.integer  "state_id",   :limit => 2
+    t.integer  "state_id",   :limit => 3
     t.boolean  "cycle",                     :default => false
     t.datetime "created_at"
     t.datetime "updated_at"

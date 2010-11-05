@@ -3,7 +3,7 @@ class ConnectController < ApplicationController
   layout false
   require 'uri'
 
-  # Collect and craft javascript ad data.
+  # Collect and craft javascript ad content.
   def index
     @uuids = extract_uuids(params[:ids])
     @zones = Zone.find_all_by_uuid(@uuids)

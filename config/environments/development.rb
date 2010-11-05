@@ -24,6 +24,6 @@ AdBase::Application.configure do
   config.action_dispatch.best_standards_support = :builtin
 
   # Devise required configuration.
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => 'adbase.local' }
 end
 

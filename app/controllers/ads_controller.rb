@@ -64,7 +64,7 @@ class AdsController < ApplicationController
     end
 
     def build_site_fields
-        missing_fields_count = CONFIG['site_fields_count'] - @ad.site_ads.length
-        missing_fields_count.times { @ad.site_ads.build }
+      missing_fields_count = CONFIG['site_fields_count'] - @ad.site_ads.length
+      missing_fields_count.times { @ad.site_ads.build }
     end
 end

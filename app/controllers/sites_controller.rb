@@ -16,6 +16,7 @@ class SitesController < ApplicationController
     redirect_to destroy_user_session_path unless current_users?
   end
 
+  # Only admin is allowed to add site.
   def new
     @site = Site.new
     load_users_for_admin
