@@ -60,7 +60,6 @@ GEM
     net-ssh (2.0.23)
     net-ssh-gateway (1.0.1)
       net-ssh (>= 1.99.1)
-    nokogiri (1.4.3.1)
     paperclip (2.3.4)
       activerecord
       activesupport
@@ -103,10 +102,6 @@ GEM
     uuidtools (2.1.1)
     warden (0.10.7)
       rack (>= 1.0.0)
-    webrat (0.7.2)
-      nokogiri (>= 1.2.0)
-      rack (>= 1.0)
-      rack-test (>= 0.5.3)
     whenever (0.6.2)
       aaronh-chronic (>= 0.3.9)
       activesupport (>= 2.3.4)
@@ -120,7 +115,6 @@ DEPENDENCIES
   mysql2 (= 0.2.4)
   paperclip (= 2.3.4)
   rails (= 3.0.1)
-  rspec-rails (~> 2.0.1)
+  rspec-rails (= 2.0.1)
   uuidtools (= 2.1.1)
-  webrat
   whenever (= 0.6.2)

@@ -9,6 +9,5 @@ gem 'whenever', '0.6.2'
 gem 'capistrano', '2.5.19'
 
 group :test, :development do
-  gem "rspec-rails", "~> 2.0.1"
-  gem 'webrat'
+  gem 'rspec-rails', '2.0.1'
 end
