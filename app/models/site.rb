@@ -14,7 +14,6 @@ class Site < ActiveRecord::Base
   belongs_to :state
 
   scope :active, where(:state_id => CONFIG['state_site_active'])
-  # scope :that_has_zone, lambda { |zone_id| { where() } }
 
   validates_presence_of :name, :url
   validates_uniqueness_of :url
