@@ -1,16 +1,14 @@
-== AdBase
+# AdBase
 
 AdBase is a simple and joy-to-use ad management and serving app created with Rails framework.
 
-== Information
+## Information
 
-Currently under development and not ready for production.
-
-=== 3 Steps Installation
+### 3 Steps Installation
 
 Clone repository to a location in your local directory,
 
-  git clone http://github.com/yenihayat/adbase.git
+    git clone http://github.com/yenihayat/adbase.git
 
 Update <tt>config/examples/database.yml</tt> and <tt>config/examples/config.yml</tt> with your environments config.
 
@@ -18,19 +16,19 @@ Run <tt>script/setup</tt> to generate config files, install gems, create/migrate
 
 That's all! Now you can login with default user credentials;
 
-  admin@domain.com
-  12345
+    admin@domain.com
+    12345
 
-* Don't forget to change default URLs in <tt>config/config.yml</tt> and <tt>public/assets/ad.js</tt>.
+> Don't forget to change default URLs in <tt>config/config.yml</tt> and <tt>public/assets/ad.js</tt>.
 
-== Bug Reports
+### Bug Reports
 
-Bug reports and Feature suggestions {are welcomed}[https://github.com/yenihayat/adbase/issues].
+Bug reports and Feature suggestions [are welcomed](https://github.com/yenihayat/adbase/issues).
 
-=== Maintainers
+### Maintainers
 
 Soner Eker <soner.eker@yh.com.tr>
 
-== License
+## License
 
-MIT License. Copyright 2010 {Yeni Hayat A.Ş.}[http://yh.com.tr]
+Released under the MIT License. See the LICENSE file for further details.
