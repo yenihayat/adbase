@@ -34,7 +34,7 @@
     <td class="title"><%= t('.publish_track_code').html_safe %></td>
     <td>
       <textarea class="code">
-<script type="text/javascript">
+<script type="text/javascript" id="<%= @zone.uuid %>">
   //<![CDATA[
   AdBase.ad('<%= @zone.uuid %>');
   //]]>
