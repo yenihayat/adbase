@@ -22,7 +22,7 @@ module ConnectHelper
       content += "param1.setAttribute('name', 'movie');\n"
       content += "param1.setAttribute('value', '#{CONFIG["ad_contents_url"]}#{partitionize(ad_id)}/#{ad_file_name}');\n"
       content += "ad_content.appendChild(param1);\n"
-      content += "var scr = document.getElementById('#{zone_uuid}');\n"
+      content += "var src = document.getElementById('#{zone_uuid}');\n"
       content += "src.parentNode.insertBefore(ad_content, src);\n"
     else
       content += ""
