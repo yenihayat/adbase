@@ -9,5 +9,5 @@ gem 'whenever', '0.6.2'
 gem 'capistrano', '2.5.19'
 
 group :test, :development do
-  gem 'rspec-rails', '2.1.0'
+  gem 'rspec-rails'
 end
