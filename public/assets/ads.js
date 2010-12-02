@@ -4,22 +4,16 @@ var AdBase = function() {
 
   // You don't need to touch below.
   var zones = zones || [];
-  var zonesCount = zonesCount || 0
 
   this.enabled = false;
 
   function init() {
     this.enabled = true;
-    collectZones();
+    getZoneContents();
   }
 
   function addToBase(a) {
     zones.push(a);
-  }
-
-  function collectZones() {
-    zonesCount = document.getElementsByClassName('adbase').length;
-    getZoneContents();
   }
 
   function getZoneContents() {
