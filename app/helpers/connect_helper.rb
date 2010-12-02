@@ -17,6 +17,7 @@ module ConnectHelper
       content += "ad_content.setAttribute('type', 'application/x-shockwave-flash');\n"
       content += "ad_content.setAttribute('width', '" + ad_width + "');\n"
       content += "ad_content.setAttribute('height', '" + ad_height + "');\n"
+      content += "ad_content.setAttribute('classid', 'clsid:D27CDB6E-AE6D-11cf-96B8-444553540000');\n"
       content += "ad_content.setAttribute('data', '#{CONFIG["ad_contents_url"]}#{partitionize(ad_id)}/#{ad_file_name}');\n"
       content += "var param1 = document.createElement('param');\n"
       content += "param1.setAttribute('name', 'movie');\n"
