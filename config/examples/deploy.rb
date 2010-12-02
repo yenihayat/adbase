@@ -19,7 +19,7 @@ set :branch, "master"
 namespace :deploy do
   desc "Tell Passenger to restart."
   task :restart, :roles => :web do
-    run "touch #{deploy_to}/current/tmp/restart.txt" 
+    run "touch #{deploy_to}/current/tmp/restart.txt"
   end
 
   desc "Do nothing on startup so we don't get a script/spin error."
@@ -30,7 +30,7 @@ namespace :deploy do
   desc "Symlink configs."
   task :symlink_configs do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
-    run "ln -nfs #{shared_path}/config/deploy.rb #{release_path}/config/deploy.rb"
+    run "ln -nfs #{shared_path}/config/config.yml #{release_path}/config/config.yml"
   end
 
   # http://github.com/javan/whenever

@@ -1,5 +1,5 @@
 var AdBase = function() {
-  
+
   var adbaseConnectUrl = 'http://adbase.yh.com.tr/connect/'
 
   // You don't need to touch below.
