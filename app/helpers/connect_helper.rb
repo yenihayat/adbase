@@ -10,8 +10,8 @@ module ConnectHelper
       content += "ad_content.src = '#{CONFIG["ad_contents_url"]}#{partitionize(ad_id)}/#{ad_file_name}';\n"
       content += "ad_content.border = '0';\n"
       content += "target_url.appendChild(ad_content);\n"
-      content += "var scr = document.getElementById('#{zone_uuid}');\n"
-      content += "scr.parentNode.insertBefore(target_url, scr);\n"
+      content += "var src = document.getElementById('#{zone_uuid}');\n"
+      content += "src.parentNode.insertBefore(target_url, src);\n"
     elsif content_type.include?('application')
       content += "var ad_content = document.createElement('object');\n"
       content += "ad_content.setAttribute('type', 'application/x-shockwave-flash');\n"
@@ -23,7 +23,7 @@ module ConnectHelper
       content += "param1.setAttribute('value', '#{CONFIG["ad_contents_url"]}#{partitionize(ad_id)}/#{ad_file_name}');\n"
       content += "ad_content.appendChild(param1);\n"
       content += "var scr = document.getElementById('#{zone_uuid}');\n"
-      content += "scr.parentNode.insertBefore(ad_content, scr);\n"
+      content += "src.parentNode.insertBefore(ad_content, src);\n"
     else
       content += ""
     end
