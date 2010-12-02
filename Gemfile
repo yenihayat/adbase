@@ -7,7 +7,3 @@ gem 'uuidtools', '2.1.1'
 gem 'paperclip', '2.3.4'
 gem 'whenever', '0.6.2'
 gem 'capistrano', '2.5.19'
-
-group :test, :development do
-  gem 'rspec-rails'
-end
