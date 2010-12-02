@@ -13,7 +13,6 @@ module ConnectHelper
       content += "var src = document.getElementById('#{zone_uuid}');\n"
       content += "src.parentNode.insertBefore(target_url, src);\n"
     elsif content_type.include?('application')
-      content += "alert('test');\n"
       content += "var ad_content = document.createElement('object');\n"
       content += "ad_content.setAttribute('type', 'application/x-shockwave-flash');\n"
       content += "ad_content.setAttribute('width', '" + ad_width + "');\n"
